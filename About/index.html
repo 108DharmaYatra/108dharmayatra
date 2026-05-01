@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — 108 Dharma Yatra</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+            --transition-theme: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0a0806;
+            --text: #f0e8dc;
+            --muted: #8a7f72;
+            --glass-bg: rgba(254, 105, 1, 0.055);
+            --glass-bg-strong: rgba(254, 105, 1, 0.09);
+            --glass-border: rgba(254, 105, 1, 0.18);
+            --glass-border-soft: rgba(255, 255, 255, 0.06);
+            --glass-shine: rgba(255, 255, 255, 0.04);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --nav-glass: rgba(10, 8, 6, 0.5);
+            --surface-glass: rgba(254, 105, 1, 0.04);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf4e8;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-bg-strong: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(254, 105, 1, 0.25);
+            --glass-border-soft: rgba(255, 255, 255, 0.7);
+            --glass-shine: rgba(255, 255, 255, 0.6);
+            --shadow-color: rgba(180, 100, 20, 0.15);
+            --nav-glass: rgba(253, 244, 232, 0.6);
+            --surface-glass: rgba(255, 255, 255, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: var(--transition-theme);
+        }
+
+        /* ── BACKGROUND ── */
+        .bg-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .bg-canvas {
+            background: #0a0806;
+        }
+
+        [data-theme="light"] .bg-canvas {
+            background: #fdf4e8;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.35;
+            animation: drift 18s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(254, 105, 1, 0.5), transparent 70%);
+            top: -10%;
+            right: -5%;
+            animation-duration: 22s;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255, 238, 0, 0.25), transparent 70%);
+            bottom: 15%;
+            left: -5%;
+            animation-duration: 28s;
+            animation-delay: -6s;
+        }
+
+        [data-theme="light"] .orb {
+            opacity: 0.2;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, -20px) scale(1.04);
+            }
+
+            100% {
+                transform: translate(-15px, 30px) scale(0.98);
+            }
+        }
+
+        nav,
+        section,
+        .about-hero,
+        .about-grid,
+        .values-section,
+        .mission-section,
+        footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── PROGRESS BAR ── */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+            background-size: 200% 100%;
+            animation: shimmer 2s linear infinite;
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--nav-glass);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 20px var(--shadow-color);
+            transition: var(--transition-theme);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--saffron);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--saffron);
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--saffron);
+            transform: rotate(15deg) scale(1.08);
+            background: rgba(254, 105, 1, 0.12);
+        }
+
+        /* ── PAGE LOADER ── */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.2rem;
+            transition: opacity 0.6s ease;
+            background: var(--bg);
+        }
+
+        #page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-om {
+            font-size: 3.5rem;
+            color: var(--saffron);
+            animation: pulse-om 1.6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(254, 105, 1, 0.5));
+        }
+
+        @keyframes pulse-om {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.9);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.12);
+            }
+        }
+
+        .loader-text {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* ── REVEAL ANIMATIONS ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ── ABOUT HERO ── */
+        .about-hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.68rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 2rem;
+            padding: 0.5rem 1.5rem;
+            background: rgba(254, 105, 1, 0.08);
+            border: 1px solid rgba(254, 105, 1, 0.2);
+            border-radius: 100px;
+            backdrop-filter: blur(8px);
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .about-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 500;
+            line-height: 1.15;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
+            animation: fadeUp 0.8s 0.15s ease both;
+        }
+
+        .about-hero p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: var(--muted);
+            animation: fadeUp 0.8s 0.28s ease both;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--saffron), transparent);
+            margin: 2.5rem auto;
+            animation: fadeUp 0.8s 0.38s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── ABOUT MAIN CARD ── */
+        .about-card {
+            margin: 0 2rem 1.5rem;
+            border-radius: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px) saturate(140%);
+            -webkit-backdrop-filter: blur(16px) saturate(140%);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 40px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
+            overflow: hidden;
+        }
+
+        .about-card-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .about-text-block {
+            padding: 4rem;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .about-quote-block {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--surface-glass);
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .about-text-block h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+        }
+
+        .about-text-block p {
+            font-size: 0.9rem;
+            line-height: 1.95;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .about-text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blockquote {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .quote-source {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 1.8rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0 2rem 2rem;
+            border-radius: 14px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 0.82rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+        }
+
+        .footer-copy {
+            font-size: 0.7rem;
+            color: var(--muted);
+            opacity: 0.45;
+            letter-spacing: 0.1em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .about-card-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text-block {
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            .values-section {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            .value-card:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .about-hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .about-text-block,
+            .about-quote-block {
+                padding: 2.5rem 1.8rem;
+            }
+
+            .mission-section {
+                flex-direction: column;
+                padding: 2.5rem 1.8rem;
+            }
+
+            .about-card,
+            .values-section,
+            .mission-section,
+            footer {
+                margin: 0 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-canvas">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-om">ॐ</div>
+        <div class="loader-text">Dharma Yatra</div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar"></div>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="logo">|| 108 <span></span> Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/" class="active">About</a></li>
+                <li><a href="#">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀️</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="about-hero">
+        <div class="eyebrow">|| Om namo bhagavate narsimhay namah ||</div>
+        <h1>About<br>108 Dharma Yatra</h1>
+        <div class="divider"></div>
+        <p>A sacred journey through ancient wisdom — exploring dharma, karma, and the timeless art of living with
+            purpose and devotion.</p>
+    </div>
+
+    <!-- ABOUT MAIN CARD -->
+    <div class="about-card reveal">
+        <div class="about-card-inner">
+
+            <div class="about-text-block">
+                <div class="section-label">Who We Are</div>
+                <h2>Dandwat Pranam</h2>
+                <p>I’m Kausik, 26 years old and the founder of the 108 Dharma Yatra. My spiritual journey began about
+                    four years ago when I started following Krishna consciousness. Since then, I have been practicing
+                    spiritual disciplines and spent a significant amount of time in a temple, where I studied Vedic
+                    scriptures and learned about the Vedic way of life.</p>
+                <p>During this time, I developed a deep connection and understanding of Lord Narasimha Dev, which
+                    inspired me to share this knowledge with others. That’s why I started the 108 Dharma Yatra channel
+                    and this website—to spread awareness about Lord Narasimha Dev and to highlight the importance of
+                    temples in our lives.</p>
+                <p>My goal is simple: to share what I’ve learned and support others on their spiritual journey.</p>
+            </div>
+
+            <div class="about-quote-block">
+                <div class="section-label">My goal</div>
+                <div class="blockquote">
+                    "To share what I’ve learned and support others on their spiritual journey."
+                </div>
+                <div class="quote-source">— Jai Narsimha</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">|| 108 Dharma Yatra ||</div>
+        <div class="footer-copy">© 2026 · All rights reserved</div>
+    </footer>
+
+    <script>
+        // LOADER
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('page-loader').classList.add('hidden');
+            }, 1200);
+        });
+
+        // PROGRESS BAR
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('progress-bar').style.width = (scrollTop / docHeight * 100) + '%';
+        });
+
+        // SCROLL REVEAL
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // THEME TOGGLE
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const saved = localStorage.getItem('dy-theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+        toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+        toggle.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('dy-theme', next);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — 108 Dharma Yatra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --saffron: #FE6901;
+      --gold: #FFEE00;
+      --transition-theme: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0a0806;
+      --text: #f0e8dc;
+      --muted: #8a7f72;
+      --glass-bg: rgba(254, 105, 1, 0.055);
+      --glass-bg-strong: rgba(254, 105, 1, 0.09);
+      --glass-border: rgba(254, 105, 1, 0.18);
+      --glass-shine: rgba(255, 255, 255, 0.04);
+      --shadow-color: rgba(0, 0, 0, 0.5);
+      --nav-glass: rgba(10, 8, 6, 0.5);
+    }
+
+    [data-theme="light"] {
+      --bg: #fdf4e8;
+      --text: #1a1208;
+      --muted: #7a6550;
+      --glass-bg: rgba(255, 255, 255, 0.45);
+      --glass-bg-strong: rgba(255, 255, 255, 0.65);
+      --glass-border: rgba(254, 105, 1, 0.25);
+      --glass-shine: rgba(255, 255, 255, 0.6);
+      --shadow-color: rgba(180, 100, 20, 0.15);
+      --nav-glass: rgba(253, 244, 232, 0.6);
+    }
+
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      min-height: 100vh;
+      transition: var(--transition-theme);
+    }
+
+    /* BG ORBS */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .bg-canvas { background: #0a0806; }
+    [data-theme="light"] .bg-canvas { background: #fdf4e8; }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      will-change: transform;
+    }
+
+    .orb-1 { width: 450px; height: 450px; background: radial-gradient(circle, rgba(254,105,1,0.45), transparent 70%); top: -5%; right: -5%; }
+    .orb-2 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,238,0,0.2), transparent 70%); bottom: 15%; left: -5%; }
+
+    [data-theme="light"] .orb { opacity: 0.18; }
+
+    nav, .page-header, main, footer, #progress-bar { position: relative; z-index: 1; }
+
+    /* PROGRESS */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+      background-size: 200% 100%;
+      animation: shimmer 2s linear infinite;
+      z-index: 999;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* NAV */
+    nav {
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--nav-glass);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 4px 20px var(--shadow-color);
+      transition: var(--transition-theme);
+    }
+
+    .logo {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo .logo-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--saffron);
+    }
+
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .theme-toggle {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--saffron);
+      transform: rotate(15deg) scale(1.08);
+      background: rgba(254,105,1,0.12);
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 1rem;
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      background: rgba(254,105,1,0.08);
+      border: 1px solid rgba(254,105,1,0.2);
+      border-radius: 100px;
+    }
+
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    .last-updated {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* POLICY CARD */
+    .policy-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
+      padding: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* INTRO BLOCK */
+    .intro-block {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* SECTION */
+    .policy-section {
+      margin-bottom: 0;
+    }
+
+    .policy-section + .policy-section {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .section-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .policy-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .policy-section p {
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      margin: 0.5rem 0 0.8rem 1.2rem;
+    }
+
+    .policy-section ul li {
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .policy-section ul li::marker { color: var(--saffron); }
+
+    .policy-section strong { color: var(--text); font-weight: 500; }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: rgba(254,105,1,0.06);
+      border: 1px solid rgba(254,105,1,0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-card a {
+      color: var(--saffron);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      padding: 1.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 0 2rem 2rem;
+      border-radius: 14px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+    }
+
+    .footer-logo {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--saffron); }
+
+    .footer-copy {
+      font-size: 0.7rem;
+      color: var(--muted);
+      opacity: 0.45;
+      letter-spacing: 0.1em;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-eyebrow { animation: fadeUp 0.6s ease both; }
+    .page-header h1 { animation: fadeUp 0.6s 0.1s ease both; }
+    .last-updated { animation: fadeUp 0.6s 0.18s ease both; }
+    .policy-card { animation: fadeUp 0.7s 0.22s ease both; }
+    .contact-card-wrap { animation: fadeUp 0.7s 0.3s ease both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
+      .nav-right { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      main { padding: 1.5rem 1rem 3rem; }
+      .policy-card { padding: 1.8rem 1.4rem; }
+      footer { margin: 0 1rem 1rem; flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BG -->
+  <div class="bg-canvas">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div id="progress-bar"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="dharma-yatra-glass.html" class="logo">|| <span class="logo-num">108</span> Dharma Yatra ||</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="dharma-yatra-glass.html">About</a></li>
+        <li><a href="dharma-yatra-glass.html">eBooks</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last Updated: [Insert Date]</p>
+  </div>
+
+  <main>
+
+    <!-- INTRO + ALL SECTIONS IN ONE CARD -->
+    <div class="policy-card">
+
+      <p class="intro-block">
+        At <strong>108 Dharma Yatra</strong>, accessible from <strong>[Insert Website URL]</strong>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by 108 Dharma Yatra and how we use it.
+      </p>
+
+      <!-- 1 -->
+      <div class="policy-section">
+        <span class="section-num">Section 01</span>
+        <h2>Information We Collect</h2>
+        <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, and the contents of the message you may send us.</p>
+        <p><strong>Account / Purchase Information:</strong> When you purchase the Narsimha Kavach Sadhna eBook, we collect details such as your name, email address, and billing information.</p>
+        <p><strong>Log Files:</strong> We follow a standard procedure of using log files. These files log visitors when they visit websites. This includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, and referring/exit pages.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="policy-section">
+        <span class="section-num">Section 02</span>
+        <h2>Cookies and Web Beacons</h2>
+        <p>Like any other website, 108 Dharma Yatra uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="policy-section">
+        <span class="section-num">Section 03</span>
+        <h2>Google DoubleClick DART Cookie</h2>
+        <p>Google is one of the third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="policy-section">
+        <span class="section-num">Section 04</span>
+        <h2>Our Advertising Partners</h2>
+        <p>Some of the advertisers on our site (specifically Google AdSense) may use cookies and web beacons. Each of our advertising partners has its own Privacy Policy for its policies on user data.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="policy-section">
+        <span class="section-num">Section 05</span>
+        <h2>Third-Party Privacy Policies</h2>
+        <p>108 Dharma Yatra's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="policy-section">
+        <span class="section-num">Section 06</span>
+        <h2>Payment Processing</h2>
+        <p>For eBook purchases, we use third-party payment processors (e.g., <strong>Razorpay</strong>). We do not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="policy-section">
+        <span class="section-num">Section 07</span>
+        <h2>GDPR & CCPA Data Protection Rights</h2>
+        <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        <ul>
+          <li><strong>The right to access</strong> — You have the right to request copies of your personal data.</li>
+          <li><strong>The right to rectification</strong> — You have the right to request that we correct any information you believe is inaccurate.</li>
+          <li><strong>The right to erasure</strong> — You have the right to request that we erase your personal data, under certain conditions.</li>
+        </ul>
+      </div>
+
+      <!-- 8 -->
+      <div class="policy-section">
+        <span class="section-num">Section 08</span>
+        <h2>Children's Information</h2>
+        <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+        <p>108 Dharma Yatra does not knowingly collect any Personal Identifiable Information from children under the age of 13.</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="policy-section">
+        <span class="section-num">Section 09</span>
+        <h2>Consent</h2>
+        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+      </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-card-wrap">
+      <div class="contact-card">
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p>📧 <a href="mailto:[Insert Email]">[Insert Email Address]</a></p>
+        <p>🌐 <a href="[Insert Website URL]">[Insert Website URL]</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="dharma-yatra-glass.html" class="footer-logo">|| <span class="logo-num">108</span> Dharma Yatra ||</a>
+    <ul class="footer-links">
+      <li><a href="dharma-yatra-glass.html">Home</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 · All rights reserved</div>
+  </footer>
+
+  <script>
+    // PROGRESS
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('progress-bar').style.width = (scrollTop / docHeight * 100) + '%';
+    });
+
+    // THEME
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('dy-theme') || 'dark';
+    html.setAttribute('data-theme', saved);
+    toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('dy-theme', next);
+    });
+  </script>
+
+</body>
+</html>
