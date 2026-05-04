@@ -9,53 +9,6 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap"
     rel="stylesheet" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <!-- Firebase v10 -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import {
-      getFirestore,
-      collection, addDoc,
-      serverTimestamp
-    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    import {
-      getFunctions,
-      httpsCallable
-    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js";
-
-    /* ═══════════════════════════════════════════
-       🔥 STEP A — FIREBASE CONFIG
-       Firebase Console → Project Settings → Web App
-    ═══════════════════════════════════════════ */
-    const firebaseConfig = {
-      apiKey: "YAHAN_API_KEY_DALO",
-      authDomain: "YAHAN_AUTH_DOMAIN_DALO",
-      projectId: "YAHAN_PROJECT_ID_DALO",
-      storageBucket: "YAHAN_STORAGE_BUCKET_DALO",
-      messagingSenderId: "YAHAN_SENDER_ID_DALO",
-      appId: "YAHAN_APP_ID_DALO"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const functions = getFunctions(app);
-
-    /* Firestore mein order save karo */
-    window._saveOrder = async (data) => {
-      const ref = await addDoc(collection(db, "orders"), {
-        ...data, createdAt: serverTimestamp()
-      });
-      return ref.id;
-    };
-
-    /* Cloud Function call karo — token banane ke liye */
-    window._generateToken = async (email, paymentId, customerName) => {
-      const fn = httpsCallable(functions, "generateDownloadToken");
-      const result = await fn({ email, paymentId, customerName });
-      return result.data.token;
-    };
-  </script>
 
   <style>
     *,
@@ -1210,8 +1163,8 @@
           </div>
           <div class="price-block">
             <div>
-              <div class="price-amount">₹299</div>
-              <div class="price-old">₹599</div>
+              <div class="price-amount">₹199</div>
+              <div class="price-old">₹299</div>
             </div>
             <div class="price-note">One Time Payment<br>No Subscription</div>
           </div>
@@ -1347,213 +1300,95 @@
   </footer>
 
   <script>
-    /* ══════════════════════════════════════════
-       🔑 SIRF YAHAN APNI VALUES DALO (4 jagah)
-    ═══════════════════════════════════════════ */
+/* ══════════════════════════════════════════
+   🔑 CONFIGURATION
+   ═══════════════════════════════════════════ */
+const RAZORPAY_KEY = 'rzp_test_Skre5TadiWzdx7'; // 1️⃣ Razorpay Key
+const WORKER_URL = 'https://ebook-api.108dharmayatra.workers.dev/'; // 2️⃣ Aapka Cloudflare Worker URL
+const AMOUNT_PAISE =  0 //19900; // 3️⃣ Amount in paise (₹199.00)
 
-    // 1️⃣ Razorpay Test Key ID
-    const RAZORPAY_KEY = 'rzp_test_XXXXXXXXXXXX';
 
-    // 2️⃣ EmailJS Keys
-    const EJS_PUBLIC_KEY = 'TUMHARA_PUBLIC_KEY';
-    const EJS_SERVICE_ID = 'TUMHARA_SERVICE_ID';
-    const EJS_TEMPLATE_ID = 'TUMHARA_TEMPLATE_ID';
+/* ═══════════════════════════════════ */
 
-    // 3️⃣ Tumhari website ka base URL (download.html kahan hai)
-    //    Jaise: 'https://tumhariwebsite.com'  ya  'https://PROJECT.web.app'
-    const SITE_URL = 'https://TUMHARI-WEBSITE.web.app';
+// UI Helpers (Loader, Theme, etc.)
+window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('gone'), 1200));
 
-    // 4️⃣ Amount
-    const AMOUNT_PAISE = 29900;
+function showErr(msg) {
+    document.getElementById('errTxt').textContent = msg;
+    const b = document.getElementById('errBanner');
+    b.classList.add('show');
+    setTimeout(() => b.classList.remove('show'), 6000);
+}
 
-    /* ═══════════════════════════════════ */
+function showInfo(msg) {
+    document.getElementById('statusInfoTxt').textContent = msg;
+    document.getElementById('statusInfo').classList.add('show');
+}
 
-    emailjs.init(EJS_PUBLIC_KEY);
+function hideInfo() { document.getElementById('statusInfo').classList.remove('show'); }
 
-    window.addEventListener('load', () =>
-      setTimeout(() => document.getElementById('page-loader').classList.add('gone'), 1200)
-    );
+function setLoading(on) {
+    const btn = document.getElementById('payBtn');
+    btn.disabled = on;
+    btn.classList.toggle('loading', on);
+}
 
-    window.addEventListener('scroll', () => {
-      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
-      document.getElementById('progress-bar').style.width = pct + '%';
-    });
-
-    const html = document.documentElement;
-    const tBtn = document.getElementById('themeBtn');
-    const saved = localStorage.getItem('dy-theme') || 'dark';
-    html.setAttribute('data-theme', saved);
-    tBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
-    tBtn.addEventListener('click', () => {
-      const n = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', n);
-      tBtn.textContent = n === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('dy-theme', n);
-    });
-
-    function showErr(msg) {
-      document.getElementById('errTxt').textContent = msg;
-      const b = document.getElementById('errBanner');
-      b.classList.add('show');
-      setTimeout(() => b.classList.remove('show'), 6000);
-    }
-
-    function showInfo(msg) {
-      document.getElementById('statusInfoTxt').textContent = msg;
-      document.getElementById('statusInfo').classList.add('show');
-    }
-
-    function hideInfo() {
-      document.getElementById('statusInfo').classList.remove('show');
-    }
-
-    function setLoading(on) {
-      const btn = document.getElementById('payBtn');
-      btn.disabled = on;
-      btn.classList.toggle('loading', on);
-    }
-
-    function setStep(n) {
-      ['stp1', 'stp2', 'stp3', 'stp4'].forEach((id, i) => {
-        if (i < n) {
-          document.getElementById(id).classList.add('active');
-          if (i < n - 1) document.getElementById(id).classList.add('done');
-        }
-      });
-    }
-
-    function validate(d) {
-      if (!d.firstName) return 'Pehla naam likhna zaroori hai.';
-      if (!d.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email))
-        return 'Please enter a valid email address.';
-      if (!d.phone || !/^[+]?[\d\s\-]{10,13}$/.test(d.phone))
-        return 'Please enter a valid phone number (10-13 digits).';
-      return null;
-    }
-
-    /* Email bhejo jisme download link ho */
-    async function sendTokenEmail(data, token) {
-      const downloadLink = `${SITE_URL}/download.html?token=${token}`;
-      return emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
-        to_name: data.firstName + ' ' + data.lastName,
-        to_email: data.email,
-        customer_name: data.firstName,
-        download_link: downloadLink,   // Template mein {{download_link}}
-        payment_id: data.paymentId,
-        product_name: 'Bhagwan Narsimha Kavach Stuti & Sampurn Sadhna',
-        expiry_hours: '24',           // Template mein {{expiry_hours}}
-      });
-    }
-
-    /* Main submit handler */
-    document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const data = {
+// Main Logic
+document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const data = {
         firstName: document.getElementById('fName').value.trim(),
-        lastName: document.getElementById('lName').value.trim(),
         email: document.getElementById('email').value.trim(),
         phone: document.getElementById('phone').value.trim(),
-      };
+    };
 
-      const err = validate(data);
-      if (err) return showErr(err);
+    if (!data.email || !data.firstName) return showErr("Please fill all details.");
 
-      setLoading(true);
-      setStep(2);
+    setLoading(true);
 
-      const options = {
+    const options = {
         key: RAZORPAY_KEY,
         amount: AMOUNT_PAISE,
         currency: 'INR',
         name: '108 Dharma Yatra',
-        description: 'Bhagwan Narsimha Kavach Stuti & Sampurn Sadhna',
-        image: '', // 📌 Apna logo URL
-
-        prefill: {
-          name: (data.firstName + ' ' + data.lastName).trim(),
-          email: data.email,
-          contact: data.phone.replace(/\D/g, ''),
-        },
-
-        theme: { color: '#FE6901' },
-
-        modal: {
-          ondismiss: () => { setLoading(false); setStep(1); hideInfo(); }
-        },
-
+        description: 'Bhagwan Narsimha Kavach Ebook',
         handler: async (response) => {
-          const payId = response.razorpay_payment_id;
-          data.paymentId = payId;
+            showInfo('⏳ Processing delivery...');
+            
+            try {
+                // ✅ Cloudflare Worker ko call kar rahe hain
+                const res = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        payment_id: response.razorpay_payment_id,
+                        email: data.email,
+                        name: data.firstName
+                    })
+                });
 
-          try {
-            // ── STEP 1: Firebase mein order save karo ──
-            showInfo('⏳ Order save ho raha hai...');
-            if (window._saveOrder) {
-              await window._saveOrder({
-                razorpay_payment_id: payId,
-                razorpay_order_id: response.razorpay_order_id || '',
-                razorpay_signature: response.razorpay_signature || '',
-                customer_name: (data.firstName + ' ' + data.lastName).trim(),
-                customer_email: data.email,
-                customer_phone: data.phone,
-                product: 'Bhagwan Narsimha Kavach Stuti & Sampurn Sadhna',
-                amount_inr: 199,
-                status: 'paid',
-              });
+                if (res.ok) {
+                    hideInfo();
+                    document.getElementById('successOverlay').classList.add('show');
+                } else {
+                    throw new Error('Delivery Failed');
+                }
+            } catch (err) {
+                showErr("Payment successful but delivery failed. Contact support.");
+            } finally {
+                setLoading(false);
             }
-
-            // ── STEP 2: Unique token generate karo ──
-            setStep(3);
-            showInfo('🔐 Your unique download link is being generated...');
-            let token = null;
-
-            if (window._generateToken) {
-              token = await window._generateToken(
-                data.email,
-                payId,
-                (data.firstName + ' ' + data.lastName).trim()
-              );
-            }
-
-            // ── STEP 3: Email mein link bhejo ──
-            showInfo('📧 Email Sending...');
-            if (token) {
-              await sendTokenEmail(data, token);
-            }
-
-            hideInfo();
-            setLoading(false);
-
-            // Success dikhao
-            document.getElementById('sEmail').textContent = data.email;
-            document.getElementById('sPid').textContent = 'Payment ID: ' + payId;
-            document.getElementById('successOverlay').classList.add('show');
-            setStep(4);
-
-          } catch (postErr) {
-            console.error('Post-payment error:', postErr);
-            hideInfo();
-            setLoading(false);
-            // Payment hua — user ko batao
-            document.getElementById('sEmail').textContent = data.email;
-            document.getElementById('sPid').textContent = 'Payment ID: ' + payId;
-            document.getElementById('successOverlay').classList.add('show');
-          }
         },
-      };
+        prefill: { name: data.firstName, email: data.email, contact: data.phone },
+        modal: { ondismiss: () => setLoading(false) }
+    };
 
-      const rzp = new window.Razorpay(options);
-      rzp.open();
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+});
+</script>
 
-      rzp.on('payment.failed', (fail) => {
-        setLoading(false);
-        setStep(1);
-        hideInfo();
-        showErr('Payment failed: ' + (fail.error?.description || 'Please try again.'));
-      });
-    });
-  </script>
 </body>
 
 </html>
