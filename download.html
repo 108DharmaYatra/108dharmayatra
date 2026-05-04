@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download — 108 Dharma Yatra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #0a0806;
+      color: #f0e8dc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .box {
+      background: rgba(254,105,1,.07);
+      border: 1px solid rgba(254,105,1,.2);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      max-width: 460px;
+      width: 100%;
+    }
+    .icon { font-size: 3rem; margin-bottom: 1rem; }
+    h2 { font-family: 'Cinzel', serif; font-size: 1.5rem;
+         color: #FE6901; margin-bottom: .8rem; }
+    p { color: #8a7f72; line-height: 1.8; margin-bottom: .5rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 1rem 2.5rem;
+      background: #FE6901;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: .95rem;
+    }
+    .note {
+      margin-top: 1.2rem;
+      padding: .8rem 1rem;
+      background: rgba(74,222,128,.06);
+      border: 1px solid rgba(74,222,128,.15);
+      border-radius: 10px;
+      font-size: .78rem;
+      color: #8a7f72;
+      line-height: 1.7;
+    }
+    .err { color: #ff7070; }
+  </style>
+</head>
+<body>
+<div class="box" id="box">
+  <div class="icon">⏳</div>
+  <h2>Verifying...</h2>
+  <p>Link verify ho raha hai...</p>
+</div>
+
+<script>
+  const box = document.getElementById('box');
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+
+  // 📌 APNA WORKER URL YAHAN DAALO
+  const WORKER_URL = 'https://your-worker-name.your-subdomain.workers.dev';
+
+  async function verifyAndLoad() {
+    if (!token) {
+      showError("Token Missing", "Link mein token nahi mila.");
+      return;
+    }
+
+    try {
+      // 1. Worker ko call karo token verify karne ke liye
+      const response = await fetch(`${WORKER_URL}/verify-token?token=${token}`);
+      const data = await response.json();
+
+      if (data.valid) {
+        // 2. Agar valid hai toh download UI dikhao
+        box.innerHTML = `
+          <div class="icon">🙏</div>
+          <h2>Jai Narsimha!</h2>
+          <p>Priya ${data.name}, aapka eBook taiyaar hai.</p>
+          <!-- Hum Worker se milne wala PDF_URL use karenge -->
+          <a href="${data.pdfUrl}" target="_blank" class="btn">📥 Download eBook</a>
+          <div class="note">
+            Yeh link security ke liye 24 ghante mein expire ho jayega.
+            Kripya file download karke save kar lein.
+          </div>`;
+          
+        // Optional: Auto-download start karna ho toh:
+        // window.location.href = data.pdfUrl;
+      } else {
+        // 3. Agar token expire ho gaya ya galat hai
+        showError("Link Expired", data.error || "Yeh link ab valid nahi hai.");
+      }
+    } catch (err) {
+      showError("Server Error", "Worker se connect nahi ho pa raha hai.");
+      console.error(err);
+    }
+  }
+
+  function showError(title, msg) {
+    box.innerHTML = `
+      <div class="icon">❌</div>
+      <h2 class="err">${title}</h2>
+      <p>${msg}</p>
+      <p style="margin-top:10px; font-size:0.8rem;">Support: dharma.yatra@gmail.com</p>`;
+  }
+
+  // Function run karo
+  verifyAndLoad();
+</script>
+</body>
+</html>
