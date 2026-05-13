@@ -58,7 +58,7 @@
 <div class="box" id="box">
   <div class="icon">⏳</div>
   <h2>Verifying...</h2>
-  <p>Link verify ho raha hai...</p>
+  
 </div>
 
 <script>
@@ -71,7 +71,7 @@
 
   async function verifyAndLoad() {
     if (!token) {
-      showError("Token Missing", "Link mein token nahi mila.");
+      showError("Token Missing", "Token not found on the link.");
       return;
     }
 
@@ -85,22 +85,21 @@
         box.innerHTML = `
           <div class="icon">🙏</div>
           <h2>Jai Narsimha!</h2>
-          <p>Priya ${data.name}, aapka eBook taiyaar hai.</p>
+          <p>Priya ${data.name}, your eBook is ready for download.</p>
           <!-- Hum Worker se milne wala PDF_URL use karenge -->
           <a href="${data.pdfUrl}" target="_blank" class="btn">📥 Download eBook</a>
           <div class="note">
-            Yeh link security ke liye 24 ghante mein expire ho jayega.
-            Kripya file download karke save kar lein.
+            this link will expire in 24 hours. If you face any issues, contact us at <a href="mailto:108dharmayatra@gmail.com">108dharmayatra@gmail.com</a>
           </div>`;
           
         // Optional: Auto-download start karna ho toh:
         // window.location.href = data.pdfUrl;
       } else {
         // 3. Agar token expire ho gaya ya galat hai
-        showError("Link Expired", data.error || "Yeh link ab valid nahi hai.");
+        showError("Link Expired", data.error || "this link has expired.");
       }
     } catch (err) {
-      showError("Server Error", "Worker se connect nahi ho pa raha hai.");
+      showError("Server Error", "no response from the server.");
       console.error(err);
     }
   }
@@ -110,7 +109,7 @@
       <div class="icon">❌</div>
       <h2 class="err">${title}</h2>
       <p>${msg}</p>
-      <p style="margin-top:10px; font-size:0.8rem;">Support: dharma.yatra@gmail.com</p>`;
+      <p style="margin-top:10px; font-size:0.8rem;">Support: 108dharmayatra@gmail.com</p>`;
   }
 
   // Function run karo
