@@ -1157,11 +1157,14 @@
           </p>
           <div class="feat-list">
             <div class="feat-item"><span class="feat-dot"></span>भगवान नरसिंह कवच का परिचय</div>
-            <div class="feat-item"><span class="feat-dot"></span>भगवान नरसिंह कवच (संस्कृत एवं सरल हिन्दी अर्थ सहित)</div>
+            <div class="feat-item"><span class="feat-dot"></span>भगवान नरसिंह कवच (संस्कृत एवं सरल हिन्दी अर्थ सहित)
+            </div>
             <div class="feat-item"><span class="feat-dot"></span>मंत्र जाप साधना</div>
             <div class="feat-item"><span class="feat-dot"></span>108 संख्या का रहस्य (वेदिक तर्क)</div>
             <div class="feat-item"><span class="feat-dot"></span>भगवान नरसिंह साधना कैसे आरंभ करें</div>
-            <div class="feat-item"><span class="feat-dot"></span> <p style="color: #FE6901;">and More!</p></div>
+            <div class="feat-item"><span class="feat-dot"></span>
+              <p style="color: #FE6901;">and More!</p>
+            </div>
           </div>
           <div class="price-block">
             <div>
@@ -1302,94 +1305,98 @@
   </footer>
 
   <script>
-/* ══════════════════════════════════════════
-   🔑 CONFIGURATION
-   ═══════════════════════════════════════════ */
-const RAZORPAY_KEY = 'rzp_test_Skre5TadiWzdx7'; // 1️⃣ Razorpay Key
-const WORKER_URL = 'https://ebook-api.108dharmayatra.workers.dev/direct-purchase'; // 2️⃣ Aapka Cloudflare Worker URL
-const AMOUNT_PAISE =  0 //19900; // 3️⃣ Amount in paise (₹199.00)
+    /* ══════════════════════════════════════════
+       🔑 CONFIGURATION
+       ═══════════════════════════════════════════ */
+    const RAZORPAY_KEY = 'rzp_test_Skre5TadiWzdx7'; // 1️⃣ Razorpay Key
+    const WORKER_URL = 'https://ebook-api.108dharmayatra.workers.dev/direct-purchase'; // 2️⃣ Cloudflare Worker URL
+    const AMOUNT_PAISE = 300; // 
 
 
-/* ═══════════════════════════════════ */
+    /* ═══════════════════════════════════ */
 
-// UI Helpers (Loader, Theme, etc.)
-window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('gone'), 1200));
+    // UI Helpers (Loader, Theme, etc.)
+    window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('gone'), 1200));
 
-function showErr(msg) {
-    document.getElementById('errTxt').textContent = msg;
-    const b = document.getElementById('errBanner');
-    b.classList.add('show');
-    setTimeout(() => b.classList.remove('show'), 6000);
-}
+    function showErr(msg) {
+      document.getElementById('errTxt').textContent = msg;
+      const b = document.getElementById('errBanner');
+      b.classList.add('show');
+      setTimeout(() => b.classList.remove('show'), 6000);
+    }
 
-function showInfo(msg) {
-    document.getElementById('statusInfoTxt').textContent = msg;
-    document.getElementById('statusInfo').classList.add('show');
-}
+    function showInfo(msg) {
+      document.getElementById('statusInfoTxt').textContent = msg;
+      document.getElementById('statusInfo').classList.add('show');
+    }
 
-function hideInfo() { document.getElementById('statusInfo').classList.remove('show'); }
+    function hideInfo() { document.getElementById('statusInfo').classList.remove('show'); }
 
-function setLoading(on) {
-    const btn = document.getElementById('payBtn');
-    btn.disabled = on;
-    btn.classList.toggle('loading', on);
-}
+    function setLoading(on) {
+      const btn = document.getElementById('payBtn');
+      btn.disabled = on;
+      btn.classList.toggle('loading', on);
+    }
 
-// Main Logic
-document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const data = {
+    // Main Logic
+    document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const data = {
         firstName: document.getElementById('fName').value.trim(),
         email: document.getElementById('email').value.trim(),
         phone: document.getElementById('phone').value.trim(),
-    };
+      };
 
-    if (!data.email || !data.firstName) return showErr("Please fill all details.");
+      if (!data.email || !data.firstName) return showErr("Please fill all details.");
 
-    setLoading(true);
+      setLoading(true);
 
-    const options = {
+      const options = {
         key: RAZORPAY_KEY,
         amount: AMOUNT_PAISE,
         currency: 'INR',
         name: '108 Dharma Yatra',
         description: 'Bhagwan Narsimha Kavach Ebook',
         handler: async (response) => {
-            showInfo('⏳ Processing delivery...');
-            
-            try {
-                // ✅ Cloudflare Worker ko call kar rahe hain
-                const res = await fetch(WORKER_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        payment_id: response.razorpay_payment_id,
-                        email: data.email,
-                        name: data.firstName
-                    })
-                });
+          showInfo('⏳ Processing delivery...');
 
-                if (res.ok) {
-                    hideInfo();
-                    document.getElementById('successOverlay').classList.add('show');
-                } else {
-                    throw new Error('Delivery Failed');
-                }
-            } catch (err) {
-                showErr("Payment successful but delivery failed. Contact support.");
-            } finally {
-                setLoading(false);
+          try {
+            // ✅ Cloudflare Worker ko call kar rahe hain
+            const res = await fetch(WORKER_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                payment_id: response.razorpay_payment_id,
+                email: data.email,
+                name: data.firstName
+              })
+            });
+
+            if (res.ok) {
+              hideInfo();
+              document.getElementById('successOverlay').classList.add('show');
+            } else {
+              // 🛡️ NAYA SYSTEM: Backend ka asli error message nikal rahe hain (Jaise: "Price too low")
+              const errData = await res.json();
+              throw new Error(errData.error || 'Delivery Failed');
             }
+          } catch (err) {
+            // ❌ Ab page atke ga nahi, balki asli security error dikha dega!
+            hideInfo();
+            showErr(err.message);
+          } finally {
+            setLoading(false);
+          }
         },
         prefill: { name: data.firstName, email: data.email, contact: data.phone },
         modal: { ondismiss: () => setLoading(false) }
-    };
+      };
 
-    const rzp = new window.Razorpay(options);
-    rzp.open();
-});
-</script>
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    });
+  </script>
 
 </body>
 
