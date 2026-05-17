@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="hi" data-theme="dark">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>नारायण कवच: भगवान नृसिंह की दिव्य सुरक्षा शक्ति | 108 Dharma Yatra</title>
-    <meta name="description" content="नारायण कवच क्या है? श्रीमद्भागवत के षष्ठ स्कंध में वर्णित इस दिव्य कवच की उत्पत्ति की पूरी कथा।" />
+    <meta name="description"
+        content="नारायण कवच क्या है? श्रीमद्भागवत के षष्ठ स्कंध में वर्णित इस दिव्य कवच की उत्पत्ति की पूरी कथा।" />
     <link rel="canonical" href="https://108dharmayatra.com/blogs/narayana-kavach" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --saffron: #FE6901;
@@ -35,7 +43,10 @@
             --shlok-bg: rgba(254, 105, 1, 0.05);
         }
 
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
 
         body {
             background: var(--bg);
@@ -48,7 +59,8 @@
         /* ── PROGRESS BAR ── */
         #progress-bar {
             position: fixed;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             height: 2px;
             width: 0%;
             background: linear-gradient(90deg, var(--saffron), var(--gold));
@@ -56,36 +68,45 @@
             transition: width 0.1s linear;
         }
 
-        /* ── NAV ── */
         nav {
-            position: sticky;
+            position: relative;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 100;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            background: var(--bg);
-            border-bottom: 1px solid var(--border);
+            background: var(--nav-glass);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 20px var(--shadow-color);
+            transition: var(--transition-theme);
         }
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
             color: var(--text);
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .nav-links {
             display: flex;
-            gap: 1.8rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
@@ -98,10 +119,13 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover { color: var(--saffron); }
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
 
         .theme-btn {
-            width: 34px; height: 34px;
+            width: 34px;
+            height: 34px;
             border-radius: 8px;
             background: var(--card);
             border: 1px solid var(--border);
@@ -110,7 +134,9 @@
             transition: transform 0.2s;
         }
 
-        .theme-btn:hover { transform: scale(1.1); }
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
 
         /* ── HERO ── */
         .hero {
@@ -131,8 +157,14 @@
             align-items: center;
         }
 
-        .breadcrumb a { color: var(--muted); text-decoration: none; }
-        .breadcrumb a:hover { color: var(--saffron); }
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
 
         .tags {
             display: flex;
@@ -147,11 +179,15 @@
             text-transform: uppercase;
             padding: 0.25rem 0.8rem;
             border-radius: 100px;
-            border: 1px solid rgba(254,105,1,0.3);
+            border: 1px solid rgba(254, 105, 1, 0.3);
             color: var(--saffron);
         }
 
-        .tag.primary { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
 
         h1 {
             font-family: 'Cinzel', serif;
@@ -161,7 +197,9 @@
             margin-bottom: 1.2rem;
         }
 
-        h1 .accent { color: var(--saffron); }
+        h1 .accent {
+            color: var(--saffron);
+        }
 
         .subtitle {
             font-family: 'EB Garamond', serif;
@@ -183,9 +221,10 @@
         }
 
         .meta-dot {
-            width: 3px; height: 3px;
+            width: 3px;
+            height: 3px;
             border-radius: 50%;
-            background: rgba(254,105,1,0.35);
+            background: rgba(254, 105, 1, 0.35);
             align-self: center;
         }
 
@@ -334,7 +373,9 @@
             line-height: 1.6;
         }
 
-        .info-card li:last-child { border-bottom: none; }
+        .info-card li:last-child {
+            border-bottom: none;
+        }
 
         .info-card li::before {
             content: '✦';
@@ -372,7 +413,7 @@
         /* ── DIVIDER ── */
         .divider {
             text-align: center;
-            color: rgba(254,105,1,0.2);
+            color: rgba(254, 105, 1, 0.2);
             letter-spacing: 1rem;
             font-size: 1.2rem;
             margin: 2.5rem 0;
@@ -409,7 +450,7 @@
             font-family: 'Tiro Devanagari Hindi', serif;
             font-size: 0.85rem;
             letter-spacing: 0.12em;
-            color: rgba(254,105,1,0.35);
+            color: rgba(254, 105, 1, 0.35);
             margin: 3rem 0 0;
         }
 
@@ -457,15 +498,43 @@
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 600px) {
-            nav { padding: 0.8rem 1rem; }
-            .nav-links { display: none; }
-            .hero, .article { padding-left: 1.2rem; padding-right: 1.2rem; }
-            .post-footer { padding-left: 1.2rem; padding-right: 1.2rem; }
-            h1 { font-size: 1.7rem; }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+                letter-spacing: 0.08em;
+            }
+
+            .read-mode-btn span {
+                display: none;
+            }
+
+            /* sirf icon dikhega */
         }
     </style>
 </head>
+
 <body>
 
     <div id="progress-bar"></div>
@@ -514,9 +583,12 @@
     <!-- ARTICLE -->
     <article class="article">
 
-        <p class="dropcap">कल्पना कीजिए… एक ऐसा मंत्र, जिसे सुनते ही भय भाग जाए। जिसे धारण करने वाला व्यक्ति अदृश्य शक्तियों से भी सुरक्षित हो जाए। और सबसे चौंकाने वाली बात — यह कोई साधारण स्तोत्र नहीं, बल्कि स्वयं भगवान नृसिंह की दिव्य शक्ति का "कवच" है।</p>
+        <p class="dropcap">कल्पना कीजिए… एक ऐसा मंत्र, जिसे सुनते ही भय भाग जाए। जिसे धारण करने वाला व्यक्ति अदृश्य
+            शक्तियों से भी सुरक्षित हो जाए। और सबसे चौंकाने वाली बात — यह कोई साधारण स्तोत्र नहीं, बल्कि स्वयं भगवान
+            नृसिंह की दिव्य शक्ति का "कवच" है।</p>
 
-        <p>यह कथा है उस दिव्य कवच की उत्पत्ति की, जिसे ब्रह्मा जी ने स्वयं प्रकट किया — और जो आज भी साधकों के लिए एक अटूट सुरक्षा कवच माना जाता है।</p>
+        <p>यह कथा है उस दिव्य कवच की उत्पत्ति की, जिसे ब्रह्मा जी ने स्वयं प्रकट किया — और जो आज भी साधकों के लिए एक
+            अटूट सुरक्षा कवच माना जाता है।</p>
 
         <div class="info-card">
             <div class="info-card-title">📜 शास्त्रीय प्रमाण</div>
@@ -531,26 +603,34 @@
 
         <h2>कहानी की शुरुआत: इंद्र का भय</h2>
 
-        <p>एक समय की बात है — देवताओं और असुरों के बीच भयंकर युद्ध चल रहा था। यह कोई साधारण युद्ध नहीं था। यह था <strong>धर्म और अधर्म का संघर्ष।</strong> देवताओं के राजा इंद्र, जो स्वर्ग के स्वामी माने जाते हैं, वो भी इस युद्ध में बार-बार हार का सामना कर रहे थे।</p>
+        <p>एक समय की बात है — देवताओं और असुरों के बीच भयंकर युद्ध चल रहा था। यह कोई साधारण युद्ध नहीं था। यह था
+            <strong>धर्म और अधर्म का संघर्ष।</strong> देवताओं के राजा इंद्र, जो स्वर्ग के स्वामी माने जाते हैं, वो भी इस
+            युद्ध में बार-बार हार का सामना कर रहे थे।
+        </p>
 
-        <p>असुरों की सेना दिन-ब-दिन अधिक शक्तिशाली होती जा रही थी। उनके पास तपस्या से प्राप्त वरदान थे, अद्भुत शक्तियाँ थीं और सबसे बड़ी बात — उनमें भय नहीं था।</p>
+        <p>असुरों की सेना दिन-ब-दिन अधिक शक्तिशाली होती जा रही थी। उनके पास तपस्या से प्राप्त वरदान थे, अद्भुत शक्तियाँ
+            थीं और सबसे बड़ी बात — उनमें भय नहीं था।</p>
 
         <div class="pull-quote">
             <p>"क्या मैं अपना स्वर्ग खो दूँगा?"</p>
             <cite>— इंद्र के मन में उठता भय</cite>
         </div>
 
-        <p>लेकिन दूसरी ओर इंद्र के मन में डर घर करने लगा था। रातों की नींद गायब हो चुकी थी। उनका आत्मविश्वास टूटने लगा था। देवताओं की सेना भी निराश हो चुकी थी। युद्ध केवल बाहरी नहीं था — अब यह एक <em>मानसिक युद्ध</em> भी बन चुका था।</p>
+        <p>लेकिन दूसरी ओर इंद्र के मन में डर घर करने लगा था। रातों की नींद गायब हो चुकी थी। उनका आत्मविश्वास टूटने लगा
+            था। देवताओं की सेना भी निराश हो चुकी थी। युद्ध केवल बाहरी नहीं था — अब यह एक <em>मानसिक युद्ध</em> भी बन
+            चुका था।</p>
 
         <div class="divider">✦ ✦ ✦</div>
 
         <h2>ऋषि विश्वरूप की शरण</h2>
 
-        <p>जब सभी उपाय विफल हो गए, तब इंद्र ने एक निर्णय लिया — <em>"अब मुझे किसी दिव्य शक्ति की शरण में जाना होगा।"</em> तभी उन्हें स्मरण हुआ एक महान तपस्वी का — <strong>ऋषि विश्वरूप!</strong></p>
+        <p>जब सभी उपाय विफल हो गए, तब इंद्र ने एक निर्णय लिया — <em>"अब मुझे किसी दिव्य शक्ति की शरण में जाना
+                होगा।"</em> तभी उन्हें स्मरण हुआ एक महान तपस्वी का — <strong>ऋषि विश्वरूप!</strong></p>
 
         <div class="highlight">
             <strong>ऋषि विश्वरूप कौन थे?</strong>
-            विश्वरूप कोई साधारण ऋषि नहीं थे। वे ब्रह्मज्ञानी थे, वेदों के ज्ञाता थे और दिव्य शक्तियों के साधक थे। उनका ज्ञान तीनों लोकों में प्रसिद्ध था।
+            विश्वरूप कोई साधारण ऋषि नहीं थे। वे ब्रह्मज्ञानी थे, वेदों के ज्ञाता थे और दिव्य शक्तियों के साधक थे। उनका
+            ज्ञान तीनों लोकों में प्रसिद्ध था।
         </div>
 
         <p>इंद्र तुरंत उनके पास पहुँचे। नम्रता से सिर झुकाकर बोले —</p>
@@ -569,9 +649,11 @@
 
         <h2>नारायण कवच: आध्यात्मिक सुरक्षा</h2>
 
-        <p>विश्वरूप बोले — <em>"मैं तुम्हें एक अत्यंत गुप्त और दिव्य स्तोत्र बताता हूँ —</em> <strong>नारायण कवच।</strong>"</p>
+        <p>विश्वरूप बोले — <em>"मैं तुम्हें एक अत्यंत गुप्त और दिव्य स्तोत्र बताता हूँ —</em> <strong>नारायण
+                कवच।</strong>"</p>
 
-        <p>यह केवल एक मंत्र नहीं था — यह था भगवान विष्णु की विभिन्न शक्तियों का आह्वान। इसमें साधक अपने शरीर के प्रत्येक अंग की रक्षा के लिए भगवान के अलग-अलग रूपों को स्मरण करता है।</p>
+        <p>यह केवल एक मंत्र नहीं था — यह था भगवान विष्णु की विभिन्न शक्तियों का आह्वान। इसमें साधक अपने शरीर के प्रत्येक
+            अंग की रक्षा के लिए भगवान के अलग-अलग रूपों को स्मरण करता है।</p>
 
         <div class="info-card">
             <div class="info-card-title">🛡️ नारायण कवच क्या रक्षा करता है?</div>
@@ -586,7 +668,8 @@
         </div>
 
         <div class="pull-quote">
-            <p>"जब तुम इसे श्रद्धा और विश्वास के साथ धारण करोगे, तो तुम्हारे चारों ओर एक अदृश्य सुरक्षा घेरा बन जाएगा।"</p>
+            <p>"जब तुम इसे श्रद्धा और विश्वास के साथ धारण करोगे, तो तुम्हारे चारों ओर एक अदृश्य सुरक्षा घेरा बन जाएगा।"
+            </p>
             <cite>— ऋषि विश्वरूप</cite>
         </div>
 
@@ -594,11 +677,13 @@
 
         <h2>🔥 नृसिंह का विशेष आह्वान</h2>
 
-        <p>नारायण कवच में अनेक दिव्य रूपों का स्मरण किया जाता है — परंतु उनमें सबसे विशेष स्थान है <strong>भगवान नृसिंह का।</strong></p>
+        <p>नारायण कवच में अनेक दिव्य रूपों का स्मरण किया जाता है — परंतु उनमें सबसे विशेष स्थान है <strong>भगवान नृसिंह
+                का।</strong></p>
 
         <h3>नृसिंह ही क्यों?</h3>
 
-        <p>क्योंकि नृसिंह अवतार स्वयं <em>भय के अंत का प्रतीक</em> है। वे आधे सिंह और आधे मनुष्य रूप में प्रकट हुए थे — अपने भक्त प्रह्लाद की रक्षा के लिए। उन्होंने यह सिद्ध कर दिया —</p>
+        <p>क्योंकि नृसिंह अवतार स्वयं <em>भय के अंत का प्रतीक</em> है। वे आधे सिंह और आधे मनुष्य रूप में प्रकट हुए थे —
+            अपने भक्त प्रह्लाद की रक्षा के लिए। उन्होंने यह सिद्ध कर दिया —</p>
 
         <div class="pull-quote">
             <p>"जब भक्त सच्चे मन से पुकारता है, तो भगवान किसी भी रूप में प्रकट हो सकते हैं।"</p>
@@ -613,7 +698,8 @@
             </div>
             <div class="shlok-meaning">
                 <strong>भावार्थ —</strong><br><br>
-                जो अत्यंत उग्र हैं… जो वीर हैं… जो महाविष्णु के स्वरूप हैं… जो सभी दिशाओं में प्रकाशमान हैं… जो भयंकर भी हैं और कल्याणकारी भी… जो <em>मृत्यु के भी मृत्यु</em> हैं… मैं उन भगवान नृसिंह को प्रणाम करता हूँ।
+                जो अत्यंत उग्र हैं… जो वीर हैं… जो महाविष्णु के स्वरूप हैं… जो सभी दिशाओं में प्रकाशमान हैं… जो भयंकर भी
+                हैं और कल्याणकारी भी… जो <em>मृत्यु के भी मृत्यु</em> हैं… मैं उन भगवान नृसिंह को प्रणाम करता हूँ।
             </div>
         </div>
 
@@ -621,7 +707,8 @@
 
         <h2>इंद्र का परिवर्तन</h2>
 
-        <p>जब इंद्र ने यह "कवच" धारण किया, तो एक चमत्कार हुआ — उनका भय धीरे-धीरे समाप्त होने लगा। मन में एक नई शक्ति का संचार हुआ।</p>
+        <p>जब इंद्र ने यह "कवच" धारण किया, तो एक चमत्कार हुआ — उनका भय धीरे-धीरे समाप्त होने लगा। मन में एक नई शक्ति का
+            संचार हुआ।</p>
 
         <div class="info-card">
             <div class="info-card-title">⚡ आंतरिक परिवर्तन</div>
@@ -637,9 +724,11 @@
 
         <h2>⚔️ युद्ध का परिणाम — देवताओं की विजय</h2>
 
-        <p>अब इंद्र फिर से युद्धभूमि में उतरे। लेकिन इस बार वे पहले जैसे नहीं थे। उनके भीतर दिव्य शक्ति थी। उनके चारों ओर अदृश्य सुरक्षा कवच था। असुरों ने पूरी ताकत से आक्रमण किया — लेकिन इस बार स्थिति बदल चुकी थी।</p>
+        <p>अब इंद्र फिर से युद्धभूमि में उतरे। लेकिन इस बार वे पहले जैसे नहीं थे। उनके भीतर दिव्य शक्ति थी। उनके चारों
+            ओर अदृश्य सुरक्षा कवच था। असुरों ने पूरी ताकत से आक्रमण किया — लेकिन इस बार स्थिति बदल चुकी थी।</p>
 
-        <p>इंद्र का हर प्रहार सटीक था। उनकी सेना में भी नया उत्साह था। धीरे-धीरे युद्ध का पलड़ा देवताओं की ओर झुकने लगा। और अंततः —</p>
+        <p>इंद्र का हर प्रहार सटीक था। उनकी सेना में भी नया उत्साह था। धीरे-धीरे युद्ध का पलड़ा देवताओं की ओर झुकने लगा।
+            और अंततः —</p>
 
         <div class="victory">
             <div class="victory-text">देवताओं ने असुरों पर विजय प्राप्त की। 🙏</div>
@@ -650,14 +739,17 @@
 
         <h2>आज के जीवन में नारायण कवच का महत्त्व</h2>
 
-        <p>यह केवल एक प्राचीन कथा नहीं है। आज के युग में भी जब मनुष्य के मन में भय होता है, जब जीवन की परिस्थितियाँ कठिन होती हैं — तब नारायण कवच का पाठ एक आंतरिक शक्ति प्रदान करता है।</p>
+        <p>यह केवल एक प्राचीन कथा नहीं है। आज के युग में भी जब मनुष्य के मन में भय होता है, जब जीवन की परिस्थितियाँ कठिन
+            होती हैं — तब नारायण कवच का पाठ एक आंतरिक शक्ति प्रदान करता है।</p>
 
         <div class="highlight">
             <strong>साधना की विधि</strong>
-            नारायण कवच का पाठ प्रतिदिन प्रातःकाल स्नान के पश्चात्, शुद्ध मन और श्रद्धा से करना चाहिए। यह न केवल बाहरी सुरक्षा देता है, बल्कि आंतरिक शांति और दृढ़ता भी प्रदान करता है।
+            नारायण कवच का पाठ प्रतिदिन प्रातःकाल स्नान के पश्चात्, शुद्ध मन और श्रद्धा से करना चाहिए। यह न केवल बाहरी
+            सुरक्षा देता है, बल्कि आंतरिक शांति और दृढ़ता भी प्रदान करता है।
         </div>
 
-        <p>इंद्र का भय समाप्त हुआ — क्योंकि उन्होंने अपने अहंकार को त्याग कर भगवान की शरण ली। यही इस कथा का सबसे गहरा संदेश है।</p>
+        <p>इंद्र का भय समाप्त हुआ — क्योंकि उन्होंने अपने अहंकार को त्याग कर भगवान की शरण ली। यही इस कथा का सबसे गहरा
+            संदेश है।</p>
 
         <div class="pull-quote">
             <p>"भक्ति वह ढाल है, जिसे धारण करने वाले को कोई शस्त्र नहीं छू सकता।"</p>
@@ -702,4 +794,5 @@
     </script>
 
 </body>
+
 </html>
