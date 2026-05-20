@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blogs — 108 Dharma Yatra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --saffron: #FE6901;
@@ -42,7 +49,10 @@
       --card-bg: rgba(255, 255, 255, 0.45);
     }
 
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
 
     body {
       background: var(--bg);
@@ -64,8 +74,13 @@
       overflow: hidden;
     }
 
-    [data-theme="dark"] .bg-canvas { background: #0a0806; }
-    [data-theme="light"] .bg-canvas { background: #fdf4e8; }
+    [data-theme="dark"] .bg-canvas {
+      background: #0a0806;
+    }
+
+    [data-theme="light"] .bg-canvas {
+      background: #fdf4e8;
+    }
 
     .orb {
       position: absolute;
@@ -76,25 +91,68 @@
       will-change: transform;
     }
 
-    .orb-1 { width: 550px; height: 550px; background: radial-gradient(circle, rgba(254,105,1,0.55), transparent 70%); top: -10%; right: -5%; animation-duration: 22s; }
-    .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,238,0,0.25), transparent 70%); bottom: 20%; left: -5%; animation-duration: 28s; animation-delay: -10s; }
-    .orb-3 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(254,105,1,0.3), transparent 70%); top: 50%; right: 20%; animation-duration: 18s; animation-delay: -5s; }
+    .orb-1 {
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(254, 105, 1, 0.55), transparent 70%);
+      top: -10%;
+      right: -5%;
+      animation-duration: 22s;
+    }
 
-    [data-theme="light"] .orb { opacity: 0.25; }
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 238, 0, 0.25), transparent 70%);
+      bottom: 20%;
+      left: -5%;
+      animation-duration: 28s;
+      animation-delay: -10s;
+    }
+
+    .orb-3 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(254, 105, 1, 0.3), transparent 70%);
+      top: 50%;
+      right: 20%;
+      animation-duration: 18s;
+      animation-delay: -5s;
+    }
+
+    [data-theme="light"] .orb {
+      opacity: 0.25;
+    }
 
     @keyframes drift {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(30px, -25px) scale(1.04); }
-      100% { transform: translate(-20px, 30px) scale(0.97); }
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, -25px) scale(1.04);
+      }
+
+      100% {
+        transform: translate(-20px, 30px) scale(0.97);
+      }
     }
 
     /* All content above bg */
-    nav, main, footer, #page-loader, #progress-bar { position: relative; z-index: 1; }
+    nav,
+    main,
+    footer,
+    #page-loader,
+    #progress-bar {
+      position: relative;
+      z-index: 1;
+    }
 
     /* ── PROGRESS BAR ── */
     #progress-bar {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       height: 2px;
       width: 0%;
       background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
@@ -104,8 +162,13 @@
     }
 
     @keyframes shimmer {
-      0%   { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 200% 50%;
+      }
     }
 
     /* ── NAV ── */
@@ -132,9 +195,17 @@
       text-decoration: none;
     }
 
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
 
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
     .nav-links a {
       font-size: 0.75rem;
@@ -146,10 +217,13 @@
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: var(--saffron); }
+    .nav-links a.active {
+      color: var(--saffron);
+    }
 
     .theme-toggle {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
@@ -165,7 +239,7 @@
     .theme-toggle:hover {
       border-color: var(--saffron);
       transform: rotate(15deg) scale(1.08);
-      background: rgba(254,105,1,0.12);
+      background: rgba(254, 105, 1, 0.12);
     }
 
     /* ── PAGE HEADER ── */
@@ -182,8 +256,8 @@
       margin-bottom: 1rem;
       display: inline-block;
       padding: 0.4rem 1.2rem;
-      background: rgba(254,105,1,0.08);
-      border: 1px solid rgba(254,105,1,0.2);
+      background: rgba(254, 105, 1, 0.08);
+      border: 1px solid rgba(254, 105, 1, 0.2);
       border-radius: 100px;
     }
 
@@ -204,7 +278,11 @@
     }
 
     /* ── MAIN ── */
-    main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     /* ── FEATURED POST ── */
     .featured-post {
@@ -226,7 +304,7 @@
     }
 
     .featured-img {
-      background: linear-gradient(135deg, rgba(254,105,1,0.25) 0%, rgba(10,8,6,0.9) 100%);
+      background: linear-gradient(135deg, rgba(254, 105, 1, 0.25) 0%, rgba(10, 8, 6, 0.9) 100%);
       min-height: 380px;
       display: flex;
       align-items: flex-end;
@@ -239,7 +317,7 @@
       content: 'ॐ';
       position: absolute;
       font-size: 18rem;
-      color: rgba(254,105,1,0.08);
+      color: rgba(254, 105, 1, 0.08);
       top: -3rem;
       left: -2rem;
       font-family: 'Cinzel', serif;
@@ -302,8 +380,19 @@
       color: var(--muted);
     }
 
-    .post-meta span { display: flex; align-items: center; gap: 0.3rem; }
-    .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); opacity: 0.5; }
+    .post-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .meta-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--muted);
+      opacity: 0.5;
+    }
 
     .read-more {
       display: inline-flex;
@@ -318,7 +407,9 @@
       transition: gap 0.2s;
     }
 
-    .read-more:hover { gap: 0.8rem; }
+    .read-more:hover {
+      gap: 0.8rem;
+    }
 
     /* ── SECTION TITLE ── */
     .section-title {
@@ -372,7 +463,7 @@
 
     .card-img {
       height: 180px;
-      background: linear-gradient(135deg, rgba(254,105,1,0.2), rgba(10,8,6,0.8));
+      background: linear-gradient(135deg, rgba(254, 105, 1, 0.2), rgba(10, 8, 6, 0.8));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -382,10 +473,26 @@
     }
 
     .card-om {
-      font-size: 6rem;
-      color: rgba(254,105,1,0.15);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      image-rendering: optimizeSpeed;
       font-family: 'Cinzel', serif;
       user-select: none;
+    }
+
+    .card-img::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 120px;
+
+      background: linear-gradient(to bottom,
+          rgba(185, 16, 16, 0) 0%,
+          rgb(20, 5, 0) 100%); 
+
     }
 
     .card-tag {
@@ -395,15 +502,17 @@
       font-size: 0.58rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      background: rgba(254,105,1,0.15);
-      border: 1px solid rgba(254,105,1,0.3);
+      background: rgba(254, 105, 1, 0.15);
+      border: 1px solid rgba(254, 105, 1, 0.3);
       color: var(--saffron);
       padding: 0.25rem 0.7rem;
       border-radius: 100px;
       backdrop-filter: blur(8px);
     }
 
-    .card-body { padding: 1.5rem; }
+    .card-body {
+      padding: 1.5rem;
+    }
 
     .card-body h3 {
       font-family: 'Cinzel', serif;
@@ -437,7 +546,9 @@
       border-top: 1px solid var(--glass-border);
     }
 
-    .card-read { color: var(--saffron); }
+    .card-read {
+      color: var(--saffron);
+    }
 
     /* ── LOAD MORE ── */
     .load-more-wrap {
@@ -463,7 +574,7 @@
     .btn-outline-saffron:hover {
       border-color: var(--saffron);
       color: var(--saffron);
-      background: rgba(254,105,1,0.08);
+      background: rgba(254, 105, 1, 0.08);
     }
 
     /* ── FOOTER ── */
@@ -510,18 +621,30 @@
       background: var(--bg);
     }
 
-    #page-loader.hidden { opacity: 0; pointer-events: none; }
+    #page-loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
 
     .loader-om {
       font-size: 3rem;
       color: var(--saffron);
       animation: pulse-om 1.6s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(254,105,1,0.5));
+      filter: drop-shadow(0 0 20px rgba(254, 105, 1, 0.5));
     }
 
     @keyframes pulse-om {
-      0%, 100% { opacity: 0.3; transform: scale(0.9); }
-      50%       { opacity: 1;   transform: scale(1.12); }
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scale(0.9);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
     }
 
     .loader-text {
@@ -538,39 +661,98 @@
       transform: translateY(28px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    .delay-1 { transition-delay: 0.1s; }
-    .delay-2 { transition-delay: 0.2s; }
-    .delay-3 { transition-delay: 0.3s; }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.3s;
+    }
 
     /* ── HERO ENTRY ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .page-eyebrow { animation: fadeUp 0.7s ease both; }
-    .page-header h1 { animation: fadeUp 0.7s 0.1s ease both; }
-    .page-header p  { animation: fadeUp 0.7s 0.2s ease both; }
+    .page-eyebrow {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .page-header h1 {
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .page-header p {
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
-      nav { flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
-      .nav-right { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-      main { padding: 1rem; }
-      .featured-post { grid-template-columns: 1fr; }
-      .featured-img { min-height: 220px; }
-      .featured-content { padding: 2rem 1.5rem; }
-      .blog-grid { grid-template-columns: 1fr; }
-      footer { margin: 0 1rem 1rem; flex-direction: column; text-align: center; }
+      nav {
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 0.8rem 1rem;
+      }
+
+      .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .featured-post {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-img {
+        min-height: 220px;
+      }
+
+      .featured-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        margin: 0 1rem 1rem;
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- BG -->
@@ -606,7 +788,7 @@
   <div class="page-header">
     <div class="page-eyebrow">|| Om Namoh Bhagvate narsimhay namah ||</div>
     <h1>Spiritual Blogs</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sequi inventore rerum sunt corporis?</p>
+    <p>Temple Mysteries ✦ Divine Narasimha Stories ✦ Vedic Science And Beyond.</p>
   </div>
 
   <main>
@@ -621,7 +803,8 @@
       <div class="featured-content">
         <div class="featured-label">Featured · 8 min read</div>
         <h2>Featured Post</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat consequuntur iste voluptates dolor, id architecto.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat consequuntur iste voluptates
+          dolor, id architecto.</p>
         <div class="post-meta">
           <span>12 April 2026</span>
           <span class="meta-dot"></span>
@@ -640,7 +823,7 @@
 
       <a href="./नारायण कवच भगवान नृसिंह की दिव्य सुरक्षा शक्ति/" class="blog-card reveal delay-1">
         <div class="card-img">
-          <span class="card-om">ॐ</span>
+          <img src="/Images/IMG_0578.PNG" alt="Om" class="card-om">
           <span class="card-tag">Karma</span>
         </div>
         <div class="card-body">
@@ -649,21 +832,6 @@
           <div class="card-meta">
             <span>17 May 2026</span>
             <span class="card-read">5 min →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="blog-post.html" class="blog-card reveal delay-2">
-        <div class="card-img">
-          <span class="card-om">🪔</span>
-          <span class="card-tag">Sadhna</span>
-        </div>
-        <div class="card-body">
-          <h3>BLOG 02</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis non debitis ipsam ullam odit perspiciatis.</p>
-          <div class="card-meta">
-            <span>12 April 2026</span>
-            <span class="card-read">6 min →</span>
           </div>
         </div>
       </a>
@@ -720,4 +888,5 @@
   </script>
 
 </body>
+
 </html>
