@@ -1,0 +1,9 @@
+# 1. Sabhi search engines (Google, Bing, etc.) ko allow karo
+User-agent: *
+Allow: /
+
+# 2. Success page ko Google search se chhipao (Security ke liye)
+Disallow: /success.html
+
+# 3. Apne sitemap ka rasta batao taaki Google jaldi crawl kare
+Sitemap: https://www.108dharmayatra.com/sitemap.xml
