@@ -406,6 +406,14 @@
             background: var(--surface-glass);
         }
 
+        .about-block-image {
+            height: auto;
+            width: 100%;
+            border-radius: 14px;
+            margin-top: 2rem;
+            border: 1px solid var(--glass-border);
+        }
+
         .section-label {
             font-size: 0.65rem;
             letter-spacing: 0.3em;
@@ -434,15 +442,18 @@
             margin-bottom: 0;
         }
 
-        .blockquote {
-            font-family: 'EB Garamond', serif;
-            font-size: 1.35rem;
-            font-style: italic;
-            line-height: 1.7;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            padding-left: 1.2rem;
-            border-left: 2px solid var(--saffron);
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-block-image {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--saffron);
         }
 
         .quote-source {
@@ -581,7 +592,7 @@
 
     <!-- HERO -->
     <div class="about-hero">
-        <div class="eyebrow">|| Om namo bhagavate narsimhay namah ||</div>
+        <div class="eyebrow">|| Om namo bhagavate narsimhay ||</div>
         <h1>About<br>108 Dharma Yatra</h1>
         <div class="divider"></div>
         <p>Temple Mysteries, Vedic Wisdom & Divine Narasimha Stories.</p>
@@ -592,6 +603,10 @@
         <div class="about-card-inner">
 
             <div class="about-text-block">
+                <div class="about-image">
+                    <img class="about-block-image" src="/Images/IMG_20240308_064336.jpg.jpeg" alt="hello">
+                </div>
+
                 <div class="section-label">Who We Are</div>
                 <h2>Dandwat Pranam</h2>
                 <p>I’m Kausik, 26 years old and the founder of the 108 Dharma Yatra. My spiritual journey began about
@@ -602,15 +617,11 @@
                     inspired me to share this knowledge with others. That’s why I started the 108 Dharma Yatra channel
                     and this website—to spread awareness about Lord Narasimha Dev and to highlight the importance of
                     temples in our lives.</p>
-                <p>My goal is simple: to share what I’ve learned and support others on their spiritual journey.</p>
-            </div>
+                <p><strong>My goal is simple: to share what I’ve learned and support others on their spiritual
+                        journey.</strong></p>
 
-            <div class="about-quote-block">
-                <div class="section-label">My goal</div>
-                <div class="blockquote">
-                    "To share what I’ve learned and support others on their spiritual journey."
-                </div>
-                <div class="quote-source">— Jai Narsimha</div>
+
+
             </div>
 
         </div>
