@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: 108DharmaYatra/108dharmayatra
+  branch: main
+
+media_folder: "Images/uploads"
+public_folder: "/Images/uploads"
+
+collections:
+  - name: "blogs"
+    label: "Blogs"
+    folder: "Blogs/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title (Hindi)", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Read Time", name: "readtime", widget: "string", default: "8 मिनट पठन" }
+      - { label: "Source (e.g. श्रीमद्भागवत)", name: "source", widget: "string", required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["Dharma"]
+      - { label: "Meta Description (SEO)", name: "description", widget: "text" }
+      - { label: "Keywords (SEO)", name: "keywords", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
