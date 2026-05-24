@@ -303,17 +303,35 @@
       box-shadow: 0 24px 80px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
     }
 
-    .featured-img {
-      background: linear-gradient(135deg, rgba(254, 105, 1, 0.25) 0%, rgba(10, 8, 6, 0.9) 100%);
-      min-height: 380px;
-      display: flex;
-      align-items: flex-end;
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
+    .featured-img{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
 
-    .featured-img::before {
+.featured-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.featured-img::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 120px;
+
+      background: linear-gradient(to bottom,
+          rgba(185, 16, 16, 0) 0%,
+          rgb(20, 5, 0) 100%);
+
+    }
+    /* .featured-img::before {
       content: 'ॐ';
       position: absolute;
       font-size: 18rem;
@@ -322,7 +340,7 @@
       left: -2rem;
       font-family: 'Cinzel', serif;
       pointer-events: none;
-    }
+    } */
 
     .featured-tag {
       display: inline-block;
@@ -808,6 +826,7 @@
 
     <a href="./वह शिष्य जिसे गंगा ने भी प्रणाम किया/" class="featured-post reveal" style="text-decoration:none; color:inherit;">
       <div class="featured-img">
+        <img src="/Images/padmapad_img_Cover.webp" alt="Om" class="featured-om">
         <span class="featured-tag">Stories</span>
       </div>
       <div class="featured-content">
@@ -833,7 +852,7 @@
 
       <a href="./नारायण कवच भगवान नृसिंह की दिव्य सुरक्षा शक्ति/" class="blog-card reveal delay-1">
         <div class="card-img">
-          <img src="/Images/IMG_0578.PNG" alt="Om" class="card-om">
+          <img src="/Images/LoardNarimhaKavachBlog_cove.webp" alt="Om" class="card-om">
           <span class="card-tag">divine narsimha stories</span>
         </div>
         <div class="card-body">
@@ -848,7 +867,7 @@
 
       <a href="./वह शिष्य जिसे गंगा ने भी प्रणाम किया/" class="blog-card reveal delay-1">
         <div class="card-img">
-          <img src="" alt="Om" class="card-om">
+          <img src="/Images/padmapad_img_Cover.webp" alt="Om" class="card-om">
           <span class="card-tag">divine narsimha stories</span>
         </div>
         <div class="card-body">
@@ -864,7 +883,7 @@
 
       <a href="./अहोबिलम का दिव्य रहस्य/" class="blog-card reveal delay-1">
         <div class="card-img">
-          <img src="/Images/Garud dev And 9 narsimha dev avtaras.PNG" alt="Om" class="card-om">
+          <img src="/Images/GarudDevAnd 9 avataras of Loard.webp" alt="Om" class="card-om">
           <span class="card-tag">mystery temple</span>
         </div>
         <div class="card-body">
