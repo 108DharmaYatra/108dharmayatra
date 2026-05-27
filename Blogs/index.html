@@ -65,7 +65,6 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    /* ── BACKGROUND ORBS ── */
     .bg-canvas {
       position: fixed;
       inset: 0;
@@ -74,13 +73,8 @@
       overflow: hidden;
     }
 
-    [data-theme="dark"] .bg-canvas {
-      background: #0a0806;
-    }
-
-    [data-theme="light"] .bg-canvas {
-      background: #fdf4e8;
-    }
+    [data-theme="dark"] .bg-canvas { background: #0a0806; }
+    [data-theme="light"] .bg-canvas { background: #fdf4e8; }
 
     .orb {
       position: absolute;
@@ -92,69 +86,40 @@
     }
 
     .orb-1 {
-      width: 550px;
-      height: 550px;
+      width: 550px; height: 550px;
       background: radial-gradient(circle, rgba(254, 105, 1, 0.55), transparent 70%);
-      top: -10%;
-      right: -5%;
+      top: -10%; right: -5%;
       animation-duration: 22s;
     }
 
     .orb-2 {
-      width: 400px;
-      height: 400px;
+      width: 400px; height: 400px;
       background: radial-gradient(circle, rgba(255, 238, 0, 0.25), transparent 70%);
-      bottom: 20%;
-      left: -5%;
+      bottom: 20%; left: -5%;
       animation-duration: 28s;
       animation-delay: -10s;
     }
 
     .orb-3 {
-      width: 300px;
-      height: 300px;
+      width: 300px; height: 300px;
       background: radial-gradient(circle, rgba(254, 105, 1, 0.3), transparent 70%);
-      top: 50%;
-      right: 20%;
+      top: 50%; right: 20%;
       animation-duration: 18s;
       animation-delay: -5s;
     }
 
-    [data-theme="light"] .orb {
-      opacity: 0.25;
-    }
+    [data-theme="light"] .orb { opacity: 0.25; }
 
     @keyframes drift {
-      0% {
-        transform: translate(0, 0) scale(1);
-      }
-
-      50% {
-        transform: translate(30px, -25px) scale(1.04);
-      }
-
-      100% {
-        transform: translate(-20px, 30px) scale(0.97);
-      }
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(30px, -25px) scale(1.04); }
+      100% { transform: translate(-20px, 30px) scale(0.97); }
     }
 
-    /* All content above bg */
-    nav,
-    main,
-    footer,
-    #page-loader,
-    #progress-bar {
-      position: relative;
-      z-index: 1;
-    }
+    nav, main, footer, #page-loader, #progress-bar { position: relative; z-index: 1; }
 
-    /* ── PROGRESS BAR ── */
     #progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 2px;
-      width: 0%;
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
       background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
       background-size: 200% 100%;
       animation: shimmer 2s linear infinite;
@@ -162,22 +127,13 @@
     }
 
     @keyframes shimmer {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      100% {
-        background-position: 200% 50%;
-      }
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
 
-    /* ── NAV ── */
     nav {
-      width: 100%;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
       background: var(--nav-glass);
       backdrop-filter: blur(20px) saturate(160%);
       -webkit-backdrop-filter: blur(20px) saturate(160%);
@@ -187,53 +143,27 @@
     }
 
     .logo {
-      font-family: 'Cinzel', serif;
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      color: var(--text);
-      text-decoration: none;
+      font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 400;
+      letter-spacing: 0.05em; color: var(--text); text-decoration: none;
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
 
     .nav-links a {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
+      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--saffron);
-    }
+    .nav-links a:hover, .nav-links a.active { color: var(--saffron); }
 
     .theme-toggle {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(10px);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      transition: all 0.3s ease;
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: all 0.3s ease;
     }
 
     .theme-toggle:hover {
@@ -242,19 +172,11 @@
       background: rgba(254, 105, 1, 0.12);
     }
 
-    /* ── PAGE HEADER ── */
-    .page-header {
-      text-align: center;
-      padding: 4rem 2rem 2rem;
-    }
+    .page-header { text-align: center; padding: 4rem 2rem 2rem; }
 
     .page-eyebrow {
-      font-size: 0.65rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--saffron);
-      margin-bottom: 1rem;
-      display: inline-block;
+      font-size: 0.65rem; letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--saffron); margin-bottom: 1rem; display: inline-block;
       padding: 0.4rem 1.2rem;
       background: rgba(254, 105, 1, 0.08);
       border: 1px solid rgba(254, 105, 1, 0.2);
@@ -264,38 +186,99 @@
     .page-header h1 {
       font-family: 'Cinzel', serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8rem;
+      font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.8rem;
     }
 
     .page-header p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 420px;
-      margin: 0 auto;
-      line-height: 1.8;
+      font-size: 0.95rem; color: var(--muted);
+      max-width: 420px; margin: 0 auto; line-height: 1.8;
     }
 
-    /* ── MAIN ── */
-    main {
-      padding: 2rem;
+    /* ── TAG FILTER BAR ── */
+    .tag-filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0 2rem 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* ── FEATURED POST ── */
+    .tag-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1.1rem;
+      border-radius: 100px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass-bg);
+      color: var(--muted);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s ease;
+    }
+
+    .tag-btn:hover {
+      border-color: var(--saffron);
+      color: var(--saffron);
+      background: rgba(254, 105, 1, 0.08);
+    }
+
+    .tag-btn.active {
+      border-color: var(--saffron);
+      background: rgba(254, 105, 1, 0.15);
+      color: var(--saffron);
+      box-shadow: 0 0 14px rgba(254, 105, 1, 0.18);
+    }
+
+    .tag-btn .tag-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--saffron);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .tag-btn.active .tag-dot { opacity: 1; }
+
+    .tag-count {
+      font-size: 0.6rem;
+      opacity: 0.6;
+      letter-spacing: 0;
+    }
+
+    /* ── NO RESULTS ── */
+    .no-results {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      display: none;
+    }
+
+    .no-results .no-results-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      opacity: 0.4;
+    }
+
+    main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+
     .featured-post {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 0;
-      border-radius: 20px;
-      overflow: hidden;
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 0; border-radius: 20px; overflow: hidden;
       border: 1px solid var(--glass-border);
       box-shadow: 0 16px 64px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
-      margin-bottom: 2rem;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 2rem; cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     }
 
     .featured-post:hover {
@@ -303,175 +286,98 @@
       box-shadow: 0 24px 80px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
     }
 
+    .featured-post.hidden {
+      display: none;
+    }
+
     .featured-img {
-      height: 100%;
-      overflow: hidden;
-      position: relative;
+      height: 100%; overflow: hidden; position: relative;
       border-bottom: 1px solid var(--glass-border);
     }
 
-    .featured-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
+    .featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .featured-img::after {
       content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 120px;
-
-      background: linear-gradient(to bottom,
-          rgba(185, 16, 16, 0) 0%,
-          rgb(20, 5, 0) 100%);
-
+      position: absolute; left: 0; bottom: 0; width: 100%; height: 120px;
+      background: linear-gradient(to bottom, rgba(185,16,16,0) 0%, rgb(20,5,0) 100%);
     }
 
-    /* .featured-img::before {
-      content: 'ॐ';
-      position: absolute;
-      font-size: 18rem;
-      color: rgba(254, 105, 1, 0.08);
-      top: -3rem;
-      left: -2rem;
-      font-family: 'Cinzel', serif;
-      pointer-events: none;
-    } */
-
     .featured-tag {
-      display: inline-block;
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      background: var(--saffron);
-      color: #fff;
-      padding: 0.3rem 0.8rem;
-      border-radius: 100px;
-      font-weight: 500;
+      display: inline-block; font-size: 0.6rem; letter-spacing: 0.25em;
+      text-transform: uppercase; background: var(--saffron); color: #fff;
+      padding: 0.3rem 0.8rem; border-radius: 100px; font-weight: 500;
     }
 
     .featured-content {
-      padding: 3rem;
-      background: var(--glass-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 3rem; background: var(--glass-bg);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      display: flex; flex-direction: column; justify-content: center;
     }
 
     .featured-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--saffron);
-      margin-bottom: 1rem;
+      font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--saffron); margin-bottom: 1rem;
     }
 
     .featured-content h2 {
       font-family: 'Cinzel', serif;
       font-size: clamp(1.3rem, 2.5vw, 1.9rem);
-      font-weight: 500;
-      line-height: 1.35;
-      letter-spacing: 0.02em;
-      margin-bottom: 1rem;
+      font-weight: 500; line-height: 1.35; letter-spacing: 0.02em; margin-bottom: 1rem;
     }
 
     .featured-content p {
-      font-size: 1.3rem;
-      color: var(--text);
-      line-height: 1.85;
-      margin-bottom: 1.8rem;
+      font-size: 1.3rem; color: var(--text);
+      line-height: 1.85; margin-bottom: 1.8rem;
     }
 
     .post-meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
     }
 
-    .post-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
+    .post-meta span { display: flex; align-items: center; gap: 0.3rem; }
 
     .meta-dot {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--muted);
-      opacity: 0.5;
+      width: 3px; height: 3px; border-radius: 50%;
+      background: var(--muted); opacity: 0.5;
     }
 
     .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--saffron);
-      text-decoration: none;
-      margin-top: 1.5rem;
-      transition: gap 0.2s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--saffron); text-decoration: none;
+      margin-top: 1.5rem; transition: gap 0.2s;
     }
 
-    .read-more:hover {
-      gap: 0.8rem;
-    }
+    .read-more:hover { gap: 0.8rem; }
 
-    /* ── SECTION TITLE ── */
     .section-title {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--saffron);
+      font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--saffron);
       margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      display: flex; align-items: center; gap: 1rem;
     }
 
     .section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--glass-border);
+      content: ''; flex: 1; height: 1px; background: var(--glass-border);
     }
 
-    /* ── BLOG GRID ── */
     .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-bottom: 2rem;
     }
 
     .blog-card {
-      border-radius: 16px;
-      overflow: hidden;
+      border-radius: 16px; overflow: hidden;
       border: 1px solid var(--glass-border);
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
+      background: var(--card-bg); backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 8px 32px var(--shadow-color), inset 0 1px 0 var(--glass-shine);
       cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s, opacity 0.35s ease;
+      text-decoration: none; color: inherit; display: block;
     }
 
     .blog-card:hover {
@@ -480,294 +386,151 @@
       box-shadow: 0 16px 48px var(--shadow-color);
     }
 
+    /* Hidden filtered card */
+    .blog-card.hidden {
+      display: none;
+    }
+
     .card-img {
       height: 180px;
-      background: linear-gradient(135deg, rgba(254, 105, 1, 0.2), rgba(10, 8, 6, 0.8));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, rgba(254,105,1,0.2), rgba(10,8,6,0.8));
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
       border-bottom: 1px solid var(--glass-border);
     }
 
     .card-om {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover;
       image-rendering: optimizeSpeed;
-      font-family: 'Cinzel', serif;
-      user-select: none;
+      font-family: 'Cinzel', serif; user-select: none;
     }
 
     .card-img::after {
       content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 120px;
-
-      background: linear-gradient(to bottom,
-          rgba(185, 16, 16, 0) 0%,
-          rgb(20, 5, 0) 100%);
-
+      position: absolute; left: 0; bottom: 0; width: 100%; height: 120px;
+      background: linear-gradient(to bottom, rgba(185,16,16,0) 0%, rgb(20,5,0) 100%);
     }
 
     .card-tag {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      font-size: 0.58rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background: rgba(254, 105, 1, 0.15);
-      border: 1px solid rgba(254, 105, 1, 0.3);
-      color: var(--text);
-      padding: 0.25rem 0.7rem;
-      border-radius: 100px;
+      position: absolute; top: 1rem; left: 1rem;
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      background: rgba(254,105,1,0.15); border: 1px solid rgba(254,105,1,0.3);
+      color: var(--text); padding: 0.25rem 0.7rem; border-radius: 100px;
       backdrop-filter: blur(8px);
     }
 
-    .card-body {
-      padding: 1.5rem;
-    }
+    .card-body { padding: 1.5rem; }
 
     .card-body h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 0.95rem;
-      font-weight: 500;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.75rem;
+      font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 500;
+      line-height: 1.5; letter-spacing: 0.02em; margin-bottom: 0.75rem;
     }
 
     .card-body p {
-      font-size: 0.95rem;
-      color: var(--text);
-      line-height: 1.75;
-      margin-bottom: 1.2rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 0.95rem; color: var(--text); line-height: 1.75; margin-bottom: 1.2rem;
+      display: -webkit-box; -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; overflow: hidden;
     }
 
     .card-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); padding-top: 1rem;
       border-top: 1px solid var(--glass-border);
     }
 
-    .card-read {
-      color: var(--saffron);
-    }
+    .card-read { color: var(--saffron); }
 
-    /* ── LOAD MORE ── */
-    .load-more-wrap {
-      text-align: center;
-      padding: 1rem 0 3rem;
-    }
+    .load-more-wrap { text-align: center; padding: 1rem 0 3rem; }
 
     .btn-outline-saffron {
-      display: inline-block;
-      padding: 0.8rem 2.5rem;
-      border: 1px solid var(--glass-border);
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 100px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(10px);
+      display: inline-block; padding: 0.8rem 2.5rem;
+      border: 1px solid var(--glass-border); color: var(--muted);
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      text-decoration: none; border-radius: 100px;
+      background: var(--glass-bg); backdrop-filter: blur(10px);
       transition: all 0.3s;
     }
 
     .btn-outline-saffron:hover {
-      border-color: var(--saffron);
-      color: var(--saffron);
-      background: rgba(254, 105, 1, 0.08);
+      border-color: var(--saffron); color: var(--saffron);
+      background: rgba(254,105,1,0.08);
     }
 
-    /* ── FOOTER ── */
     footer {
       padding: 1.8rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 0 2rem 2rem;
-      border-radius: 14px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem; margin: 0 2rem 2rem;
+      border-radius: 14px; background: var(--glass-bg);
+      backdrop-filter: blur(20px); border: 1px solid var(--glass-border);
     }
 
     .footer-logo {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 0.82rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-      text-decoration: none;
+      font-family: 'Cinzel Decorative', serif; font-size: 0.82rem;
+      color: var(--muted); letter-spacing: 0.05em; text-decoration: none;
     }
 
-    .footer-copy {
-      font-size: 0.7rem;
-      color: var(--muted);
-      opacity: 0.45;
-      letter-spacing: 0.1em;
-    }
+    .footer-copy { font-size: 0.7rem; color: var(--muted); opacity: 0.45; letter-spacing: 0.1em; }
 
-    /* ── PAGE LOADER ── */
     #page-loader {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1.2rem;
-      transition: opacity 0.6s ease;
-      background: var(--bg);
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1.2rem;
+      transition: opacity 0.6s ease; background: var(--bg);
     }
 
-    #page-loader.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
+    #page-loader.hidden { opacity: 0; pointer-events: none; }
 
     .loader-om {
-      font-size: 3rem;
-      color: var(--saffron);
+      font-size: 3rem; color: var(--saffron);
       animation: pulse-om 1.6s ease-in-out infinite;
-      filter: drop-shadow(0 0 20px rgba(254, 105, 1, 0.5));
+      filter: drop-shadow(0 0 20px rgba(254,105,1,0.5));
     }
 
     @keyframes pulse-om {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: scale(0.9);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.12);
-      }
+      0%, 100% { opacity: 0.3; transform: scale(0.9); }
+      50%       { opacity: 1;   transform: scale(1.12); }
     }
 
     .loader-text {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--muted);
+      font-family: 'Jost', sans-serif; font-size: 0.72rem;
+      letter-spacing: 0.35em; text-transform: uppercase; color: var(--muted);
     }
 
-    /* ── SCROLL REVEAL ── */
     .reveal {
-      opacity: 0;
-      transform: translateY(28px);
+      opacity: 0; transform: translateY(28px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    .delay-1 {
-      transition-delay: 0.1s;
-    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
 
-    .delay-2 {
-      transition-delay: 0.2s;
-    }
-
-    .delay-3 {
-      transition-delay: 0.3s;
-    }
-
-    /* ── HERO ENTRY ── */
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    .page-eyebrow {
-      animation: fadeUp 0.7s ease both;
-    }
+    .page-eyebrow { animation: fadeUp 0.7s ease both; }
+    .page-header h1 { animation: fadeUp 0.7s 0.1s ease both; }
+    .page-header p { animation: fadeUp 0.7s 0.2s ease both; }
 
-    .page-header h1 {
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-
-    .page-header p {
-      animation: fadeUp 0.7s 0.2s ease both;
-    }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 0.6rem;
-        padding: 0.8rem 1rem;
-      }
-
-      .nav-right {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      main {
-        padding: 1rem;
-      }
-
-      .featured-post {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-img {
-        min-height: 220px;
-      }
-
-      .featured-content {
-        padding: 2rem 1.5rem;
-      }
-
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-
-      footer {
-        margin: 0 1rem 1rem;
-        flex-direction: column;
-        text-align: center;
-      }
+      nav { flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
+      .nav-right { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      main { padding: 1rem; }
+      .featured-post { grid-template-columns: 1fr; }
+      .featured-img { min-height: 220px; }
+      .featured-content { padding: 2rem 1.5rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+      footer { margin: 0 1rem 1rem; flex-direction: column; text-align: center; }
+      .tag-filter-bar { padding: 0 1rem 1.5rem; }
     }
   </style>
 </head>
@@ -778,29 +541,24 @@
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-5Q4T94P5L8');
 </script>
 
 <body>
 
-  <!-- BG -->
   <div class="bg-canvas">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
   </div>
 
-  <!-- LOADER -->
   <div id="page-loader">
     <div class="loader-om">ॐ</div>
     <div class="loader-text">Dharma Yatra</div>
   </div>
 
-  <!-- PROGRESS -->
   <div id="progress-bar"></div>
 
-  <!-- NAV -->
   <nav>
     <a href="../index.html" class="logo">|| 108 Dharma Yatra ||</a>
     <div class="nav-right">
@@ -813,20 +571,50 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
   <div class="page-header">
     <div class="page-eyebrow">|| Om Namoh Bhagvate narsimhay ||</div>
     <h1>Spiritual Blogs</h1>
     <p>Temple Mysteries ✦ Divine Narasimha Stories ✦ Vedic Science And Beyond.</p>
   </div>
 
+  <!-- TAG FILTER BAR -->
+  <div class="tag-filter-bar">
+    <button class="tag-btn active" data-filter="all">
+      <span class="tag-dot"></span>
+      सभी Posts
+    </button>
+    <button class="tag-btn" data-filter="narsimha stories">
+      <span class="tag-dot"></span>
+      Narsimha Stories
+      <span class="tag-count" id="count-narsimha"></span>
+    </button>
+    <button class="tag-btn" data-filter="mystery temple">
+      <span class="tag-dot"></span>
+      Mystery Temple
+      <span class="tag-count" id="count-mystery"></span>
+    </button>
+    <button class="tag-btn" data-filter="vedic science">
+      <span class="tag-dot"></span>
+      Vedic Science
+      <span class="tag-count" id="count-vedic"></span>
+    </button>
+    <button class="tag-btn" data-filter="stories">
+      <span class="tag-dot"></span>
+      Stories
+      <span class="tag-count" id="count-stories"></span>
+    </button>
+  </div>
+
   <main>
 
-    <!-- FEATURED POST -->
-    <div class="section-title">Featured Post</div>
+    <div class="section-title" id="featured-label">Featured Post</div>
 
-    <a href="./wah-shishya-jise-ganga-ne-bhi-pranam-kiya/" class="featured-post reveal"
-      style="text-decoration:none; color:inherit;">
+    <!-- FEATURED POST — tag: stories -->
+    <a href="./wah-shishya-jise-ganga-ne-bhi-pranam-kiya/"
+       class="featured-post reveal"
+       data-tag="stories"
+       data-date="2026-05-24"
+       style="text-decoration:none; color:inherit;">
       <div class="featured-img">
         <img src="/Images/padmapad_img_Cover.webp" alt="Om" class="featured-om">
         <span class="featured-tag">Stories</span>
@@ -847,12 +635,15 @@
       </div>
     </a>
 
-    <!-- BLOG GRID -->
-    <div class="section-title" style="margin-top: 2rem;">Recent Posts</div>
+    <div class="section-title" id="recent-label" style="margin-top: 2rem;">Recent Posts</div>
 
-    <div class="blog-grid">
+    <div class="blog-grid" id="blogGrid">
 
-      <a href="./narayan-kavach-bhagwan-narsingh-ki-divya-suraksha-shakti/" class="blog-card reveal delay-1">
+      <!-- Blog card: narsimha stories | date: 2026-05-17 -->
+      <a href="./narayan-kavach-bhagwan-narsingh-ki-divya-suraksha-shakti/"
+         class="blog-card reveal delay-1"
+         data-tag="narsimha stories"
+         data-date="2026-05-17">
         <div class="card-img">
           <img src="/Images/LoardNarimhaKavachBlog_cove.webp" alt="Om" class="card-om">
           <span class="card-tag">narsimha stories</span>
@@ -867,13 +658,16 @@
         </div>
       </a>
 
-      <a href="./wah-shishya-jise-ganga-ne-bhi-pranam-kiya/" class="blog-card reveal delay-1">
+      <!-- Blog card: narsimha stories | date: 2026-05-24 -->
+      <a href="./wah-shishya-jise-ganga-ne-bhi-pranam-kiya/"
+         class="blog-card reveal delay-1"
+         data-tag="narsimha stories"
+         data-date="2026-05-24">
         <div class="card-img">
           <img src="/Images/padmapad_img_Cover.webp" alt="Om" class="card-om">
           <span class="card-tag">narsimha stories</span>
         </div>
         <div class="card-body">
-          <!-- <h3>वह शिष्य जिसे गंगा ने भी प्रणाम किया</h3> -->
           <p>पद्मपाद आचार्य कौन थे: —
             नृसिंह साधना, गंगा पर कमल और कापालिक प्रसंग</p>
           <div class="card-meta">
@@ -883,13 +677,16 @@
         </div>
       </a>
 
-      <a href="./ahobilam-ka-divya-rahasya/" class="blog-card reveal delay-1">
+      <!-- Blog card: mystery temple | date: 2026-05-23 -->
+      <a href="./ahobilam-ka-divya-rahasya/"
+         class="blog-card reveal delay-1"
+         data-tag="mystery temple"
+         data-date="2026-05-23">
         <div class="card-img">
           <img src="/Images/GarudDevAnd 9 avataras of Loard.webp" alt="Om" class="card-om">
           <span class="card-tag">mystery temple</span>
         </div>
         <div class="card-body">
-          <!-- <h3>अहोबिलम का दिव्य रहस्य</h3> -->
           <p>गरुड़ देव की तपस्या —
             और नौ नृसिंह रूपों का प्रकट होना</p>
           <div class="card-meta">
@@ -899,13 +696,16 @@
         </div>
       </a>
 
-      <a href="./yadaadri-panch-narsimha/" class="blog-card reveal delay-1">
+      <!-- Blog card: narsimha stories | date: 2026-05-25 -->
+      <a href="./yadaadri-panch-narsimha/"
+         class="blog-card reveal delay-1"
+         data-tag="narsimha stories"
+         data-date="2026-05-25">
         <div class="card-img">
           <img src="/Images/yadaripanchNarsimha.webp" alt="img" class="card-om">
           <span class="card-tag">narsimha stories</span>
         </div>
         <div class="card-body">
-          <!-- <h3>अहोबिलम का दिव्य रहस्य</h3> -->
           <p>यदाद्रि का रहस्य —
             वह गुफा जहाँ नृसिंह पाँच रूपों में प्रकट हुए</p>
           <div class="card-meta">
@@ -915,13 +715,16 @@
         </div>
       </a>
 
-      <a href="./narsimha-dakshin-africa-sachchi-ghatna/" class="blog-card reveal delay-1">
+      <!-- Blog card: narsimha stories | date: 2026-05-26 -->
+      <a href="./narsimha-dakshin-africa-sachchi-ghatna/"
+         class="blog-card reveal delay-1"
+         data-tag="narsimha stories"
+         data-date="2026-05-26">
         <div class="card-img">
           <img src="/Images/loard arsimha savees girle.webp" alt="img" class="card-om">
           <span class="card-tag">narsimha stories</span>
         </div>
         <div class="card-body">
-          <!-- <h3>अहोबिलम का दिव्य रहस्य</h3> -->
           <p>जब नृसिंह देव ने उठा लिया —
             दक्षिण अफ्रीका की वह सच्ची घटना जो अखबारों में छपी</p>
           <div class="card-meta">
@@ -931,19 +734,20 @@
         </div>
       </a>
 
-
-      
-
     </div>
 
-    <!-- LOAD MORE -->
+    <!-- No results message -->
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">ॐ</div>
+      <p>Is tag mein abhi koi post nahi hai.</p>
+    </div>
+
     <div class="load-more-wrap reveal">
       <a href="#" class="btn-outline-saffron">Aur Posts Dekhen</a>
     </div>
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <a href="dharma-yatra-glass.html" class="footer-logo">|| 108 Dharma Yatra ||</a>
     <div class="footer-copy">© 2026 · All rights reserved</div>
@@ -982,8 +786,110 @@
       toggle.textContent = next === 'dark' ? '☀️' : '🌙';
       localStorage.setItem('dy-theme', next);
     });
+
+    // ── TAG FILTER SYSTEM ──
+    const tagBtns = document.querySelectorAll('.tag-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
+    const featuredPost = document.querySelector('.featured-post');
+    const noResults = document.getElementById('noResults');
+    const featuredLabel = document.getElementById('featured-label');
+    const recentLabel = document.getElementById('recent-label');
+
+    // Count tags for badge numbers
+    const tagCounts = {};
+    blogCards.forEach(card => {
+      const tag = card.getAttribute('data-tag');
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+    // Also count featured post tag
+    if (featuredPost) {
+      const ftag = featuredPost.getAttribute('data-tag');
+      if (ftag) tagCounts[ftag] = (tagCounts[ftag] || 0) + 1;
+    }
+
+    // Set counts in buttons
+    const countMap = {
+      'narsimha stories': 'count-narsimha',
+      'mystery temple': 'count-mystery',
+      'vedic science': 'count-vedic',
+      'stories': 'count-stories'
+    };
+
+    Object.entries(countMap).forEach(([tag, id]) => {
+      const el = document.getElementById(id);
+      if (el && tagCounts[tag]) el.textContent = `(${tagCounts[tag]})`;
+    });
+
+    // Sort cards by date (newest first) — default view
+    function sortCardsByDate() {
+      const grid = document.getElementById('blogGrid');
+      const cards = Array.from(grid.querySelectorAll('.blog-card'));
+      cards.sort((a, b) => {
+        const da = new Date(a.getAttribute('data-date') || '2000-01-01');
+        const db = new Date(b.getAttribute('data-date') || '2000-01-01');
+        return db - da;
+      });
+      cards.forEach(card => grid.appendChild(card));
+    }
+
+    sortCardsByDate();
+
+    // Filter function
+    function applyFilter(filter) {
+      let visibleCards = 0;
+
+      // Handle featured post
+      if (featuredPost) {
+        const ftag = featuredPost.getAttribute('data-tag');
+        if (filter === 'all' || ftag === filter) {
+          featuredPost.classList.remove('hidden');
+          featuredLabel.style.display = '';
+        } else {
+          featuredPost.classList.add('hidden');
+          featuredLabel.style.display = 'none';
+        }
+      }
+
+      // Handle grid cards
+      blogCards.forEach(card => {
+        const cardTag = card.getAttribute('data-tag');
+        const match = filter === 'all' || cardTag === filter;
+        if (match) {
+          card.classList.remove('hidden');
+          visibleCards++;
+          // Re-trigger reveal animation
+          card.classList.remove('visible');
+          setTimeout(() => card.classList.add('visible'), 50);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Show/hide "recent posts" label
+      recentLabel.style.display = visibleCards === 0 && featuredPost?.classList.contains('hidden') ? 'none' : '';
+
+      // Show no-results message
+      const featuredVisible = featuredPost && !featuredPost.classList.contains('hidden');
+      if (visibleCards === 0 && !featuredVisible) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+
+    // Tag button click handlers
+    tagBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tagBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        applyFilter(filter);
+      });
+    });
+
+    // Initial state: show all, sorted by date
+    applyFilter('all');
   </script>
 
 </body>
-
 </html>
