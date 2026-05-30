@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मंगलगिरि का महारहस्य: वह मंदिर जहाँ नृसिंह स्वयं पानकम पीते हैं | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="आंध्र प्रदेश के मंगलगिरि में वह अद्वितीय मंदिर जहाँ भगवान पनकाल लक्ष्मी नृसिंह को पानकम अर्पित किया जाता है — भगवान आधा पीते हैं, आधा प्रसाद के रूप में वापस करते हैं। गरगराहट की वह दिव्य आवाज जिसे विज्ञान नहीं समझा सका।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/mangalagiri-panakam-narsimha-rahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>मंगलगिरि —
+                पनकाल नृसिंह का महारहस्य</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">मंगलगिरि</span>
+            <span class="tag">पानकम</span>
+            <span class="tag">आंध्र प्रदेश</span>
+        </div>
+        <h1>मंगलगिरि का महारहस्य —<br><span class="accent">वह मंदिर जहाँ नृसिंह स्वयं पानकम पीते हैं और आधा वापस लौटाते
+                हैं</span></h1>
+        <p class="subtitle">गुड़, जल और इलायची का वह पेय जो प्रतिदिन भगवान को अर्पित होता है — और वह दिव्य गरगराहट जो
+            सिद्ध करती है कि भगवान केवल प्रतीक नहीं, वे वास्तव में यहाँ उपस्थित हैं।</p>
+        <div class="meta">
+            <span>30 मई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+
+        <p class="dropcap">आंध्र प्रदेश के गुंटूर जिले में एक पहाड़ी है। दूर से देखने पर यह पहाड़ी एक विशाल हाथी के समान
+            दिखती है — घुटनों के बल बैठे हुए हाथी की तरह। इस पहाड़ी पर एक ऐसा मंदिर है जिसके विषय में सुनकर मन में एक ही
+            प्रश्न उठता है: क्या यह संभव है?</p>
+
+        <p>यहाँ भगवान नृसिंह को <strong>पानकम</strong> अर्पित किया जाता है। पानकम अर्थात गुड़, जल और इलायची से बना एक
+            पेय। और भगवान उसे पीते हैं।</p>
+
+        <p>शंख से जब पुजारी पानकम भगवान के मुख में डालते हैं तो <strong>स्पष्ट गरगराहट की आवाज आती है।</strong> जैसे कोई
+            प्राणी तृप्त होकर पी रहा हो। आधा पानकम भगवान पी लेते हैं। आधा वापस आता है। यही प्रसाद के रूप में भक्तों को
+            मिलता है।</p>
+
+        <p>और इस पूरी प्रक्रिया में एक और रहस्य है। इतने मीठे पेय के बावजूद मंदिर में <strong>कभी एक भी चींटी या मक्खी
+                नहीं दिखती।</strong></p>
+
+        <p>यह कोई कथा नहीं। यह प्रतिदिन होता है। लाखों भक्तों के सामने। और विज्ञान के पास इसका उत्तर नहीं है। यह स्थान
+            है: <strong>मंगलगिरि।</strong> और यह मंदिर है: <strong>श्री पनकाल लक्ष्मी नृसिंह स्वामी मंदिर।</strong></p>
+
+        <h2>वह विग्रह जो संसार में अद्वितीय है: केवल मुख, कोई प्रतिमा नहीं</h2>
+
+        <p>इस मंदिर की पहली और सबसे अद्भुत विशेषता यह है कि यहाँ भगवान का कोई सम्पूर्ण विग्रह नहीं है। गर्भगृह में
+            <strong>केवल भगवान का मुख है। स्वयंभू। 15 सेंटीमीटर चौड़ा, विस्तृत रूप से खुला हुआ।</strong>
+        </p>
+
+        <p>यह मुख धातु के एक मुखौटे से आच्छादित है। किंतु वह मुखौटा केवल शोभा के लिए है। भीतर वह स्वयंभू मुख है जो सतयुग
+            से यहाँ विद्यमान है।</p>
+
+        <p>पनकाल नृसिंह का शाब्दिक अर्थ है: वह नृसिंह जो पानकम पीते हैं। और यह मुख सदा खुला रहता है। सदा तैयार।</p>
+
+
+        <p>जैसे भगवान स्वयं कह रहे हों: "आओ। मैं प्रतीक्षा में हूँ।" भारत में ऐसा कोई और नृसिंह मंदिर नहीं जहाँ
+            भगवान की केवल मुख की उपस्थिति हो।</p>
+        <cite><strong>— मंगलगिरि स्थलपुराण</strong></cite>
+
+
+        <p>यह स्वरूप किसी मूर्तिकार ने नहीं बनाया। यह स्वयंभू है। प्रकृति ने, अथवा कहें भगवान ने स्वयं इसे यहाँ प्रकट
+            किया।</p>
+
+        <h2>मंगलगिरि का नाम: माता लक्ष्मी की तपस्या से पड़ा</h2>
+
+        <p>इस पहाड़ी का मूल नाम था: <strong>तोटाद्रि।</strong> किंतु जब माता लक्ष्मी ने इस पर्वत पर तपस्या की, तब से यह
+            <strong>मंगलगिरि</strong> कहलाया। मंगल का पर्वत। शुभ का पर्वत।
+        </p>
+
+        <p>शास्त्र और स्थलपुराण बताते हैं कि हिरण्यकशिपु के वध के पश्चात भगवान नृसिंह का क्रोध शांत नहीं हुआ था। उनके उस
+            उग्र स्वरूप को शांत करने के लिए <strong>माता लक्ष्मी ने इसी पर्वत पर तपस्या की।</strong> और भगवान ने यहाँ
+            शांत होकर माता लक्ष्मी को दर्शन दिए।</p>
+
+        <p>इसीलिए यहाँ भगवान <strong>"पनकाल लक्ष्मी नृसिंह"</strong> के रूप में पूजित हैं। माता लक्ष्मी की तपस्या का
+            स्मरण सदा के लिए उनके नाम में अंकित है।</p>
+
+        <h2>ह्रस्व शृंगी की कथा: जो पुत्र पर्वत बन गया</h2>
+
+        <p>राजा परियात्र के पुत्र का नाम था <strong>ह्रस्व शृंगी।</strong> वे जन्म से शारीरिक विकलांगता से पीड़ित थे।
+            अपनी स्थिति से मुक्ति पाने के लिए वे अनेक तीर्थों पर गए। अनेक ऋषियों से मार्गदर्शन लिया। अंत में वे मंगलगिरि
+            की इस पहाड़ी पर पहुँचे।</p>
+
+        <p>यहाँ उन्होंने तीन वर्षों तक भगवान विष्णु की कठोर तपस्या की। जब राजा परियात्र को ज्ञात हुआ, वे अपने पुत्र को
+            वापस लेने आए। किंतु ह्रस्व शृंगी वापस नहीं जाना चाहते थे।</p>
+
+        <p>और तब एक अद्भुत घटना हुई। ह्रस्व शृंगी ने हाथी का रूप धारण किया और <strong>भगवान विष्णु का शाश्वत आवास बन
+                गए।</strong></p>
+
+
+        <p>वह पहाड़ी जो दूर से हाथी के समान दिखती है, वह स्वयं ह्रस्व शृंगी हैं। यह पर्वत एक भक्त का शरीर है। और उस
+            भक्त के शरीर पर भगवान विराजमान हैं।</p>
+        <cite><strong>— मंगलगिरि स्थलपुराण</strong></cite>
+
+
+        <h2>युधिष्ठिर का संकल्प और पाण्डवों का आगमन</h2>
+
+        <p>सतयुग में प्रकट हुए इस मंदिर से द्वापर युग में पाण्डवों का सम्बन्ध जुड़ा। वनवास के समय पाण्डव इस पवित्र पर्वत
+            पर आए।</p>
+
+        <p>युधिष्ठिर को एक दिव्य वाणी सुनाई दी। उन्हें एक विशेष स्थान पर खुदाई करने का निर्देश मिला। युधिष्ठिर ने वह
+            खुदाई करवाई। और उन्हें <strong>वह स्वयंभू मुख मिला जो आज भी यहाँ विद्यमान है।</strong></p>
+
+        <p>तब भीम के आग्रह पर यहाँ भगवान नृसिंह और माता राजलक्ष्मी के विग्रह स्थापित किए गए। महाभारत के पाण्डव जिस स्थान
+            को पवित्र मानते थे, वह स्थान वास्तव में कितना असाधारण होगा।</p>
+
+        <h2>वह महारहस्य जिसे विज्ञान नहीं सुलझा पाया: आधा पानकम क्यों वापस आता है?</h2>
+
+        <p>जब पुजारी शंख से पानकम भगवान के मुख में डालते हैं तो तीन असाधारण बातें होती हैं।</p>
+
+        <p><strong>पहली:</strong> स्पष्ट गरगराहट की आवाज आती है। जैसे कोई वास्तव में पी रहा हो। और यह आवाज तब तक आती
+            रहती है जब तक पानकम डाला जाता रहता है।</p>
+
+        <p><strong>दूसरी:</strong> ठीक आधा पानकम भगवान स्वीकार करते हैं। शेष आधा वापस आता है। यह आधा कभी कम नहीं होता,
+            कभी अधिक नहीं होता। सदा ठीक आधा।</p>
+
+        <p><strong>तीसरी:</strong> इतने मीठे पेय के बावजूद मंदिर में एक भी चींटी या मक्खी नहीं होती।</p>
+
+        <p>वैज्ञानिकों ने इसे समझने का प्रयास किया। किंतु वे केवल एक तथ्य बता सके: विजयवाड़ा-गुंटूर का यह क्षेत्र
+            भूकंपीय दृष्टि से संवेदनशील है और कभी ज्वालामुखीय क्षेत्र था। गुड़ का जल सल्फर यौगिकों को निष्क्रिय करता है।
+            इसलिए पानकम चढ़ाने से ज्वालामुखीय विस्फोट की संभावना कम होती है।</p>
+
+
+        <p>किंतु यह उत्तर उन प्रश्नों का समाधान नहीं करता: गरगराहट की आवाज कहाँ से आती है? आधा ही क्यों वापस आता है?
+            चींटी और मक्खी क्यों नहीं आतीं? विज्ञान के पास इन प्रश्नों का उत्तर नहीं है। और भक्त कहते हैं: जिस
+            प्रश्न का उत्तर विज्ञान नहीं दे सकता, वह उत्तर श्रद्धा देती है।</p>
+        <cite><strong>— पनकाल नृसिंह स्वामी देवस्थानम्</strong></cite>
+
+        <h2>तीन मंदिर, एक पर्वत: मंगलगिरि की त्रिमूर्ति</h2>
+
+        <p>इस एक पर्वत पर <strong>तीन नृसिंह मंदिर</strong> हैं।</p>
+
+        <p><strong>पहला मंदिर:</strong> पर्वत की तलहटी में श्री लक्ष्मी नृसिंह स्वामी मंदिर। यहाँ भगवान का पूर्ण विग्रह
+            है।</p>
+
+        <p><strong>दूसरा मंदिर:</strong> पर्वत के मध्य में पनकाल नृसिंह स्वामी मंदिर। यहाँ केवल मुख है। यही वह स्थान है
+            जहाँ पानकम का चमत्कार होता है।</p>
+
+        <p><strong>तीसरा मंदिर:</strong> पर्वत के शिखर पर गण्डाल नृसिंह स्वामी मंदिर। यह मंदिर युधिष्ठिर ने स्थापित किया
+            था। यहाँ पहुँचने के लिए पर्वत की पूरी चढ़ाई करनी होती है।</p>
+
+        <p>यह तीन मंदिर एक साथ भगवान नृसिंह के तीन भावों का प्रतीक हैं। तलहटी में सुगम दर्शन। मध्य में रहस्यमय पानकम। और
+            शिखर पर कठिन साधना के बाद का दर्शन। <strong>जो जितनी ऊँचाई तय करता है, भगवान उतने निकट मिलते हैं।</strong>
+        </p>
+
+        <h2>नामुचि वध: वह प्रसंग जो मंगलगिरि को और विशेष बनाता है</h2>
+
+        <p>भगवान नृसिंह ने यहाँ <strong>नामुचि</strong> नामक असुर का भी वध किया था। हिरण्यकशिपु के वध के अतिरिक्त यह एक
+            और असुर संहार है जो मंगलगिरि की भूमि पर हुआ।</p>
+
+        <p>नामुचि के वध के पश्चात भगवान ने इस पर्वत को अपना शांत निवास बनाया। और माता लक्ष्मी की तपस्या के पश्चात यह
+            पर्वत वास्तव में शांत हो गया। मंगलमय हो गया।</p>
+
+        <p>यह भूमि केवल तीर्थ नहीं। <strong>यह वह रणभूमि है जहाँ भगवान ने अधर्म को समाप्त किया और फिर यहीं रह
+                गए।</strong></p>
+
+        <h2>भक्त नंगे पाँव चढ़ते हैं: वह परंपरा जो प्रेम का प्रमाण है</h2>
+
+        <p>मंगलगिरि की एक और विशेषता है जो इस स्थान को और पवित्र बनाती है। अनेक भक्त इस पर्वत पर नंगे पाँव चढ़ते हैं। यह
+            कोई नियम नहीं है। यह श्रद्धा है।</p>
+
+        <p>प्रत्येक पग के साथ वे मानते हैं कि वे संसार की चिंताओं को नीचे छोड़ रहे हैं और भगवान के निकट जा रहे हैं।
+            पर्वत का प्रत्येक पत्थर उस भक्त के चरणों को याद रखता है जो भगवान के दर्शन के लिए आया था। <strong>जो यात्रा
+                कठिन हो वह यात्रा अर्थपूर्ण होती है।</strong></p>
+
+        <h2>इस मंदिर से चार शाश्वत शिक्षाएँ</h2>
+
+        <p><strong>पहली शिक्षा: भगवान भक्त का अर्पण स्वयं स्वीकार करते हैं।</strong> पानकम का चमत्कार यह सिद्ध करता है
+            कि भगवान मूर्ति में भी जीवंत हैं। वे केवल प्रतीक नहीं हैं। वे वास्तव में उपस्थित हैं। उपासना स्वीकार करते
+            हैं। प्रसाद लौटाते हैं।</p>
+
+        <p><strong>दूसरी शिक्षा: जो आधा वापस आता है वह भक्त का भाग है।</strong> भगवान आधा रखते हैं, आधा भक्त को देते
+            हैं। यह इस सत्य का प्रतीक है कि भगवान और भक्त के बीच सब कुछ बँटता है। सुख भी, प्रसाद भी।</p>
+
+        <p><strong>तीसरी शिक्षा: भक्त अपना सर्वस्व अर्पित कर सकता है।</strong> ह्रस्व शृंगी ने अपना शरीर ही भगवान का
+            आवास बना दिया। यह सर्वोच्च समर्पण है। हम अपना समय, अपनी ऊर्जा, अपना प्रेम अर्पित कर सकते हैं।</p>
+
+        <p><strong>चौथी शिक्षा: विज्ञान की सीमाएँ हैं, श्रद्धा की नहीं।</strong> जो विज्ञान नहीं समझ सका, वह श्रद्धा ने
+            युगों से जाना है। पानकम का चमत्कार इस सत्य का जीवंत प्रमाण है।</p>
+
+        <h2>उपसंहार: वह आवाज जो सब कुछ कह देती है</h2>
+
+        <p>कल्पना कीजिए। आप उस गर्भगृह में हैं। पुजारी शंख में पानकम भरते हैं। और उसे उस खुले मुख में डालते हैं।</p>
+
+        <p>और तब वह आवाज आती है। गरगराहट। एक जीवंत प्राणी के पीने की आवाज।</p>
+
+        <p>उस आवाज को सुनकर कोई संशय नहीं रहता। कोई प्रश्न नहीं रहता। <strong>वह आवाज स्वयं उत्तर है।</strong></p>
+
+        <p>जो युगों से पूछा जाता रहा है: क्या भगवान हैं? क्या वे सुनते हैं? क्या वे स्वीकार करते हैं? मंगलगिरि में वह
+            आवाज प्रतिदिन उत्तर देती है — <strong>हाँ। हूँ। सुनता हूँ। स्वीकार करता हूँ।</strong></p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह स्तुति ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्॥
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                मैं उन उग्र, वीर, महाविष्णु स्वरूप, ज्वलंत, सर्वव्यापी, भीषण किंतु कल्याणकारी नृसिंह को प्रणाम करता हूँ
+                — जो मृत्यु के भी मृत्यु हैं।
+            </div>
+        </div>
+
+        <p
+            style="font-family:'EB Garamond',serif; font-style:italic; font-size:0.92rem; color:var(--muted); line-height:1.8;">
+            <strong>स्रोत एवं संदर्भ:</strong> यह लेख श्री पनकाल नृसिंह स्वामी देवस्थानम् (panakalanarasimhaswamy.org),
+            BhaktiBharat.com, famoustemplesofindia.com तथा मंगलगिरि स्थलपुराण के प्रमाणित स्रोतों पर आधारित है।
+        </p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+
+    </article>
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
