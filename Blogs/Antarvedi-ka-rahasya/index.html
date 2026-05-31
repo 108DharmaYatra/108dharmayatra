@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>अंतर्वेदी का महारहस्य: गोदावरी-समुद्र संगम पर नृसिंह का प्राकट्य | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="आंध्र प्रदेश के पूर्वी गोदावरी जिले में स्थित अंतर्वेदी — वह पवित्र द्वीप जहाँ गोदावरी और बंगाल की खाड़ी के संगम पर भगवान लक्ष्मी नृसिंह स्वामी विराजमान हैं। रक्तविलोचन की कथा, ब्रह्मा का यज्ञ, और एक भक्त की ललकार का महारहस्य।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/antarvedi-narasimha-mahakshetra" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>अंतर्वेदी
+                नृसिंह क्षेत्र</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">तीर्थ यात्रा</span>
+            <span class="tag">आंध्र प्रदेश</span>
+            <span class="tag">पुराण कथा</span>
+        </div>
+        <h1>अंतर्वेदी का महारहस्य —<br><span class="accent">रक्तविलोचन नृसिंह कथा</span></h1>
+        <p class="subtitle">वह द्वीप जहाँ गोदावरी और समुद्र के संगम पर नृसिंह स्वयं प्रकट हुए — सतयुग से कलियुग तक की
+            अटूट दैवीय परंपरा का महाआख्यान।</p>
+        <div class="meta">
+            <span>31 मई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+
+        <p class="dropcap">आंध्र प्रदेश के पूर्वी गोदावरी जिले में एक छोटा सा गाँव है। चारों ओर जल है। पूर्व और दक्षिण
+            में बंगाल की खाड़ी। पश्चिम में वसिष्ठ गोदावरी। उत्तर में रक्तकुल्या नदी। यह गाँव एक द्वीप है — चार वर्ग मील
+            का द्वीप। और इस द्वीप पर एक ऐसा मंदिर है जिसे दक्षिण काशी कहते हैं।</p>
+
+        <p>जैसे काशी में गंगा के तट पर भगवान शिव विराजमान हैं, वैसे ही यहाँ गोदावरी और बंगाल की खाड़ी के संगम पर भगवान
+            लक्ष्मी नृसिंह स्वामी विराजमान हैं। यह स्थान है: <strong>अंतर्वेदी।</strong></p>
+
+        <p>किंतु इस स्थान की विशेषता केवल उसकी भौगोलिक स्थिति नहीं है। इस स्थान का इतिहास सतयुग से आरंभ होता है। यहाँ
+            ब्रह्मा ने यज्ञ किया। वसिष्ठ ऋषि ने आश्रम बनाया। रक्तविलोचन ने दस हजार वर्षों की तपस्या की। और एक साधारण
+            ग्वाले ने घने जंगल में वह विग्रह खोजा जो युगों से वहाँ था। और एक भक्त ने समुद्र में खड़े होकर भगवान को
+            ललकारा — और भगवान आए।</p>
+
+        <p>आइए, इस महारहस्य को उसकी गहराई से समझते हैं।</p>
+
+        <h2>अंतर्वेदी नाम का रहस्य: जब ब्रह्मा ने यहाँ यज्ञ किया</h2>
+
+        <p>इस स्थान का नाम अंतर्वेदी क्यों पड़ा? इसके पीछे एक प्राचीन कथा है जो नैमिषारण्य में शौनक ऋषि और सूत महर्षि के
+            संवाद में वर्णित है। सतयुग में महर्षि वसिष्ठ ने गौतमी नदी की उस शाखा को — जो गोदावरी की सहायक थी — समुद्र
+            में मिलाया और उस संगम पर अपना आश्रम स्थापित किया।</p>
+
+        <p>उसी स्थान पर भगवान ब्रह्मा ने एक महान यज्ञ किया। यज्ञ का नाम था: <em>रुद्रयाग।</em> ब्रह्मा ने यह यज्ञ भगवान
+            शंकर के प्रति हुए एक अपराध के प्रायश्चित्त के लिए किया। उन्होंने यज्ञ के पश्चात भगवान नीलकण्ठेश्वर की
+            स्थापना इस स्थान पर की।</p>
+
+        
+            <p>चूँकि इस भूमि पर यज्ञ की वेदी स्थापित हुई थी और यह स्थान दो जलराशियों के अंतर में था, इसलिए यह
+                "अंतर्वेदी" कहलाया।</p>
+            <cite><strong>— स्थलपुराण, अंतर्वेदी</strong></cite>
+        
+
+        <p>अर्थात इस भूमि का नाम स्वयं ब्रह्मा के यज्ञ की स्मृति है। जहाँ सृष्टि के रचयिता ने प्रायश्चित्त किया, वह भूमि
+            स्वयं पवित्र हो गई।</p>
+
+        <h2>रक्तविलोचन की दस हजार वर्षों की तपस्या</h2>
+
+        <p>अब उस कथा पर आते हैं जो इस क्षेत्र को नृसिंह क्षेत्र बनाती है। हिरण्यकशिपु के भाई हिरण्याक्ष का एक पुत्र था:
+            <strong>रक्तविलोचन।</strong> हिरण्याक्ष वही असुर है जिसे भगवान विष्णु ने वराह अवतार में समुद्र की गहराई से
+            पृथ्वी को बचाते समय मारा था।</p>
+
+        <p>रक्तविलोचन ने अपने पिता की मृत्यु का बदला लेने के लिए भगवान शिव की कठोर तपस्या की — दस हजार वर्षों तक, वसिष्ठ
+            गोदावरी के तट पर। शिव प्रसन्न हुए और उन्होंने वरदान दिया: "तुम्हारे शरीर से जितनी रक्त की बूँदें धरती पर
+            गिरेंगी, उतने नए रक्तविलोचन उत्पन्न होंगे।"</p>
+
+        <p>यह वरदान पाकर रक्तविलोचन ने संसार में उत्पात मचाना शुरू किया। ऋषियों को पीड़ा दी। यज्ञों में बाधा डाली। देवता
+            और ऋषि भगवान विष्णु के पास गए। भगवान विष्णु ने नृसिंह रूप में अवतरण लिया। रक्तविलोचन से युद्ध हुआ। किंतु
+            समस्या वही थी — जितनी रक्त की बूँदें गिरतीं, उतने नए रक्तविलोचन उत्पन्न होते।</p>
+
+        <p>तब नृसिंह देव ने एक अद्भुत उपाय किया। उन्होंने रक्तविलोचन को अपनी जंघा पर रखकर उसका वध किया — और अपने नखों से
+            उसका रक्त धरती पर गिरने से पहले ही पी लिया। रक्त धरती पर नहीं गिरा। कोई नया रक्तविलोचन उत्पन्न नहीं हुआ।</p>
+
+       
+            <p>और उसी स्थान पर जहाँ यह युद्ध हुआ, भगवान नृसिंह ने विश्राम किया। वह स्थान यही था: अंतर्वेदी।</p>
+            <cite><strong>— रक्तविलोचन नृसिंह महात्म्य</strong></cite>
+        
+
+        <h2>वसिष्ठ गोदावरी का रहस्य</h2>
+
+        <p>इस क्षेत्र की एक और विशेषता है जो कम लोग जानते हैं। जिस नदी के तट पर यह मंदिर स्थित है, उसका नाम है:
+            <em>वसिष्ठ गोदावरी।</em> यह नाम इसलिए पड़ा क्योंकि महर्षि वसिष्ठ ने स्वयं गोदावरी की इस शाखा को समुद्र तक
+            लाया था। उन्होंने अपनी तपस्या के बल से इस नदी का मार्ग प्रशस्त किया।</p>
+
+        <p>सप्तर्षियों में एक, भगवान राम के कुलगुरु, महर्षि वसिष्ठ ने जिस नदी को समुद्र तक पहुँचाया — उस नदी के तट पर
+            नृसिंह का यह मंदिर है। यह स्थान सप्तर्षि परंपरा, वैष्णव परंपरा और शैव परंपरा — तीनों का मिलन बिंदु है।</p>
+
+        <h2>मंदापाटि केशवदास: वह ग्वाला जिसने विग्रह खोजा</h2>
+
+        <p>इस मंदिर का इतिहास उस दिन से आधुनिक रूप लेता है जब एक साधारण ग्वाले ने वह खोजा जो युगों से छिपा था। कलियुग
+            में मंदापाटि के <strong>केशवदास</strong> नाम के एक ग्वाले ने पशु चराते समय इस विग्रह को खोजा। वह उस घने वन
+            में अपने पशुओं के साथ था। अचानक उसे एक स्थान पर असाधारण प्रकाश दिखाई दिया।</p>
+
+        <p>उसने वहाँ खोदा। और भगवान लक्ष्मी नृसिंह का स्वयंभू विग्रह प्रकट हुआ। केशवदास एक साधारण व्यक्ति था। किंतु उसकी
+            आँखों में वह दृष्टि थी जो असाधारण को पहचान सके। बाद में रेड्डी राजाओं ने बाँस की छड़ियों से पहला मंदिर
+            बनवाया। और 1823 ई. में अग्निकुल क्षत्रिय परिवार की कोपनाटि कृष्णम्मा ने मंदिर का पुनर्निर्माण करवाया।</p>
+
+        
+            <p>भगवान सदा पहले से विद्यमान थे। केवल खोजने वाले की प्रतीक्षा थी।</p>
+            <cite><strong>— अंतर्वेदी स्थलपुराण</strong></cite>
+       
+
+        <h2>वह भक्त जिसने समुद्र में खड़े होकर नृसिंह को ललकारा</h2>
+
+        <p>यह प्रसंग अंतर्वेदी के इतिहास का सबसे अद्भुत और हृदयस्पर्शी अध्याय है। एक बार मंदिर के निर्माण के लिए लकड़ी
+            की व्यवस्था की गई थी। किंतु उस वर्ष वर्षा नहीं हुई। गोदावरी में जल कम था। लकड़ी को अंतर्वेदी तक लाना असंभव
+            हो गया।</p>
+
+        <p>एक श्रद्धालु भक्त थे: <strong>नरसिंह राव।</strong> उन्होंने तीन दिनों तक समुद्र तट पर बिना भोजन के भगवान की
+            आराधना की। किंतु भगवान ने कोई संकेत नहीं दिया। तब वे क्रोधित हो गए। समुद्र के जल में खड़े होकर उन्होंने कहा:
+        </p>
+
+       
+            <p>"तू एक निर्धन सिंह है जो अपने मंदिर के लिए लाई गई लकड़ी भी नहीं देख सकता।"</p>
+            <cite><strong>— नरसिंह राव, भक्त, अंतर्वेदी</strong></cite>
+        
+
+        <p>यह ललकार थी — एक भक्त की वह ललकार जो इतनी गहरी पीड़ा से आई थी कि उसमें क्रोध और प्रेम एक साथ थे। और भगवान
+            नृसिंह ने उत्तर दिया। अगले ही दिन गोदावरी में जल आया। लकड़ी मंदिर तक पहुँची। निर्माण पूर्ण हुआ।</p>
+
+        <p>प्रह्लाद ने पुकारा। नरसिंह राव ने ललकारा। दोनों को भगवान मिले।</p>
+
+        <h2>अंतर्वेदी की त्रिवेणी: तीन शक्तियों का मिलन</h2>
+
+        <p>अंतर्वेदी की भौगोलिक स्थिति स्वयं एक रहस्य है। यह स्थान वसिष्ठ गोदावरी नदी और बंगाल की खाड़ी के संगम पर स्थित
+            है। नदी और समुद्र का यह मिलन बिंदु भारत के सबसे पवित्र संगम स्थलों में से एक माना जाता है।</p>
+
+        <p>शास्त्रों में कहा गया है कि जहाँ नदी समुद्र से मिलती है, वह स्थान असाधारण आध्यात्मिक ऊर्जा का केंद्र होता है
+            — क्योंकि वहाँ दो विपरीत शक्तियाँ, नदी की चंचलता और समुद्र की गहराई, एक होती हैं। और इस संगम पर नृसिंह
+            विराजमान हैं।</p>
+
+        <p><em>उग्रता और करुणा का संगम। शक्ति और भक्ति का संगम। नदी और समुद्र का संगम।</em> यह स्थान तीन स्तरों पर एक
+            है: भौगोलिक, आध्यात्मिक और दैवीय।</p>
+
+        <h2>गर्भगृह का रहस्य: ब्रह्मा, विष्णु, शिव एक साथ</h2>
+
+        <p>अंतर्वेदी मंदिर के प्रांगण में ब्रह्मा, विष्णु और शिव — तीनों की उपस्थिति है। यह अत्यंत दुर्लभ विशेषता है।
+            पूर्व दिशा में माता राज्यलक्ष्मी और भगवान वेंकटेश्वर। उत्तर में भूदेवी और रंगनाथ स्वामी। पश्चिम में संतान
+            गोपाल स्वामी। दक्षिण में आचार्यों और आलवारों के मंदिर।</p>
+
+        <p>और एक विशेष तथ्य: नीलकण्ठेश्वर का मंदिर जो ब्रह्मा ने स्थापित किया था, वह आज भी गोदावरी के तट पर विद्यमान है।
+            इस मंदिर में भगवान राम ने भी पूजा की थी। जहाँ भगवान राम ने स्वयं पूजा की हो, वह भूमि कितनी पवित्र होगी।</p>
+
+        <h2>कलियुग वैकुण्ठ: जब मेले में अंतर्वेदी वैकुण्ठ बन जाता है</h2>
+
+        <p>वार्षिक मेले के समय अंतर्वेदी को <em>कलियुग वैकुण्ठ</em> कहते हैं। भीष्म एकादशी पर भगवान लक्ष्मी नृसिंह का
+            तिरुकल्याणम होता है। अगले दिन रथोत्सव। पौर्णमासी पर गोदावरी और समुद्र के संगम पर स्नान। यह नौ दिनों का उत्सव
+            लाखों भक्तों को यहाँ खींचता है।</p>
+
+        <p>किंतु यहाँ पहुँचना सरल नहीं। निकटतम रेलवे स्टेशन नरसापुरम से 20 किलोमीटर दूर है और वहाँ से नाव से यात्रा करनी
+            होती है। नाव से वह द्वीप। वह संगम। वह मंदिर। जो यात्रा कठिन हो, वह भक्त की श्रद्धा की परीक्षा भी होती है —
+            और भगवान परीक्षा में उत्तीर्ण भक्त का स्वागत करते हैं।</p>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+
+        <p><strong>पहली शिक्षा:</strong> ब्रह्मा ने पाप किया और प्रायश्चित्त के लिए यज्ञ किया। भगवान ने उन्हें क्षमा
+            किया। यह स्थान उस क्षमा का प्रतीक है। कोई भी पाप इतना बड़ा नहीं जो सच्चे प्रायश्चित्त से न मिटे।</p>
+
+        <p><strong>दूसरी शिक्षा:</strong> रक्तविलोचन हिरण्याक्ष का पुत्र था। फिर भी उसने दस हजार वर्षों की तपस्या की।
+            वंश नहीं, संकल्प महत्त्वपूर्ण है।</p>
+
+        <p><strong>तीसरी शिक्षा:</strong> नरसिंह राव ने ललकारा। भगवान ने उत्तर दिया। जो भगवान से इतना निकट हो कि उन्हें
+            ललकार सके, वह दूरी नहीं — परम निकटता का प्रमाण है।</p>
+
+        <p><strong>चौथी शिक्षा:</strong> दो जलधाराओं का मिलन, दो परंपराओं का मिलन, दो भावों का मिलन। जहाँ भिन्नता एकता
+            में बदले, वह स्थान दिव्य है।</p>
+
+        <h2>उपसंहार: वह द्वीप जो धरती और स्वर्ग के बीच है</h2>
+
+        <p>अंतर्वेदी एक साधारण द्वीप नहीं है। यह वह भूमि है जहाँ सतयुग में ब्रह्मा ने यज्ञ किया। जहाँ रक्तविलोचन ने दस
+            हजार वर्ष तपस्या की। जहाँ भगवान राम ने पूजा अर्पित की। जहाँ एक ग्वाले ने घने वन में भगवान को खोजा। जहाँ एक
+            भक्त ने समुद्र में खड़े होकर ललकारा — और भगवान ने उत्तर दिया।</p>
+
+        <p>यह सब एक ही द्वीप पर हुआ। और आज भी जब कोई भक्त नाव से उस संगम को पार करता है और उस मंदिर के द्वार पर पहुँचता
+            है, तो वह अनजाने में उन सभी के पदचिह्नों पर चल रहा होता है।</p>
+
+        <p>भगवान लक्ष्मी नृसिंह आज भी उस द्वीप पर विराजमान हैं — जहाँ नदी समुद्र से मिलती है। जहाँ धरती जल से मिलती है।
+            जहाँ भक्त भगवान से मिलता है।</p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह स्तुति ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्।।
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                उग्र, वीर, महाविष्णु, सब ओर से दीप्तिमान, भयंकर और कल्याणकारी, मृत्यु के भी मृत्यु — ऐसे नृसिंह देव को
+                मैं नमन करता हूँ।
+            </div>
+        </div>
+
+        <p
+            style="font-family: 'EB Garamond', serif; font-style: italic; font-size: 0.85rem; color: var(--muted); margin-top: 2rem;">
+            <strong
+                style="font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; font-style: normal; color: var(--saffron);">स्रोत
+                एवं संदर्भ:</strong><br>
+            यह लेख antarvedi.in, templesinindiainfo.com, famoustemplesofindia.com, eastgodavari.ap.gov.in तथा अंतर्वेदी
+            स्थलपुराण के प्रमाणित स्रोतों पर आधारित है।
+        </p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+
+    </article>
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
