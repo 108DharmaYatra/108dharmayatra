@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>क्रोड नृसिंह का महारहस्य: वह स्वरूप जो न वराह है न नृसिंह | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="जानिए अहोबिलम के क्रोड नृसिंह स्वामी की अद्भुत कथा, जिन्होंने पाताल से वेदों को वापस लाकर धर्म और ज्ञान की पुनर्स्थापना की।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/kroda-narsimha-rahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>क्रोड
+                नृसिंह</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">Narasimha</span>
+            <span class="tag">Ahobilam</span>
+            <span class="tag">Vedas</span>
+            <span class="tag">Varaha</span>
+        </div>
+        <h1>क्रोड नृसिंह का महारहस्य —<br><span class="accent">वह स्वरूप जो न वराह है न नृसिंह</span></h1>
+        <p class="subtitle">अहोबिलम के उस अद्वितीय दिव्य स्वरूप की कथा जिसने पाताल से वेदों को पुनः प्राप्त कर धर्म,
+            ज्ञान और करुणा की स्थापना की।</p>
+        <div class="meta">
+            <span>📅 8 जून 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 14 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <p class="dropcap">तीनों लोकों में भगवान के अनेक स्वरूप हैं, किंतु क्रोड नृसिंह जैसा स्वरूप अद्वितीय है। यह न
+            पूर्ण वराह हैं, न पूर्ण नृसिंह। वराह का मुख, नृसिंह की पूँछ और मानव का धड़—दो दिव्य अवतारों की शक्ति एक ही
+            देह में समाहित है। अहोबिलम के वेदाद्रि पर्वत और भवनासिनी नदी के समीप स्थित यह स्वरूप सृष्टि और ज्ञान की
+            रक्षा की एक विलक्षण कथा सुनाता है।</p>
+
+        <h2>हिरण्यकशिपु वध के बाद की घटना</h2>
+        <p>हिरण्यकशिपु के वध के पश्चात तीनों लोकों में उत्सव था, परंतु भगवान नृसिंह ब्रह्मा से अप्रसन्न थे। जब ब्रह्मा
+            भयभीत होकर उनके समक्ष पहुँचे, तब उनके हाथों से वेद गिर पड़े। यही वह क्षण था जिसने सम्पूर्ण सृष्टि की दिशा
+            बदल दी।</p>
+
+        <h2>जब वेद पाताल में चले गए</h2>
+        <p>भूमि देवी ने वेदों को अपनी गोद में लिया और उनकी रक्षा के लिए पाताल में चली गईं। मातृत्व की इस भावना ने वेदों
+            को सुरक्षित तो रखा, परंतु सृष्टि वेद-विहीन हो गई। यज्ञ रुक गए, देवताओं की शक्ति क्षीण होने लगी और धर्म
+            डगमगाने लगा।</p>
+
+        
+            <p>ज्ञान की रक्षा केवल ग्रंथों की रक्षा नहीं, बल्कि सम्पूर्ण सृष्टि की रक्षा है।</p>
+            <cite><strong>— क्रोड नृसिंह परंपरा</strong></cite>
+        
+
+        <h2>क्रोड रूप का प्राकट्य</h2>
+        <p>देवताओं की प्रार्थना सुनकर भगवान नृसिंह ने एक विलक्षण रूप धारण किया। वराह की गहराइयों में उतरने की शक्ति और
+            नृसिंह की उग्रता एक साथ प्रकट हुई। यही क्रोड नृसिंह स्वरूप था। वे पृथ्वी को भेदते हुए पाताल पहुँचे और वहाँ
+            से वेदों तथा भूमि देवी को पुनः लेकर आए।</p>
+
+        <p><strong>दो अवतारों की शक्ति, एक ही देह में।</strong> यही क्रोड नृसिंह का रहस्य है। वराह ने हिरण्याक्ष का वध
+            किया था और नृसिंह ने हिरण्यकशिपु का। दोनों भाइयों के संहारक दोनों अवतार यहाँ एकत्व में दिखाई देते हैं।</p>
+
+        <h2>पाताल से दिव्य वापसी</h2>
+        <p>जब भगवान क्रोड नृसिंह पाताल से लौटे, तब उनके कंधों पर भूमि देवी थीं और उनके साथ वेद थे। भूमि देवी उसी प्रेम
+            से उनके मुख को आलिंगन किए हुए थीं जैसा उन्होंने पूर्वकाल में वराह अवतार में किया था।</p>
+
+        
+            <p>भगवान का स्वरूप बदल सकता है, परंतु भक्त और भगवान के बीच का प्रेम नहीं बदलता।</p>
+            <cite><strong>— अहोबिलम परंपरा</strong></cite>
+       
+
+        <h2>वेद किसे सौंपे गए?</h2>
+        <p>ब्रह्मा ने वेद वापस माँगे, किंतु भगवान ने उन्हें तुरंत वापस नहीं दिया। उनका विचार था कि जो उनकी रक्षा न कर
+            सके, उसे उनका अधिकार नहीं होना चाहिए। अंततः वेद माता लक्ष्मी को सौंपे गए। यह घटना बताती है कि ज्ञान की रक्षा
+            के लिए शक्ति और भक्ति दोनों आवश्यक हैं।</p>
+
+        <h2>भवनासिनी नदी और वेदाद्रि पर्वत</h2>
+        <p>वेदाद्रि और गरुडाद्रि पर्वतों के मध्य बहती भवनासिनी नदी इस क्षेत्र की आध्यात्मिक धारा है। इसका अर्थ है—वह जो
+            भवसागर से पार कराए। इसी पवित्र वातावरण में क्रोड नृसिंह मंदिर स्थित है, जहाँ पर्वत, नदी और भगवान की उपस्थिति
+            एक साथ अनुभव होती है।</p>
+
+        <h2>रामानुजाचार्य की स्मृतियाँ</h2>
+        <p>क्रोड नृसिंह मंदिर के मार्ग में स्थित कालक्षेप मंडप वह स्थान है जहाँ श्री रामानुजाचार्य ने अपने शिष्यों को
+            वेद और विशिष्टाद्वैत का ज्ञान प्रदान किया था। यह क्षेत्र केवल भक्ति का ही नहीं, बल्कि ज्ञान परंपरा का भी
+            केंद्र है।</p>
+
+        <h2>बुध ग्रह और क्रोड नृसिंह</h2>
+        <p>नव नृसिंह परंपरा में क्रोड नृसिंह का संबंध बुध ग्रह से माना जाता है। बुध बुद्धि, वाणी और ज्ञान का प्रतीक है।
+            चूँकि इस स्वरूप की मुख्य कथा वेदों की रक्षा और पुनर्स्थापना से जुड़ी है, इसलिए विद्यार्थी, विद्वान और
+            व्यापारी विशेष रूप से उनकी आराधना करते हैं।</p>
+
+        <h2>चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा:</strong> ज्ञान की रक्षा सबसे बड़ा धर्म है।</p>
+        <p><strong>दूसरी शिक्षा:</strong> अधिकार सदैव उत्तरदायित्व के साथ आता है।</p>
+        <p><strong>तीसरी शिक्षा:</strong> भगवान परिस्थिति के अनुसार उपयुक्त स्वरूप धारण करते हैं।</p>
+        <p><strong>चौथी शिक्षा:</strong> दो शक्तियों का मिलन असंभव को संभव बना देता है।</p>
+
+        <h2>उपसंहार</h2>
+        <p>क्रोड नृसिंह केवल एक मंदिर या एक विग्रह नहीं हैं। वे उस सत्य के प्रतीक हैं कि भगवान के सभी अवतार एक ही
+            परब्रह्म के विविध प्रकाश हैं। वेदाद्रि पर्वत की छाया में, भवनासिनी नदी के तट पर, यह स्वरूप आज भी भक्तों को
+            ज्ञान, संरक्षण और दिव्य करुणा का संदेश देता है।</p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह मंत्र ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्।।
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                मैं उस उग्र, वीर, सर्वव्यापी और तेजस्वी भगवान नृसिंह को प्रणाम करता हूँ जो मृत्यु के भी मृत्यु हैं, भय
+                का नाश करते हैं और भक्तों का कल्याण करते हैं।
+            </div>
+        </div>
+
+      
+            <p>जब ज्ञान संकट में हो, तब भगवान स्वयं उसके रक्षक बनते हैं।</p>
+            <cite><strong>— क्रोड नृसिंह महिमा</strong></cite>
+      
+
+        <p><strong>स्रोत एवं संदर्भ:</strong> यह लेख अहोबिलम स्थलपुराण, ब्रह्माण्ड पुराण तथा विभिन्न पारंपरिक वैष्णव
+            स्रोतों पर आधारित है, जिनमें tirthayatra.org, arunraj.org, templesinindiainfo.com और themehulvora.com
+            सम्मिलित हैं।</p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+    </article>
+
+     <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
