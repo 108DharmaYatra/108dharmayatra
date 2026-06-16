@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>देवरायनदुर्ग का महारहस्य: वह पर्वत जो हाथी, सिंह, सर्प और गरुड़ एक साथ दिखता है | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="बेंगलुरु से 70 किमी दूर वह रहस्यमय पर्वत जो चार दिशाओं में चार रूप दिखाता है — जहाँ ब्रह्मा ने 2000 वर्षों की तपस्या की, राम के बाण से आज भी जल बहता है और योग व भोग नृसिंह एक ही पर्वत पर विराजमान हैं।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/devarayanadurga-narsimha-maharahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>देवरायनदुर्ग
+                — करिगिरि का महारहस्य</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">देवरायनदुर्ग</span>
+            <span class="tag">कर्नाटक</span>
+            <span class="tag">ब्रह्मा तपस्या</span>
+        </div>
+        <h1>देवरायनदुर्ग का महारहस्य —<br><span class="accent">वह पर्वत जो हाथी, सिंह, सर्प और गरुड़ एक साथ दिखता
+                है</span></h1>
+        <p class="subtitle">जहाँ ब्रह्मा ने 2000 वर्षों की तपस्या की, राम के बाण से आज भी जल बहता है और एक ही पर्वत पर
+            योग नृसिंह और भोग नृसिंह दोनों एक साथ विराजमान हैं — कर्नाटक का वह छिपा हुआ नृसिंह क्षेत्र।</p>
+        <div class="meta">
+            <span>📅 16 जून 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 13 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+
+        <p class="dropcap">तुमकुर जिले में बेंगलुरु से 70 किलोमीटर दूर एक पर्वत है। यह पर्वत साधारण नहीं है। पूर्व से
+            देखो तो यह <strong>हाथी</strong> जैसा दिखता है। दक्षिण से देखो तो <strong>सिंह</strong> जैसा। पश्चिम से देखो
+            तो <strong>सर्प</strong> जैसा। और उत्तर से देखो तो <strong>गरुड़</strong> जैसा।</p>
+
+        <p>एक ही पर्वत। चार दिशाएँ। चार रूप। हाथी जो भगवान गणेश का वाहन है। सिंह जो नृसिंह का स्वरूप है। सर्प जो आदिशेष
+            है। गरुड़ जो विष्णु का वाहन है। <strong>प्रकृति ने स्वयं इस पर्वत को भगवान विष्णु के सम्पूर्ण परिवार से
+                जोड़ा है।</strong></p>
+
+        <p>इसीलिए इस पर्वत का नाम है: <strong>करिगिरि।</strong> करि अर्थात हाथी। गिरि अर्थात पर्वत। और इस पर्वत पर दो
+            मंदिर हैं जो नृसिंह भक्तों के लिए स्वर्ग से कम नहीं। यह स्थान है: <strong>देवरायनदुर्ग।</strong> देव का
+            दुर्ग। ईश्वर का किला।</p>
+
+        <h2>देवरायनदुर्ग नाम का इतिहास: तीन नाम, तीन युग</h2>
+
+        <p>प्राचीन काल में इस स्थान का नाम था: <strong>अनेबिड्डसारी</strong> — अर्थात वह स्थान जहाँ हाथी गिरा। फिर यहाँ
+            के एक स्थानीय प्रमुख के नाम पर इसे <strong>जडकन दुर्ग</strong> कहा गया। और जब मैसूर के शासक चिक्क देवराज
+            वाडेयार ने इस स्थान को विजय किया, तब यह <strong>देवरायनदुर्ग</strong> कहलाया।</p>
+
+        <p>किंतु इस नाम में एक और गहरा अर्थ है। जो देवराय अर्थात देवताओं का राजा है, वह स्वयं नृसिंह हैं। और यह उन्हीं
+            का किला है। <strong>तीन नाम। तीन काल। किंतु स्वामी एक ही हैं।</strong></p>
+
+        <h2>ब्रह्मा की 2000 वर्षों की तपस्या: जब सृष्टि के रचयिता ने नृसिंह को पुकारा</h2>
+
+        <p>इस क्षेत्र की सबसे महत्त्वपूर्ण कथा ब्रह्मा देव से जुड़ी है। द्वापर युग में ब्रह्मा देव इस पर्वत पर आए। और
+            यहाँ <strong>2000 वर्षों तक</strong> भगवान विष्णु की कठोर तपस्या की।</p>
+
+        <p>जो सम्पूर्ण सृष्टि का निर्माण करते हैं, जो सृजन की शक्ति हैं, वे यहाँ बैठकर तपस्या कर रहे हैं। और भगवान
+            विष्णु उनकी तपस्या से प्रसन्न हुए। उन्होंने यहाँ <strong>योग नृसिंह</strong> के रूप में दर्शन दिए।</p>
+
+
+        <p>ब्रह्मा को नृसिंह के उस दर्शन में माता लक्ष्मी के साथ वह स्वरूप दिखा जो शांत, सौम्य और ध्यानमग्न था। यह
+            पर्वत उस भेंट का साक्षी है। जहाँ ब्रह्मा को दर्शन मिले, वह भूमि साधारण कैसे हो सकती है?</p>
+        <cite><strong>— देवरायनदुर्ग स्थलपुराण</strong></cite>
+
+
+        <h2>दो मंदिर, दो भाव: योग नृसिंह और भोग नृसिंह</h2>
+
+        <p>देवरायनदुर्ग की सबसे अनूठी विशेषता यह है कि यहाँ एक ही पर्वत पर नृसिंह के <strong>दो भिन्न स्वरूप</strong>
+            हैं।</p>
+
+        <p><strong>योग नृसिंह:</strong> पर्वत के शिखर पर। शांत, ध्यानमग्न, माता लक्ष्मी के साथ। यह वह स्वरूप है जो
+            ब्रह्मा की तपस्या से प्रकट हुआ। ऊँचाई पर होने से इस मंदिर तक पहुँचना अधिक श्रम का कार्य है।</p>
+
+        <p><strong>भोग नृसिंह:</strong> पर्वत की तलहटी में। पूर्व दिशा की ओर मुख। द्रविड़ शैली में निर्मित। यहाँ के
+            विग्रह के मुख में <strong>दो शालिग्राम</strong> हैं — एक विष्णु शालिग्राम और एक नृसिंह शालिग्राम।</p>
+
+        <p>शालिग्राम स्वयं भगवान विष्णु का जीवंत स्वरूप माना जाता है। और यहाँ दो शालिग्राम स्वयं भगवान नृसिंह के मुख में
+            विराजमान हैं। <strong>भगवान के भीतर भगवान।</strong></p>
+
+        <h2>दुर्वासा ऋषि और भोग नृसिंह: वह तपस्या जिसने तलहटी को भी पवित्र किया</h2>
+
+        <p>शिखर पर योग नृसिंह ब्रह्मा की तपस्या से प्रकट हुए। तलहटी पर भोग नृसिंह <strong>महर्षि दुर्वासा</strong> की
+            तपस्या का फल हैं। दुर्वासा ने यहाँ वर्षों की गहरी तपस्या की। और उनकी साधना के फलस्वरूप भोग नृसिंह यहाँ
+            विराजमान हुए।</p>
+
+        <p>दुर्वासा वही ऋषि हैं जो अपने क्रोध के लिए प्रसिद्ध हैं। किंतु जो क्रोध कर सके, वही साधना भी कर सके। और जिसकी
+            साधना सच्ची हो, उसे भगवान मिलते हैं। दुर्वासा की कठोर साधना का फल यह मंदिर है। <strong>विग्रह के मुख में दो
+                शालिग्राम — यह दुर्वासा ऋषि का वह उपहार है जो आज भी विग्रह में विद्यमान है।</strong></p>
+
+        <h2>भगवान राम का वह बाण: जिससे आज भी जल बहता है</h2>
+
+        <p>भगवान श्रीराम इस पर्वत पर आए थे। उन्हें अपने माथे पर तिलक लगाना था। किंतु जल नहीं था। भगवान राम ने अपना बाण
+            उठाया और एक शिला में बाण मारा। <strong>और उस शिला से जल निकल आया।</strong></p>
+
+        <p>वह जल आज भी बह रहा है। उसी स्थान से। जिस शिला में राम ने बाण मारा था। उस जल से जो नदी निकली, वह है:
+            <strong>जय-मंगली नदी।</strong> जय और मंगला तीर्थों का संगम। और उस तीर्थ का नाम है: <strong>श्रीपद
+                तीर्थ</strong> — जिसमें 108 तीर्थ समाहित हैं।
+        </p>
+
+
+        <p>वह बाण जो राम ने मारा था, वह आज भी जल दे रहा है। हजारों वर्ष बाद भी। भगवान के कार्य का प्रभाव अनंत काल तक
+            रहता है।</p>
+        <cite><strong>— देवरायनदुर्ग माहात्म्य</strong></cite>
+
+
+        <h2>108 तीर्थ और स्वयंभू हयग्रीव: वह रहस्य जो गुफा की दीवार में है</h2>
+
+        <p>देवरायनदुर्ग के श्रीपद तीर्थ की गुफा की दीवार पर <strong>स्वयंभू हयग्रीव</strong> विराजमान हैं। हयग्रीव भगवान
+            विष्णु का वह अवतार है जिसका मुख अश्व का है और जो ज्ञान के देवता हैं। छात्र और विद्वान उनकी विशेष उपासना करते
+            हैं।</p>
+
+        <p>यह स्वयंभू हयग्रीव गुफा की दीवार में प्रकट हैं — किसी ने नहीं बनाए। और उस श्रीपद तीर्थ में <strong>108 तीर्थ
+                समाहित हैं।</strong> 108 तीर्थ एक ही स्थान पर। <strong>जो यहाँ स्नान करता है, वह 108 तीर्थों का फल पाता
+                है।</strong></p>
+
+        <h2>अष्ट अंजनेय, अष्ट शिव और अष्ट विष्णु: वह त्रिकोण जिसके केन्द्र में नृसिंह हैं</h2>
+
+        <p>दोनों नृसिंह मंदिर तीन अष्टकों के केन्द्र में स्थित हैं। <strong>अष्ट अंजनेय</strong> — आठ हनुमान क्षेत्र।
+            <strong>अष्ट शिव</strong> — आठ शिव क्षेत्र। <strong>अष्ट विष्णु</strong> — आठ विष्णु क्षेत्र। तीनों मण्डल इन
+            मंदिरों को घेरते हैं।
+        </p>
+
+        <p>हनुमान, शिव और विष्णु तीनों अपने-अपने आठ क्षेत्रों के साथ इन मंदिरों की परिक्रमा कर रहे हैं। <strong>नृसिंह
+                केन्द्र में हैं। सब उनके चारों ओर हैं।</strong> यह आध्यात्मिक भूगोल बताता है कि यह क्षेत्र केवल एक मंदिर
+            नहीं, एक सम्पूर्ण आध्यात्मिक नक्षत्र का केन्द्र है।</p>
+
+        <h2>चोल और विजयनगर: दो महान साम्राज्यों का संरक्षण</h2>
+
+        <p>भोग नृसिंह मंदिर का निर्माण <strong>कांतिरव नरसराज प्रथम</strong> ने करवाया था। चोल राजाओं ने इस मंदिर को
+            भरपूर संरक्षण दिया। एपिग्राफिया कर्नाटिका के शिलालेख 41 और 42 बताते हैं कि 1858 में मैसूर के राजा
+            <strong>कृष्णराज वाडेयार तृतीय</strong> ने इस मंदिर के प्रवेश द्वार और गोपुरम का पुनर्निर्माण करवाया।
+        </p>
+
+        <p><strong>दो हजार वर्षों में अनेक राजवंश आए और गए। किंतु नृसिंह इस पर्वत पर अटल रहे।</strong></p>
+
+        <h2>कर्नाटक का वह छिपा हुआ रहस्य: जो तीर्थयात्री नहीं जानते</h2>
+
+        <p>यह स्थान बेंगलुरु से केवल 70 किलोमीटर दूर है। किंतु इसकी प्रसिद्धि उस अनुपात में नहीं है जो इसकी दिव्यता के
+            अनुसार होनी चाहिए।</p>
+
+        <p><strong>जो खोजता है, उसे मिलता है।</strong> यह वह तीर्थ है जो भीड़ से दूर है। जहाँ नृसिंह शांत पर्वत पर, घने
+            वनों में, उन भक्तों की प्रतीक्षा करते हैं जो उन्हें खोजने का कष्ट उठाएँ।</p>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+
+        <p><strong>पहली शिक्षा: ब्रह्मा भी तपस्या करते हैं।</strong> जो सृष्टि बनाते हैं, वे भी भगवान के लिए तपस्या करते
+            हैं। ज्ञान, शक्ति और पद कुछ भी हो, भगवान की भक्ति से बड़ा कोई कार्य नहीं।</p>
+
+        <p><strong>दूसरी शिक्षा: एक पर्वत में चार रूप।</strong> वह पर्वत जो हाथी, सिंह, सर्प और गरुड़ चारों दिखाता है —
+            यह बताता है कि एक ही वस्तु को अलग-अलग दृष्टिकोण से देखने पर अलग-अलग सत्य दिखते हैं। भगवान भी ऐसे ही हैं।</p>
+
+        <p><strong>तीसरी शिक्षा: राम का बाण आज भी जल देता है।</strong> वह बाण जो हजारों वर्ष पहले चला था, वह आज भी जल दे
+            रहा है। भगवान के कार्य का प्रभाव अनंत काल तक रहता है।</p>
+
+        <p><strong>चौथी शिक्षा: छिपे हुए तीर्थ भी पवित्र हैं।</strong> प्रसिद्धि पवित्रता का मापदण्ड नहीं है।
+            देवरायनदुर्ग कम प्रसिद्ध है किंतु इसकी दिव्यता किसी बड़े तीर्थ से कम नहीं।</p>
+
+        <h2>उपसंहार: वह पर्वत जो चार रूपों में ईश्वर की व्यापकता बताता है</h2>
+
+        <p>पूर्व से हाथी। दक्षिण से सिंह। पश्चिम से सर्प। उत्तर से गरुड़। यह पर्वत केवल पत्थर नहीं है। यह भगवान विष्णु
+            के उस सम्पूर्ण परिवार का प्रतीक है जिसमें उनका वाहन, उनकी शेषशय्या, उनका अवतार और उनके भक्त सभी समाहित हैं।
+        </p>
+
+        <p>और उस पर्वत के शिखर पर योग नृसिंह शांत बैठे हैं। तलहटी पर भोग नृसिंह भक्तों का स्वागत कर रहे हैं। जो यहाँ आता
+            है, वह ब्रह्मा की उस परंपरा में आता है जिन्होंने 2000 वर्षों की तपस्या की थी।</p>
+
+        <p>और जो भगवान ब्रह्मा को मिले थे, वही भगवान आज भी इस पर्वत पर विराजमान हैं। <strong>वे प्रतीक्षा में
+                हैं।</strong></p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह स्तुति ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्॥
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                मैं उन उग्र, वीर, महाविष्णु स्वरूप, ज्वलंत, सर्वव्यापी, भीषण किंतु कल्याणकारी नृसिंह को प्रणाम करता हूँ
+                — जो मृत्यु के भी मृत्यु हैं।
+            </div>
+        </div>
+
+        <p
+            style="font-family:'EB Garamond',serif; font-style:italic; font-size:0.92rem; color:var(--muted); line-height:1.8;">
+            <strong>स्रोत एवं संदर्भ:</strong> यह लेख srinarasimhakutumbam.org, karnataka.com, tumkur.nic.in,
+            ishtadevata.com, pureprayer.com तथा देवरायनदुर्ग स्थलपुराण के प्रमाणित स्रोतों पर आधारित है।
+        </p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय ॐ · ॐ नमो भगवते नृसिंहाय ॐ · ॐ नमो भगवते नृसिंहाय ॐ</div>
+
+    </article>
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
