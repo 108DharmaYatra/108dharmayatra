@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>भार्गव नृसिंह का महारहस्य: जब एक अवतार ने दूसरे अवतार की तपस्या की | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="अहोबिलम में वह अद्वितीय क्षण जब परशुराम — भगवान विष्णु के छठे अवतार — ने नृसिंह की तपस्या की, हिरण्यकशिपु ने परशुराम को देखा और वह दिव्य क्षण 1500 वर्षों से भार्गव नृसिंह मंदिर में अमर है।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/bhargava-narsimha-ahobilam-parshuram-rahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>भार्गव नृसिंह
+                — परशुराम की तपस्या का फल</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">अहोबिलम</span>
+            <span class="tag">परशुराम</span>
+            <span class="tag">नव नृसिंह</span>
+        </div>
+        <h1>भार्गव नृसिंह का महारहस्य —<br><span class="accent">जब एक अवतार ने दूसरे अवतार की तपस्या की और हिरण्यकशिपु
+                ने परशुराम को देखा</span></h1>
+        <p class="subtitle">सृष्टि के इतिहास का वह अद्वितीय क्षण — जब भगवान विष्णु के छठे अवतार परशुराम ने चौथे अवतार
+            नृसिंह की तपस्या की, और वह दिव्य क्षण भार्गव नृसिंह मंदिर में 1500 वर्षों से अमर है।</p>
+        <div class="meta">
+            <span>📅 18 जून 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+
+        <p class="dropcap">भगवान विष्णु के दस अवतार हैं। उन दस अवतारों में एक बार ऐसा हुआ जो न पहले हुआ था न बाद में
+            होगा। <strong>एक अवतार ने दूसरे अवतार की तपस्या की।</strong> परशुराम जो स्वयं भगवान विष्णु के छठे अवतार हैं,
+            वे भगवान नृसिंह की तपस्या करने आए — उसी भगवान की तपस्या जो चौथे अवतार थे।</p>
+
+        <p>यह प्रसंग केवल एक स्थान पर है। <strong>अहोबिलम। भार्गव नृसिंह का मंदिर।</strong> और इस प्रसंग में एक और रहस्य
+            है — जब परशुराम तपस्या कर रहे थे और भगवान नृसिंह ने दर्शन दिए, तो उस दर्शन के समय भगवान की गोद में
+            हिरण्यकशिपु था। <strong>हिरण्यकशिपु ने परशुराम को देखा।</strong> और परशुराम ने भगवान से प्रार्थना की कि वे
+            उसी रूप में सदा के लिए यहाँ विराजमान हों। यह है: <strong>श्री भार्गव नृसिंह स्वामी।</strong></p>
+
+        <h2>परशुराम: वह अवतार जिसने नृसिंह को पुकारा</h2>
+
+        <p>परशुराम भगवान विष्णु के छठे अवतार हैं। वे भृगु वंश में जन्मे थे। इसीलिए उनका दूसरा नाम है: <strong>भार्गव
+                राम</strong> — भृगु वंश के राम। और इसीलिए जब उनकी तपस्या से प्रकट होकर नृसिंह यहाँ विराजमान हुए, तो वे
+            <strong>भार्गव नृसिंह</strong> कहलाए।
+        </p>
+
+        <p>परशुराम ने नृसिंह की तपस्या क्यों की? उनके मन में एक गहरी अभिलाषा थी। जब सतयुग में हिरण्यकशिपु का वध हुआ था,
+            परशुराम उस समय प्रकट नहीं हुए थे। वे त्रेतायुग के अवतार हैं। किंतु उनके हृदय में उस दिव्य क्षण का दर्शन करने
+            की इच्छा थी। <strong>वह क्षण जब स्तम्भ फटा। जब नृसिंह प्रकट हुए। जब हिरण्यकशिपु की छाती विदीर्ण की
+                गई।</strong></p>
+
+        <h2>वह तपस्या और वह असाधारण दर्शन</h2>
+
+        <p>परशुराम ने <strong>अक्षय तीर्थ</strong> में स्नान किया और उस जल से भगवान नृसिंह की उपासना की। वे प्रतिदिन उस
+            तीर्थ में स्नान करते। उस पवित्र जल से भगवान का अभिषेक करते। और फिर गहरी तपस्या में बैठ जाते।</p>
+
+        <p>और उनकी तपस्या से प्रसन्न होकर भगवान नृसिंह ने दर्शन दिए। भगवान की गोद में हिरण्यकशिपु था। उनके नख उसकी छाती
+            में थे। वह उग्र, दिव्य, अलौकिक क्षण। जब भगवान दर्शन दे रहे थे, हिरण्यकशिपु जो उनकी गोद में था, उसने परशुराम
+            की ओर देखा। <strong>यह एक असाधारण क्षण था।</strong></p>
+
+        <h2>परशुराम की प्रार्थना: जब एक अवतार ने दूसरे से माँगा</h2>
+
+        <p>उस दर्शन के पश्चात परशुराम ने भगवान नृसिंह से प्रार्थना की कि वे उसी रूप में यहाँ सदा के लिए विराजमान रहें।
+            भगवान ने वह प्रार्थना स्वीकार की।</p>
+
+
+        <p>और वह क्षण जो सतयुग में एक पल के लिए था, वह यहाँ अमर हो गया। आज जब कोई भक्त इस मंदिर में भार्गव नृसिंह का
+            दर्शन करता है, तो वह उसी क्षण का दर्शन करता है जो परशुराम ने देखा था। एक ही दर्शन में तीन प्रसंग: शत्रु
+            का वध, भक्त की रक्षा और परशुराम की अभिलाषा की पूर्ति।</p>
+        <cite><strong>— अहोबिलम स्थलपुराण</strong></cite>
+
+
+        <p>भगवान के चार हाथ हैं। दो हाथों में शंख और चक्र हैं। और दो हाथ हिरण्यकशिपु के शरीर को विदीर्ण कर रहे हैं।
+            हिरण्यकशिपु उनकी गोद में है। और प्रह्लाद उनके चरणों में है।</p>
+
+        <h2>दशावतार उत्कीर्णन: वह रहस्य जो विग्रह के पीछे है</h2>
+
+        <p>भार्गव नृसिंह के विग्रह की एक और असाधारण विशेषता है। विग्रह के पीछे की प्रभाई पर <strong>दशावतार उत्कीर्ण
+                हैं</strong> — मत्स्य, कूर्म, वराह, नृसिंह, वामन, परशुराम, राम, कृष्ण, बुद्ध और कल्कि।</p>
+
+        <p>परशुराम ने नृसिंह की तपस्या की। और इस मंदिर में नृसिंह के विग्रह के पीछे परशुराम सहित सभी दस अवतार उत्कीर्ण
+            हैं। <strong>सभी अवतार एक दूसरे को प्रणाम कर रहे हैं।</strong> यह उस सत्य का प्रतीक है: भगवान के सभी अवतार
+            एक ही परब्रह्म के विभिन्न रूप हैं।</p>
+
+        <h2>अक्षय तीर्थ: वह सरोवर जहाँ परशुराम ने स्नान किया</h2>
+
+        <p>मंदिर के निकट <strong>अक्षय तीर्थ</strong> है जिसे पुष्कर तीर्थ के समान पवित्र माना जाता है। परशुराम इसी कुंड
+            में स्नान करते थे और इसी जल से भार्गव नृसिंह की पूजा करते थे।</p>
+
+        <p>जो भक्त इस सरोवर में स्नान करके भार्गव नृसिंह का दर्शन करता है, उसे भगवान <strong>लक्ष्मी करा</strong> का
+            वरदान देते हैं — अर्थात वह हाथ जिसमें माता लक्ष्मी का आशीर्वाद हो। <strong>वह जल जिसमें परशुराम ने स्नान
+                किया, वह जल आज भी भक्तों को पवित्र करता है।</strong></p>
+
+        <h2>वह गणिका जिसने दर्शन से पश्चाताप किया</h2>
+
+        <p>भार्गव नृसिंह मंदिर के इतिहास में एक और प्रसंग है जो हृदय को छूता है। एक बार एक गणिका इस मंदिर में भार्गव
+            नृसिंह का दर्शन करने आई। उस दर्शन ने उसके हृदय को परिवर्तित कर दिया। उसने अपने जीवन पर पश्चाताप किया और
+            मंदिर के निकट एक तीर्थ का निर्माण करवाया।</p>
+
+
+        <p>उस गणिका ने कोई साधना नहीं की थी। कोई तपस्या नहीं की थी। वह तो केवल दर्शन करने आई थी। किंतु उस दर्शन की
+            शक्ति ऐसी थी कि उसका जीवन बदल गया। भगवान की दृष्टि परिवर्तन का सबसे सरल मार्ग है।</p>
+        <cite><strong>— अहोबिलम माहात्म्य</strong></cite>
+
+
+        <h2>1500 वर्ष पुराना मंदिर: वह इतिहास जो शिलाओं में है</h2>
+
+        <p>यह मंदिर 1500 वर्ष से भी अधिक पुराना है। 1500 वर्ष। तब से यह विग्रह यहाँ विराजमान है। तब से परशुराम की तपस्या
+            का वह फल यहाँ अमर है।</p>
+
+        <p>मंदिर परिसर घने वन में है। ऊँचाई पर। पहुँचने के लिए खड़ी सीढ़ियाँ चढ़नी होती हैं। यह यात्रा कठिन है।
+            <strong>किंतु जो पहुँचता है, वह 1500 वर्षों की उस परंपरा का हिस्सा बनता है जो परशुराम ने स्थापित की
+                थी।</strong>
+        </p>
+
+        <h2>चैतन्य महाप्रभु के चरण चिह्न: वह स्मृति जो अमर है</h2>
+
+        <p>श्री <strong>चैतन्य महाप्रभु</strong> ने अपनी दक्षिण भारत यात्रा के समय अहोबिलम की यात्रा की थी। उग्र स्तम्भ
+            के शिखर पर उनके <strong>चरण चिह्न</strong> आज भी अंकित हैं।</p>
+
+        <p>चैतन्य महाप्रभु जो वैष्णव भक्ति परंपरा के महानतम आचार्यों में से एक हैं — जिनके भजन-कीर्तन की परंपरा आज भी
+            सम्पूर्ण भारत और विश्व में जीवित है — उन्होंने इसी अहोबिलम में अपने चरण रखे। <strong>एक भक्त की स्मृति पत्थर
+                में अमर हो जाती है।</strong></p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ भार्गव नृसिंह मंगल श्लोक ✦</div>
+            <div class="shlok-text">
+                भार्गवाख्य तपस्वीश भावना भावितात्मने।<br>
+                अक्षय तीर्थ तीर्थस्तु भार्गवायास्तु मंगलम्॥
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                वह तपस्वी जिसका नाम भार्गव है, जो ध्यान में लीन रहते हैं, जो अक्षय तीर्थ के किनारे हैं — उन भार्गव के
+                लिए मंगल हो।
+            </div>
+        </div>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+
+        <p><strong>पहली शिक्षा: भगवान के अवतारों में कोई भेद नहीं।</strong> परशुराम स्वयं भगवान विष्णु के अवतार हैं। फिर
+            भी उन्होंने नृसिंह की तपस्या की। सभी अवतार एक ही परब्रह्म के रूप हैं। किसी भी रूप की उपासना उसी एक की उपासना
+            है।</p>
+
+        <p><strong>दूसरी शिक्षा: जो क्षण अमर होने योग्य हो, भगवान उसे अमर करते हैं।</strong> परशुराम ने उस क्षण को देखा।
+            प्रार्थना की। भगवान ने स्वीकार किया। वह क्षण 1500 वर्षों से अमर है।</p>
+
+        <p><strong>तीसरी शिक्षा: एक दर्शन भी जीवन बदल सकता है।</strong> उस गणिका का जीवन केवल एक दर्शन से बदल गया। लंबी
+            साधना की आवश्यकता नहीं। सच्चे मन से एक दर्शन पर्याप्त है।</p>
+
+        <p><strong>चौथी शिक्षा: अक्षय तीर्थ का जल सब कुछ शुद्ध करता है।</strong> वह तीर्थ जो कभी क्षीण नहीं होता, जिसमें
+            परशुराम ने स्नान किया — उस जल में जो स्नान करे, वह शुद्ध हो जाता है।</p>
+
+        <h2>उपसंहार: वह दर्शन जो परशुराम ने माँगा</h2>
+
+        <p>परशुराम ने वह दर्शन माँगा जो उन्होंने नहीं देखा था। भगवान ने दिया। और उस दर्शन में हिरण्यकशिपु की दृष्टि
+            परशुराम पर पड़ी। उस एक दृष्टि ने परशुराम के मन में वह प्रार्थना जगाई जो इस मंदिर को अमर बना गई।</p>
+
+        <p><strong>"प्रभु, इसी रूप में यहाँ रहो।"</strong></p>
+
+        <p>और भगवान रहे। 1500 वर्षों से अधिक समय से वह विग्रह यहाँ है। दशावतार उसकी प्रभाई पर उत्कीर्ण हैं। और प्रह्लाद
+            उनके चरणों में हैं। <strong>जो भक्त आज इस मंदिर में आता है, वह उस क्षण के साक्षी बनता है जो परशुराम ने देखा
+                था। और वह दर्शन आज भी वैसा ही है।</strong></p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह स्तुति ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्॥
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                मैं उन उग्र, वीर, महाविष्णु स्वरूप, ज्वलंत, सर्वव्यापी, भीषण किंतु कल्याणकारी नृसिंह को प्रणाम करता हूँ
+                — जो मृत्यु के भी मृत्यु हैं।
+            </div>
+        </div>
+
+        <p
+            style="font-family:'EB Garamond',serif; font-style:italic; font-size:0.92rem; color:var(--muted); line-height:1.8;">
+            <strong>स्रोत एवं संदर्भ:</strong> यह लेख arunraj.org, lightuptemples.com, ahobilamtours.com,
+            templesinindiainfo.com तथा अहोबिलम स्थलपुराण एवं ब्रह्माण्ड पुराण के प्रमाणित स्रोतों पर आधारित है।
+        </p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+
+    </article>
+
+    <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
