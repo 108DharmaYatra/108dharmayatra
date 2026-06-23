@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>छत्रवट नृसिंह का महारहस्य: जब गंधर्वों के संगीत ने भगवान को मंत्रमुग्ध किया | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="अहोबिलम के छत्रवट नृसिंह की अद्भुत कथा — दो गंधर्व हाहा और हूहू, उनकी दिव्य संगीत-साधना, और वह ताल मुद्रा जो संसार के किसी और नृसिंह विग्रह में नहीं मिलती। जानिए इस रहस्यमय मंदिर का पूरा सत्य।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/chatraavata-narasimha" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>छत्रवट
+                नृसिंह</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">अहोबिलम</span>
+            <span class="tag">गंधर्व कथा</span>
+            <span class="tag">केतु ग्रह</span>
+        </div>
+        <h1>छत्रवट नृसिंह —<br><span class="accent">संगीत का महारहस्य</span></h1>
+        <p class="subtitle">जब दो गंधर्वों के संगीत ने नृसिंह को मंत्रमुग्ध किया और भगवान ने उन्हें संसार का सर्वश्रेष्ठ
+            गायक बना दिया — अहोबिलम के उस एकमात्र विग्रह की कथा जिसमें भगवान ताल देते हैं।</p>
+        <div class="meta">
+            <span>📅23 जून 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+
+        <p class="dropcap">अहोबिलम के निचले क्षेत्र से तीन किलोमीटर दूर एक पीपल का वृक्ष है। घने काँटेदार झाड़ियों से
+            घिरा। प्राकृतिक वन के बीचों-बीच। उस वृक्ष की छाया में एक विग्रह है — छह फुट ऊँचा। मुख पर एक अत्यंत सुंदर,
+            विस्तृत मुस्कान। ऊपरी हाथों में शंख और चक्र। और बाएँ हाथ में एक ऐसी मुद्रा जो संसार के किसी और नृसिंह विग्रह
+            में नहीं मिलती।</p>
+
+        <p><strong>ताल मुद्रा।</strong> संगीत की मुद्रा। जैसे कोई ताल दे रहा हो।</p>
+
+        <p>यह भगवान हैं: <strong>श्री छत्रवट नृसिंह स्वामी।</strong> और इस मुद्रा के पीछे एक ऐसी कथा है जो स्वर्ग के दो
+            संगीतकारों, उनकी अद्भुत प्रतिभा, और भगवान के हृदय में संगीत के प्रति उस प्रेम की गवाही देती है जो शायद ही
+            किसी और नृसिंह स्वरूप में दिखता है।</p>
+
+        <p>आइए, इस मधुर रहस्य को समझते हैं।</p>
+
+        <h2>छत्रवट नाम का रहस्य: छत्र और वट का संगम</h2>
+
+        <p>इस मंदिर के नाम में ही एक सुंदर अर्थ छिपा है। <strong>छत्र</strong> अर्थात छाता — वह जो ऊपर से आच्छादन करे।
+            <strong>वट</strong> अर्थात पीपल अथवा वट वृक्ष। छत्रवट का अर्थ है: वह वृक्षों की छतरी जो भगवान को दिव्य छत्र
+            की भाँति आच्छादित करती है।
+        </p>
+
+        <p>भगवान यहाँ एक पीपल वृक्ष के नीचे विराजमान हैं। उस वृक्ष की शाखाएँ इतनी विस्तृत हैं कि वे भगवान के ऊपर एक
+            प्राकृतिक छत्र का निर्माण करती हैं।</p>
+
+
+        <p>प्रकृति ने स्वयं भगवान के लिए एक छतरी बनाई। किसी मानव निर्मित गोपुरम की आवश्यकता नहीं। वृक्ष की शाखाएँ ही
+            उनका आवरण हैं।</p>
+        <cite><strong>— छत्रवट माहात्म्य</strong></cite>
+
+
+        <p>यह दृश्य अत्यंत भावपूर्ण है। भगवान जो सम्पूर्ण सृष्टि के रक्षक हैं, उन्हें यहाँ स्वयं प्रकृति आश्रय दे रही
+            है।</p>
+
+        <h2>हाहा और हूहू: वे दो गंधर्व जिन्होंने भगवान को मंत्रमुग्ध किया</h2>
+
+        <p>इस मंदिर की सबसे अद्भुत कथा दो गंधर्वों से जुड़ी है। मेरु पर्वत से दो गंधर्व यहाँ आए। उनके नाम थे:
+            <strong>हाहा</strong> और <strong>हूहू।</strong>
+        </p>
+
+        <p>गंधर्व स्वर्ग के वे दिव्य प्राणी हैं जो संगीत और कला में निपुण माने जाते हैं। हाहा और हूहू उन गंधर्वों में भी
+            विशेष थे। जब वे इस वन में आए और उन्होंने भगवान छत्रवट नृसिंह को पीपल वृक्ष के नीचे विराजमान देखा, तो उनके
+            हृदय में एक भाव जागा — वे भगवान के लिए गाना चाहते थे।</p>
+
+        <p>उन्होंने अपना संगीत आरंभ किया। और वह संगीत इतना मधुर, इतना मनमोहक था कि भगवान नृसिंह, जो हिरण्यकशिपु के वध के
+            पश्चात उग्रता में थे, <strong>उस संगीत में पूर्णतः लीन हो गए।</strong> उन्होंने अपने हाथ से ताल देना शुरू
+            किया।</p>
+
+        <p><strong>वही ताल जो आज भी उनके विग्रह में अमर है।</strong></p>
+
+        <h2>ताल मुद्रा: वह स्वरूप जो संसार में अद्वितीय है</h2>
+
+        <p>छत्रवट नृसिंह के विग्रह की एक विशेषता है जो किसी और नृसिंह स्वरूप में नहीं मिलती। उनका बायाँ हाथ <strong>तला
+                मुद्रा</strong> अर्थात ताल देने की मुद्रा में है। यह मुद्रा केवल इसी विग्रह में है।</p>
+
+        <p>सोचिए उस दृश्य को। भगवान जो अभी एक भयंकर असुर का वध करके आए थे, वे अब संगीत सुनकर इतने प्रसन्न थे कि अपने हाथ
+            से ताल दे रहे थे।</p>
+
+        <p>भगवान जो युद्ध में अजेय हैं, वही भगवान संगीत में इतने सरल और सहज हैं कि स्वयं ताल देने लगते हैं।</p>
+        <cite><strong>— छत्रवट स्थलपुराण</strong></cite>
+
+
+        <p>यह उनकी सर्वव्यापकता का प्रमाण है। वे केवल शक्ति नहीं, सौंदर्य भी हैं। केवल न्याय नहीं, कला भी हैं।</p>
+
+        <h2>वह वरदान जिसने दो गंधर्वों को अमर बना दिया</h2>
+
+        <p>जब हाहा और हूहू का संगीत समाप्त हुआ, तो भगवान अत्यंत प्रसन्न थे। उन्होंने दोनों गंधर्वों को आशीर्वाद दिया।
+        </p>
+
+        <p>भगवान ने कहा: <strong>"तुम दोनों तीनों लोकों में सर्वश्रेष्ठ गायक के रूप में प्रसिद्ध होगे।"</strong></p>
+
+        <p>यह वरदान साधारण नहीं था। तीनों लोकों में सर्वश्रेष्ठ गायक होना — देवलोक, मृत्युलोक और पाताल लोक में जहाँ भी
+            संगीत हो, वहाँ हाहा और हूहू का नाम सबसे ऊपर हो। यह वरदान भगवान ने उन्हें केवल इसलिए दिया क्योंकि उन्होंने
+            अपना संगीत निःस्वार्थ भाव से, केवल भगवान को प्रसन्न करने के लिए गाया था।</p>
+
+
+        <p>सच्ची कला, जो किसी प्रतिफल की आशा के बिना अर्पित की जाए, भगवान को सबसे अधिक प्रसन्न करती है।</p>
+        <cite><strong>— ब्रह्माण्ड पुराण</strong></cite>
+
+
+        <p>और आज भी जो भक्त इस मंदिर में मधुर स्वर में भजन गाते हैं, वे उन्हीं दो गंधर्वों की परंपरा का अनुसरण करते हैं।
+        </p>
+
+        <h2>देवता आराधना क्षेत्र: जब इंद्र और देवताओं ने यहाँ प्रार्थना की</h2>
+
+        <p>छत्रवट नृसिंह मंदिर का एक और नाम है: <strong>देवता आराधना क्षेत्र।</strong> यह नाम क्यों? इंद्र और अन्य
+            देवताओं ने यहाँ छत्रवट नृसिंह की आराधना की और उनसे असुर राजा का वध करने का अनुरोध किया।</p>
+
+        <p>अर्थात हिरण्यकशिपु के वध से पहले, इसी स्थान पर, इंद्र सहित सभी देवताओं ने भगवान से प्रार्थना की थी। उन्होंने
+            कहा होगा: "प्रभु, हिरण्यकशिपु के अत्याचार असहनीय हो गए हैं। हमारी रक्षा कीजिए।" और भगवान ने उनकी प्रार्थना
+            सुनी।</p>
+
+        <p>यह स्थान केवल संगीत की कथा का साक्षी नहीं। यह वह स्थान भी है जहाँ देवताओं की प्रार्थना ने भगवान को कर्म के
+            लिए प्रेरित किया। देवताओं की प्रार्थना और गंधर्वों का संगीत, दोनों इसी पीपल वृक्ष के नीचे हुए। एक ही स्थान।
+            दो अलग समय। दो अलग भाव।</p>
+
+        <h2>केतु ग्रह और छत्रवट नृसिंह: वह सम्बन्ध जो शाप से मुक्ति देता है</h2>
+
+        <p>नव नृसिंह और नवग्रहों के सम्बन्ध में छत्रवट नृसिंह <strong>केतु ग्रह</strong> के अधिपति हैं। केतु एक छाया
+            ग्रह है — रहस्य, आध्यात्मिकता, मोक्ष और अप्रत्याशित घटनाओं का ग्रह। केतु ने स्वयं अपने शाप से मुक्ति पाने के
+            लिए यहाँ प्रार्थना की थी।</p>
+
+        <p>केतु जो स्वयं एक ग्रह है, जो अनेक जीवात्माओं के भाग्य को प्रभावित करता है, उसे भी शाप से मुक्ति चाहिए थी। और
+            उसने यह मुक्ति छत्रवट नृसिंह से माँगी। यह तथ्य बताता है कि भगवान की शरण में देवता, ग्रह, गंधर्व — सभी आते
+            हैं। कोई इतना बड़ा नहीं कि उसे भगवान की कृपा की आवश्यकता न हो।</p>
+
+        <p><strong>जो भक्त केतु के दोष से पीड़ित हों, जो कलात्मक और संगीत क्षेत्र में रुचि रखते हों, वे विशेष रूप से
+                छत्रवट नृसिंह की उपासना करते हैं।</strong> ललित कला में रुचि रखने वाले लोग सामान्यतः उनके आशीर्वाद के
+            लिए इस मंदिर में आते हैं।</p>
+
+        <h2>विग्रह की एक और विशेषता: वह उत्सव मूर्ति जिसका रहस्य अनोखा है</h2>
+
+        <p>छत्रवट नृसिंह के विग्रह की एक और बात ध्यान देने योग्य है। स्तम्भों की शैली के आधार पर यह मंदिर 12वीं शताब्दी
+            का माना जाता है। और प्रधान देवता की प्रतिमा प्रारंभिक विजयनगर काल की है।</p>
+
+        <p>12वीं शताब्दी के स्तम्भ। और विजयनगर काल का विग्रह। यह बताता है कि मंदिर का ढाँचा एक काल का है और विग्रह दूसरे
+            काल का। संभवतः मूल विग्रह किसी कारण से बदला गया हो, या समय के साथ नया विग्रह स्थापित हुआ हो। आज यह मंदिर
+            पूर्णतः सीमेंट संरचना में नवीनीकृत है। किंतु वह आत्मा, वह संगीत की स्मृति, वह ताल मुद्रा आज भी वैसी ही है।
+        </p>
+
+        <h2>अहोबिलम का सबसे सुलभ मंदिर: वह मार्ग जो योगानंद नृसिंह के साथ जुड़ता है</h2>
+
+        <p>छत्रवट नृसिंह मंदिर निचले अहोबिलम से तीन किलोमीटर दूर है — योगानंद नृसिंह के मार्ग पर ही स्थित। यह मंदिर भी
+            अहोबिलम के अधिक सुलभ मंदिरों में से एक है। प्रातः नौ बजे से सायं साढ़े पाँच बजे तक मंदिर के द्वार खुले रहते
+            हैं, योगानंद मंदिर के साथ ही।</p>
+
+        <p>जो भक्त एक ही यात्रा में योगानंद नृसिंह और छत्रवट नृसिंह दोनों के दर्शन करता है, वह एक ही दिन में भगवान के दो
+            अलग भावों का अनुभव करता है। योगानंद नृसिंह में भगवान गुरु हैं। छत्रवट नृसिंह में भगवान श्रोता हैं, रसिक हैं,
+            कला-प्रेमी हैं।</p>
+
+
+        <p>एक ही पथ पर दो भिन्न दर्शन।</p>
+        <cite><strong>— अहोबिलम यात्रा माहात्म्य</strong></cite>
+
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+
+        <p><strong>पहली शिक्षा: निःस्वार्थ कला सबसे बड़ा वरदान पाती है।</strong> हाहा और हूहू ने प्रतिफल की आशा के बिना
+            गाया। और उन्हें तीनों लोकों में सर्वश्रेष्ठ होने का वरदान मिला। जो कला, जो सेवा निःस्वार्थ भाव से की जाए, वह
+            सबसे बड़ा फल देती है।</p>
+
+        <p><strong>दूसरी शिक्षा: भगवान सौंदर्य और कला के भी रसिक हैं।</strong> भगवान केवल न्यायकर्ता नहीं। वे संगीत में
+            लीन हो सकते हैं। ताल दे सकते हैं। यह बताता है कि भक्ति केवल कठोर साधना नहीं, आनंदमय अभिव्यक्ति भी हो सकती
+            है।</p>
+
+        <p><strong>तीसरी शिक्षा: प्रार्थना का बल असीम है।</strong> देवताओं की प्रार्थना ने भगवान को हिरण्यकशिपु के वध के
+            लिए प्रेरित किया। सच्ची प्रार्थना कभी व्यर्थ नहीं जाती।</p>
+
+        <p><strong>चौथी शिक्षा: प्रकृति भी भगवान की सेवा करती है।</strong> वह पीपल वृक्ष जिसने भगवान को छत्र दिया — यह
+            बताता है कि प्रकृति का प्रत्येक तत्त्व भगवान की सेवा के लिए तत्पर है।</p>
+
+        <h2>उपसंहार: वह ताल जो आज भी सुनाई देती है</h2>
+
+        <p>उस पीपल वृक्ष की छाया में। काँटेदार झाड़ियों से घिरे उस वन में। भगवान छत्रवट नृसिंह आज भी विराजमान हैं —
+            मुस्कुराते हुए, बाएँ हाथ से ताल देते हुए।</p>
+
+        <p>हाहा और हूहू का वह संगीत अब सुनाई नहीं देता। किंतु वह ताल मुद्रा आज भी उसी संगीत की स्मृति को धारण किए हुए
+            है। जो भक्त आज इस मंदिर में आकर मधुर स्वर में भजन गाता है, वह उसी परंपरा को आगे बढ़ाता है जो उन दो गंधर्वों
+            ने स्थापित की थी।</p>
+
+
+        <p>भगवान आज भी उसी प्रसन्नता से सुनते हैं, जैसे उन्होंने त्रेतायुग में हाहा और हूहू का संगीत सुना था।</p>
+        <cite><strong>— छत्रवट भक्त परंपरा</strong></cite>
+
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह स्तुति ✦</div>
+            <div class="shlok-text">
+                उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>
+                नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम्।।
+            </div>
+            <div class="shlok-meaning">
+                <strong>भावार्थ —</strong><br><br>
+                मैं उन उग्र, वीर, महाविष्णु, सर्वत्र प्रकाशमान, सब ओर मुख वाले, भयंकर और कल्याणकारी नृसिंह भगवान को
+                नमस्कार करता हूँ — जो स्वयं मृत्यु के भी मृत्यु हैं।
+            </div>
+        </div>
+
+        <p
+            style="font-family: 'EB Garamond', serif; font-style: italic; font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-top: 2rem;">
+            <strong>स्रोत एवं संदर्भ:</strong> यह लेख tirupatitirumalainfo.com, templesinindiainfo.com, arunraj.org,
+            divinedarshan.blogspot.com तथा अहोबिलम स्थलपुराण एवं ब्रह्माण्ड पुराण के प्रमाणित स्रोतों पर आधारित है। —
+            <em>108 Dharma Yatra</em>
+        </p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय · नमस्तेजस्तेजसे · आविराविर्भव · वज्रनख वज्रदंश · कर्म · आशयान् ·
+            रन्धय · रन्धय · तमो ग्रस · ग्रस · ॐ स्वाहा ॥</div>
+
+    </article>
+
+    <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>

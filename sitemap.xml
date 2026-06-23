@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 
 <url>
@@ -133,6 +133,12 @@
 <url>
   <loc>https://www.108dharmayatra.com/Blogs/yogananda-narsimha-ahobilam-prahlad-yoga</loc>
   <lastmod>2026-06-21T09:00:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+<url>
+  <loc>https://www.108dharmayatra.com/Blogs/chatraavata-narasimha</loc>
+  <lastmod>2026-06-23T09:00:07+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
