@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>देवगढ़ का दशावतार मंदिर — गुप्त काल का प्राचीनतम पत्थर मंदिर | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="उत्तर प्रदेश के देवगढ़ में स्थित गुप्त काल (लगभग 500-525 ई.) का दशावतार मंदिर, जिसे लक्ष्मी नृसिंह मंदिर भी कहा जाता है। जानें इसके अनंतशयन विष्णु पैनल, नृसिंह अवतार, पंचायतन वास्तुशैली और वैष्णव भक्ति से जुड़ी चार शाश्वत शिक्षाओं के बारे में।" />
+    <link rel="canonical" href="https://108dharmayatra.com/blogs/devgarh-dashavatar-mandir" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>दशावतार
+                मंदिर</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">गुप्त काल</span>
+            <span class="tag">वैष्णव भक्ति</span>
+            <span class="tag">मंदिर वास्तुकला</span>
+        </div>
+        <h1>देवगढ़ का दशावतार मंदिर —<br><span class="accent">गुप्त काल का प्राचीनतम पत्थर मंदिर</span></h1>
+        <p class="subtitle">वह मंदिर जो गुप्त युग की भक्ति और कला को आज भी जीवित रखे हुए है</p>
+        <div class="meta">
+            <span>📅 1 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 9 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <p class="dropcap">भारत के मंदिर इतिहास में कुछ ऐसे मंदिर हैं जो न केवल धार्मिक महत्व रखते हैं, बल्कि भारतीय कला
+            और वास्तुकला के विकास के महत्वपूर्ण साक्ष्य भी हैं। उत्तर प्रदेश के ललितपुर जिले में बेतवा नदी की घाटी में
+            स्थित दशावतार मंदिर ऐसा ही एक दुर्लभ और अमूल्य मंदिर है। इसे लोकभाषा में लक्ष्मी नृसिंह मंदिर भी कहा जाता है
+            क्योंकि इसके प्रमुख relief panels में माता लक्ष्मी सहित शयन करते भगवान विष्णु और भगवान नृसिंह के दृश्य
+            प्रमुखता से उकेरे गए हैं। यह मंदिर गुप्त काल (लगभग 500-525 ईस्वी) का है और उत्तर भारत के सबसे पुराने
+            surviving structural stone temples में गिना जाता है। इसकी खासियत यह है कि यहाँ मंदिर निर्माण की शास्त्रीय
+            परंपरा, वैष्णव भक्ति और उच्च स्तरीय मूर्तिकला का अद्भुत संगम देखने को मिलता है।</p>
+
+        <h2>वह मंदिर जो विष्णुधर्मोत्तर पुराण की सरस्वतोभद्र शैली को मूर्त रूप देता है</h2>
+        <p>इस मंदिर की सबसे बड़ी विशेषता इसकी वास्तु शैली है। विद्वानों के अनुसार, देवगढ़ का दशावतार मंदिर
+            विष्णुधर्मोत्तर पुराण के तीसरे खंड में वर्णित सरस्वतोभद्र मंदिर के विवरण से काफी हद तक मेल खाता है। पुराण
+            में जिस प्रकार के मंदिर का वर्णन मिलता है — ऊँचा चबूतरा, चारों ओर सीढ़ियाँ, मुख्य गर्भगृह के चारों कोनों में
+            छोटे-छोटे मंदिर, और ऊपर पिरामिडनुमा शिखर — वही स्वरूप यहाँ देखा जा सकता है।</p>
+        <p>यह कोई साधारण मंदिर नहीं है। यह उस युग का प्रमाण है जब मंदिर निर्माण केवल विश्वास का विषय नहीं था, बल्कि
+            शास्त्रसम्मत विज्ञान भी था। गुप्त काल में वास्तुशास्त्र और पुराणों का गहरा संबंध था और देवगढ़ का यह मंदिर
+            उसी परंपरा का सबसे पुराना जीवित उदाहरण है।</p>
+
+        <h2>वास्तुकला की विशेषताएँ: पंचायतन शैली का प्रारंभिक स्वरूप</h2>
+        <p>देवगढ़ का दशावतार मंदिर पंचायतन शैली में बना है। इसका अर्थ है कि मुख्य गर्भगृह के चारों कोनों में चार छोटे
+            मंदिर (उप-मंदिर) थे। आज मुख्य मंदिर के अवशेष अच्छी स्थिति में हैं, जबकि चारों छोटे मंदिरों के केवल आधार ही
+            बचे हैं।</p>
+        <p>मंदिर एक ऊँचे चबूतरे पर बना है जिसकी चारों दिशाओं में सीढ़ियाँ हैं। मुख्य गर्भगृह वर्गाकार है और इसके ऊपर
+            पहले पिरामिडनुमा शिखर था, जो बाद में विकसित होने वाली नागर शैली का प्रारंभिक रूप माना जाता है। मंदिर की
+            दीवारों पर गज, मकर, पुष्प और मिथुन आकृतियों का सुंदर अलंकरण किया गया है।</p>
+        <p>यह मंदिर उत्तर भारतीय मंदिर वास्तुकला के विकास में एक महत्वपूर्ण कड़ी है। इससे पहले के मंदिर ज्यादातर ईंट या
+            लकड़ी के होते थे, जबकि यह पूरी तरह पत्थर से निर्मित है और शिखर युक्त है।</p>
+
+        <h2>लक्ष्मी सहित अनंतशयन विष्णु</h2>
+        <p>मंदिर की पूर्वी दीवार पर बना अनंतशयन विष्णु का पैनल इस मंदिर की सबसे भव्य और भावपूर्ण मूर्तिकला है। भगवान
+            विष्णु शेषनाग की शय्या पर आराम से लेटे हुए हैं। उनके सिर के पास शेषनाग का फन फैला हुआ है। उनके चरणों के पास
+            माता लक्ष्मी बैठी हैं और वे भगवान के दाहिने पैर को दबा रही हैं।</p>
+        <p>इस पैनल में चारों ओर दिव्य गण, अप्सराएँ, भक्त और दिव्य प्राणी उपस्थित हैं। कुछ आकृतियाँ हाथ जोड़कर स्तुति कर
+            रही हैं, कुछ फूल बिखेर रही हैं। यह पैनल वैष्णव भक्ति की गहराई को दर्शाता है। यहीं कारण है कि लोग इस मंदिर को
+            लक्ष्मी नृसिंह मंदिर भी कहते हैं।</p>
+
+        <h2>उग्रता और करुणा का संगम</h2>
+        <p>मंदिर में भगवान नृसिंह का भी स्पष्ट चित्रण मिलता है। एक पैनल में नृसिंह हिरण्यकशिपु का वध करते हुए दिखाए गए
+            हैं। हालांकि यह पैनल अनंतशयन विष्णु जितना बड़ा नहीं है, लेकिन इसमें नृसिंह की उग्रता और भक्ति दोनों का संगम
+            दिखता है।</p>
+        <p>गुप्त काल की मूर्तिकला की खासियत यह थी कि वे देवताओं को केवल शक्तिशाली नहीं, बल्कि भावपूर्ण और करुणामय भी
+            दिखाते थे। नृसिंह का यह चित्रण उसी परंपरा का हिस्सा है।</p>
+
+        <h2>अन्य महत्वपूर्ण</h2>
+        <p>इस मंदिर की दीवारों पर कई अन्य भव्य पैनल बने हुए हैं — गजेंद्र मोक्ष (हाथी को मगरमच्छ से बचाते हुए भगवान
+            विष्णु का दृश्य), नर-नारायण (ध्यान मुद्रा में बैठे नर और नारायण), वामन अवतार (बलि राजा के यज्ञ में वामन का
+            दृश्य) तथा रामायण और महाभारत से जुड़े कई दृश्य।</p>
+        <p>ये सभी पैनल गुप्त काल की कला की परिपक्वता को दर्शाते हैं। शिल्पी ने पत्थर पर इतनी सूक्ष्मता और भाव के साथ काम
+            किया है कि आज भी ये मूर्तियाँ जीवंत लगती हैं।</p>
+
+        <h2>ऐतिहासिक महत्व और पुनर्खोज</h2>
+        <p>यह मंदिर सदियों तक घने जंगलों में छिपा रहा। 19वीं शताब्दी में सर अलेक्जेंडर कनिंघम ने इसकी खोज की। बाद में
+            भारतीय पुरातत्व सर्वेक्षण (ASI) ने विस्तृत अध्ययन किया। विद्वान मदो सरूप वाट्स ने इसके बारे में महत्वपूर्ण
+            रिपोर्ट प्रकाशित की।</p>
+        <p>आज यह मंदिर संरक्षित स्मारक है और गुप्त काल की कला एवं वास्तुकला का अध्ययन करने वालों के लिए अत्यंत
+            महत्वपूर्ण स्थल है।</p>
+
+        <h2>इस मंदिर से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: शास्त्र और कला का गहरा संबंध</strong><br>यह मंदिर सिखाता है कि प्राचीन भारत में कला और
+            शास्त्र अलग नहीं थे। विष्णुधर्मोत्तर पुराण जैसे ग्रंथ मंदिर निर्माण के लिए मार्गदर्शक थे। आज भी यदि हम
+            परंपरा का सम्मान करें तो कला सही दिशा में विकसित होती है।</p>
+        <p><strong>दूसरी शिक्षा: भक्ति पत्थर को भी जीवंत बना देती है</strong><br>गुप्त काल के शिल्पियों ने पत्थर पर
+            लक्ष्मी और नृसिंह जैसे दृश्य इसलिए उकेरे क्योंकि उनके हृदय में गहरी भक्ति थी। जब कला भक्ति से जुड़ती है तो
+            वह कालजयी हो जाती है।</p>
+        <p><strong>तीसरी शिक्षा: अवतारों की विविधता में एकता</strong><br>इस एक मंदिर में विष्णु के अनेक अवतारों को एक
+            साथ दिखाया गया है। इससे स्पष्ट होता है कि भगवान एक हैं, उनके रूप अनेक हैं। नृसिंह का उग्र रूप और लक्ष्मी
+            सहित शयन करते विष्णु — दोनों एक ही सत्य के दो पहलू हैं।</p>
+        <p><strong>चौथी शिक्षा: पुरातनता भी प्रासंगिक रह सकती है</strong><br>1500 वर्ष से अधिक पुराना यह मंदिर आज भी
+            खड़ा है और लोग इसकी कला और भक्ति से प्रेरणा लेते हैं। यह सिखाता है कि जो चीजें शास्त्र और भक्ति पर आधारित
+            होती हैं, वे समय के साथ नष्ट नहीं होतीं।</p>
+
+        <h2>उपसंहार: वह मंदिर जो गुप्त युग की सुगंध आज भी बिखेरता है</h2>
+        <p>देवगढ़ का दशावतार मंदिर (लक्ष्मी नृसिंह मंदिर) भारत के मंदिर इतिहास का एक अनमोल रत्न है। यह न केवल एक धार्मिक
+            स्थल है, बल्कि गुप्त काल की कला, वास्तुकला, वैष्णव भक्ति और शास्त्रीय परंपरा का जीवंत दस्तावेज है।</p>
+        <p>यहाँ के पैनलों में उकेरे गए लक्ष्मी सहित अनंतशयन विष्णु और नृसिंह अवतार आज भी भक्तों के हृदय में भगवान की
+            उपस्थिति का अनुभव कराते हैं। जो व्यक्ति इस मंदिर में आता है, वह न केवल प्राचीन पत्थर देखता है, बल्कि उस युग
+            को छूता है जब भगवान के अवतार पत्थर में भी साकार हो उठते थे।</p>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह मंत्र ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्॥</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उग्र, वीर एवं महाविष्णु स्वरूप, सर्वतोमुख
+                ज्वलंत, भयंकर किंतु शुभ नृसिंह को नमस्कार करता हूँ, जो मृत्यु के भी मृत्यु हैं।</div>
+        </div>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+    </article>
+
+      <!-- Email Caputure Section -->
+
+       <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
