@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>पेंचालकोना का महारहस्य: वह पर्वत जो आलिंगन से बना | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="पेनुशिला लक्ष्मी नृसिंह मंदिर, पेंचालकोना की अद्भुत कथा — वह पर्वत जो दो शिलाओं के आलिंगन से बना, वह विवाह जो चेंचु लक्ष्मी से हुआ, और वह शिला जिसमें भगवान स्वयंभू रूप में विराजमान हैं।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/penchalakona-lakshmi-narasimha-maharahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>पेंचालकोना का
+                महारहस्य</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">पेंचालकोना</span>
+            <span class="tag">नव नृसिंह क्षेत्र</span>
+        </div>
+        <h1>पेंचालकोना का महारहस्य —<br><span class="accent">वह पर्वत जो आलिंगन से बना</span></h1>
+        <p class="subtitle">जहाँ चेंचु लक्ष्मी ने भगवान नृसिंह को आलिंगन किया, विवाह हुआ, और भगवान ने स्वयं को एक विशाल
+            शिला के रूप में अमर कर लिया।</p>
+        <div class="meta">
+            <span>📅 06 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 13 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह आलिंगन जिसने एक पर्वत बना दिया</h2>
+        <p class="dropcap">आंध्र प्रदेश के नेल्लोर जिले में पूर्वी घाट की एक सुरम्य घाटी है। घने वन। स्वच्छ जल के झरने।
+            और उन झरनों के बीच एक पर्वत। वह पर्वत साधारण नहीं है।</p>
+        <p>ध्यान से देखने पर वह पर्वत दो विशाल शिलाओं के आलिंगन की भाँति दिखता है। जैसे दो प्राणी एक-दूसरे को थामे हुए
+            हों। और इस आलिंगन के पीछे एक कथा है।</p>
+        <p>हिरण्यकशिपु के वध के बाद भगवान नृसिंह का क्रोध शांत नहीं हुआ। वे वनों में विचरण करते रहे। तब माता लक्ष्मी ने
+            चेंचु लक्ष्मी नामक एक जनजातीय कन्या का रूप धारण किया और भगवान नृसिंह को इस स्थान पर आलिंगन किया। तेलुगु में
+            आलिंगन को "पेनु वेसुकोनुटा" कहते हैं। इसीलिए यह स्थान "पेनुशिला" कहलाया जो बाद में पेंचालकोना बन गया।</p>
+
+        <p>उस आलिंगन के पश्चात भगवान नृसिंह ने माता चेंचु लक्ष्मी से विवाह किया और फिर स्वयं को एक विशाल शिला के रूप
+            में प्रकट किया।</p>
+        <strong>— पेंचालकोना स्थलपुराण</strong>
+
+        <p>वह शिला आज भी है। और वह झरना आज भी बहता है। और उसी विशाल शिला की गुफा में भगवान के वह स्वयंभू विग्रह आज भी
+            विराजमान है। यह है: श्री पेनुशिला लक्ष्मी नृसिंह स्वामी मंदिर, पेंचालकोना। आइए, इस महारहस्य को समझते हैं।
+        </p>
+
+        <h2>पेंचालकोना नाम का रहस्य: एक आलिंगन से जन्मा नाम</h2>
+        <p>इस स्थान के नाम में ही उसकी पूरी कथा समाई है। "पेनुशिला" की उत्पत्ति तेलुगु के उस शब्द से हुई है जिसका अर्थ
+            है मुड़ी हुई या आपस में उलझी हुई शिला।</p>
+        <p>वह पर्वत जो दो शिलाओं के आपस में उलझने से बना। वह स्थान जहाँ चेंचु लक्ष्मी ने नृसिंह को आलिंगन किया। पेनु
+            वेसुकोनुटा अर्थात आलिंगन। शिला अर्थात पत्थर। पेनुशिला अर्थात वह शिला जो आलिंगन का प्रतीक है।</p>
+        <p>पेंचालकोना पर्वत स्वयं दो परस्पर उलझी शिलाओं के रूप में दिखता है जो एक सिंह के मुख की भाँति प्रतीत होता है।
+            इसीलिए इसे दिव्य माना जाता है।</p>
+        <p><strong>प्रकृति ने स्वयं उस आलिंगन को पत्थर में अंकित कर दिया।</strong> और वह नाम "पेंचालकोना" आज भी उस क्षण
+            की स्मृति है जब माता लक्ष्मी ने अपने प्रिय को थामा था।</p>
+
+        <h2>वह मूल कथा जो यहाँ का आधार है: पेंचालकोना एक आलिंगन का साक्षी</h2>
+        <p>जब भगवान नृसिंह इस क्षेत्र में विचरण कर रहे थे, तो उनके क्रोध से पक्षी भाग गए। किंतु चेंचु राजा की पुत्री
+            चेंचु लक्ष्मी ने साहस किया। भगवान उनकी सुंदरता और साहस से मुग्ध हो गए। नृसिंह ने प्रसन्न स्वरूप धारण किया और
+            उनसे विवाह किया। चेंचु लक्ष्मी के उस आलिंगन से वह उग्र स्वरूप शांत हो गया और एक सौम्य स्वरूप प्रकट हुआ।</p>
+        <p>यह कथा अहोबिलम और अन्य नृसिंह क्षेत्रों से मिलती-जुलती है। किंतु पेंचालकोना में एक विशेषता है। यहाँ वह आलिंगन
+            का क्षण इतना असाधारण था कि भगवान ने स्वयं को शिला बना लिया। वे उस क्षण को अमर करना चाहते थे।</p>
+        <p>दो शिलाओं का वह आपस में उलझना ही भगवान नृसिंह और चेंचु लक्ष्मी के उस मिलन का प्रतीक है।</p>
+        <p><strong>जो क्षण हृदय को छू जाए, भगवान उसे पत्थर में अमर कर देते हैं।</strong></p>
+
+        <h2>670 वर्ष पुरानी खोज: एक चरवाहा और एक रहस्यमय वृद्ध</h2>
+        <p>इस मंदिर की ऐतिहासिक खोज लगभग 670 वर्ष पहले हुई। गोनुपल्लि गाँव का एक बोया चरवाहा जिसका नाम गोल्लाबोयाडु था,
+            इस वन में अपनी गायें चरा रहा था। तभी एक वृद्ध व्यक्ति प्रकट हुआ। उसने चरवाहे को बताया कि भगवान नृसिंह स्वामी
+            यहाँ शिला रूप में विद्यमान हैं।</p>
+        <p>चरवाहे ने संदेह किया और पलटकर देखा। वृद्ध स्वयं शिला बन रहे थे। चरवाहा घबरा गया। वह अपने गाँव भागा और लोगों
+            को बताया। पहले किसी ने विश्वास नहीं किया।</p>
+        <p>कुछ समय बाद गाँव के मुखिया को उस स्थिति का स्वप्न आया और उन्होंने उस चमत्कार को सत्य माना। तब मुखिया ने मंदिर
+            बनवाया और नियमित पूजा के लिए अर्चकों की नियुक्ति की।</p>
+        <p>यह कथा कितनी परिचित है। एक चरवाहा। एक वृद्ध जो शिला बन गया। एक स्वप्न। और एक मंदिर। यही वह परंपरा है जो
+            यदाद्रि में थी, मट्टपल्ली में थी, कादिरी में थी।</p>
+        <p><strong>भगवान सबसे पहले उन्हें दर्शन देते हैं जो उनसे सबसे कम अपेक्षा रखते हैं।</strong></p>
+
+        <h2>पर्वत की परिक्रमा और स्वर्ण-रजत छत्र: वह परंपरा जो रक्षा की स्मृति है</h2>
+        <p>इस मंदिर में एक विशेष परंपरा है। भक्त पर्वत की गिरि परिक्रमा करते हैं। इसके पीछे एक कथा है: भैरवकोना नामक
+            स्थान पर राक्षस ऋषियों को पीड़ित कर रहे थे। ऋषियों की प्रार्थना पर भगवान नृसिंह वहाँ पहुँचे और राक्षसों से
+            युद्ध किया। जब भगवान राक्षसों का वध कर रहे थे, ऋषियों ने उनके ऊपर सम्मान के प्रतीक के रूप में छत्र धारण
+            किया।</p>
+        <p>उसी स्मृति में भक्त आज भी भगवान को स्वर्ण और रजत छत्र अर्पित करते हैं। और वह गिरि परिक्रमा, पर्वत के चारों ओर
+            घूमना, उन ऋषियों की उस श्रद्धा की स्मृति है जिन्होंने भगवान के ऊपर छत्र थामा था।</p>
+        <p><strong>जो ऋषियों ने किया, वह भक्त आज भी करते हैं। परंपरा केवल रिवाज नहीं, स्मृति है।</strong></p>
+
+        <h2>कण्व महर्षि का तपोवन: वह इतिहास जो नदी के नाम में जीवित है</h2>
+        <p>इस मंदिर के स्थलपुराण के अनुसार यह स्थान कण्व महर्षि के तपोवन के रूप में प्रसिद्ध था। वे यहाँ तपस्या करते थे।
+            यहाँ से निकलने वाली नदी का नाम कांडलेरु है जिसे पहले कण्व येरु कहते थे। कण्व महर्षि के नाम पर।</p>
+        <p>कण्व महर्षि वही हैं जिनके आश्रम में शकुंतला का पालन-पोषण हुआ था। कालिदास के महाकाव्य अभिज्ञान-शाकुंतलम् की
+            शकुंतला उन्हीं कण्व महर्षि की पालित पुत्री थी। उन्हीं महर्षि का तपोवन यहाँ था।</p>
+        <p>और उनके नाम की नदी आज भी बहती है। उस मंदिर के पास से होकर। उस झरने को जन्म देती है जो पेंचालकोना को प्रकृति
+            का वरदान बनाता है।</p>
+        <p><strong>ऋषियों की स्मृति नदियों में, नामों में और पत्थरों में जीवित रहती है।</strong></p>
+
+        <h2>नव नृसिंह क्षेत्रों में पेंचालकोना: वह स्थान जो सूची में है</h2>
+        <p>पेंचालकोना नव नृसिंह क्षेत्रों में से एक है। नव नृसिंह क्षेत्र हैं: अहोबिलम, पेंचालकोना, कादिरी, सिंहाचलम,
+            अंतर्वेदी, मंगलगिरि, वेदाद्रि, यदाद्रि और धर्मपुरी।</p>
+        <p>यह सूची महत्त्वपूर्ण है। पेंचालकोना उन नौ ऐतिहासिक नृसिंह क्षेत्रों में से एक है जिन्हें आंध्र-तेलंगाना की
+            नृसिंह परंपरा में विशेष स्थान प्राप्त है। इन नौ क्षेत्रों में से हम अब तक अहोबिलम, कादिरी, सिंहाचलम,
+            अंतर्वेदी, मंगलगिरि, वेदाद्रि और यदाद्रि को विस्तार से जान चुके हैं।</p>
+        <p><strong>पेंचालकोना उस पवित्र नव नृसिंह परंपरा का वह सदस्य है जो अपनी नैसर्गिक सुंदरता और अनूठी कथा से अलग
+                पहचान रखता है।</strong></p>
+
+        <h2>स्वयंभू विग्रह: वह शिला जो नृसिंह है</h2>
+        <p>भगवान का स्वयंभू विग्रह छह फुट ऊँचा है और पहाड़ी के भीतर एक गुफा में स्थित है। दो शिलाएँ परस्पर उलझकर एक सिंह
+            के मुख पर मानव के शरीर का स्वरूप बनाती हैं।</p>
+        <p>यह विग्रह किसी मूर्तिकार ने नहीं बनाया। प्रकृति ने दो शिलाओं को इस प्रकार उलझाया कि वे भगवान नृसिंह का स्वरूप
+            बन गईं। और उसी स्वयंभू विग्रह के समीप माता चेंचु लक्ष्मी का अलग मंदिर है। और भगवान अंजनेय स्वामी का मंदिर
+            मुख्य विग्रह के सामने है।</p>
+        <p><strong>तीन दिव्य उपस्थितियाँ एक ही घाटी में। नृसिंह, चेंचु लक्ष्मी और हनुमान।</strong></p>
+
+        <h2>पेंचालकोना के झरने: वह प्रकृति जो तीर्थ बनाती है</h2>
+        <p>पेंचालकोना की एक और विशेषता है जो इसे अन्य नृसिंह मंदिरों से अलग बनाती है। यहाँ के झरने। मंदिर के निकट ही
+            पेंचालकोना झरने हैं। उनका जल वर्ष भर बहता है।</p>
+        <p>भक्त मंदिर दर्शन से पूर्व उन झरनों के जल में स्नान करते हैं। उस जल को पवित्र माना जाता है।</p>
+        <p>झरने का वह जल, वह घाटी की हवा, वे घने वन — यह सब मिलकर एक ऐसा वातावरण बनाते हैं जो मंदिरों के नगरी-वातावरण से
+            सर्वथा भिन्न है। यहाँ आने वाला भक्त न केवल एक देवालय में जाता है, वह एक ऐसी प्रकृति में प्रवेश करता है जो
+            स्वयं भगवान की उपस्थिति का विस्तार है।</p>
+        <p><strong>प्रकृति जहाँ इतनी सुंदर हो, वहाँ भगवान का वास स्वाभाविक है।</strong></p>
+
+        <h2>सोलहवीं शताब्दी का मंदिर और चोल-पल्लव-विजयनगर की विरासत</h2>
+        <p>इस मंदिर की वास्तुकला में चोल, पल्लव और विजयनगर राजवंशों का योगदान है। मंदिर का गर्भगृह और मुख मंडपम
+            त्रेतायुग की वास्तुकला का प्रतिबिम्ब माना जाता है। यह मंदिर 16वीं शताब्दी में बना था।</p>
+        <p>किंतु वह स्वयंभू विग्रह उससे भी पुराना है। 670 वर्ष पहले उस चरवाहे ने जो शिला देखी, वह तब भी उतनी ही प्राचीन
+            थी।</p>
+        <p><strong>मंदिर 16वीं शताब्दी का। खोज 670 वर्ष पुरानी। और विग्रह सतयुग से। तीन कालों का यह मंदिर अपने आप में
+                अद्वितीय है।</strong></p>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: जो क्षण अमर होने योग्य है, भगवान उसे पत्थर बना देते हैं।</strong> चेंचु लक्ष्मी का
+            आलिंगन। वह क्षण इतना असाधारण था कि भगवान ने स्वयं को शिला बना लिया। जीवन के जो क्षण सबसे प्रिय हों, वे हृदय
+            की शिला में अमर हो जाते हैं।</p>
+        <p><strong>दूसरी शिक्षा: जो पीड़ा में भी साहस रखे, भगवान उससे प्रेम करते हैं।</strong> जब सभी पक्षी भाग गए,
+            चेंचु लक्ष्मी रुकी। उनके उस साहस ने भगवान को मुग्ध किया। जो संकट में भी भगवान के सामने खड़ा रहे, वह उनका
+            प्रिय बनता है।</p>
+        <p><strong>तीसरी शिक्षा: भगवान साधारण को भी असाधारण बना देते हैं।</strong> वह चरवाहा। वह वृद्ध जो शिला बन गया।
+            वह मुखिया जिसे स्वप्न आया। तीनों साधारण थे। किंतु भगवान ने उन्हें इतिहास का हिस्सा बना दिया।</p>
+        <p><strong>चौथी शिक्षा: प्रकृति भी भगवान की उपासना करती है।</strong> वे झरने, वह घाटी, वे वन — सब मिलकर उस
+            स्वयंभू शिला के चारों ओर एक दिव्य वातावरण बनाते हैं। प्रकृति भी जानती है कि यहाँ कौन विराजमान है।</p>
+
+        <h2>उपसंहार: वह शिला जो आलिंगन का प्रतीक है</h2>
+        <p>पूर्वी घाट की उस घाटी में। झरनों के बीच। दो उलझी शिलाओं से बने उस पर्वत में। भगवान नृसिंह स्वयंभू रूप में आज
+            भी विराजमान हैं। वह शिला जो कृतयुग से यहाँ है।</p>
+        <p>वह आलिंगन जिसने नृसिंह को शांत किया। वह मिलन जिसने एक पर्वत को जन्म दिया। वह विवाह जिसने एक जनजाति को भगवान
+            का परिवार बनाया। यह सब आज भी उस शिला में समाया है।</p>
+        <p>जो भक्त उस घाटी में जाता है, झरने के जल में स्नान करता है और उस गुफा में प्रवेश करता है, वह उस आलिंगन के क्षण
+            के निकट जाता है।</p>
+
+        <p>और वह शिला आज भी उस स्पर्श को धारण किए हुए है।</p>
+        <strong>— पेनुशिला लक्ष्मी नृसिंह स्वामी</strong>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह ध्यान श्लोक ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्।।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उस उग्र, वीर, महाविष्णु स्वरूप नृसिंह देव
+                को नमन करता हूँ, जो ज्वाला के समान चारों ओर से प्रकाशमान हैं, जो भयंकर होते हुए भी कल्याणकारी हैं, और जो
+                मृत्यु के भी मृत्यु स्वरूप हैं।</div>
+        </div>
+
+        <p>यह लेख spsnellore.ap.gov.in, grokipedia.com, hindugallery.com, penchalakona.co.in, travellerkaka.com तथा
+            पेंचालकोना स्थलपुराण के प्रमाणित स्रोतों पर आधारित है।</p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+    </article>
+
+     <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
+```
