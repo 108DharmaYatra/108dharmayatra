@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कादिरी का महारहस्य: वह वृक्ष जिससे नृसिंह प्रकट हुए | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="कादिरी लक्ष्मी नृसिंह मंदिर की अद्भुत कथा — वह खड़री वृक्ष जिसकी जड़ों से भगवान प्रकट हुए, वह विग्रह जो अभिषेक के बाद पसीना बहाता है, और वह नगर जो भगवान के चरण-चिह्न से बना।" />
+    <link rel="canonical" href="https://108dharmayatra.com/blogs/kadiri-lakshmi-narasimha-maharahasya" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>कादिरी का
+                महारहस्य</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">कादिरी</span>
+            <span class="tag">रायलसीमा तीर्थ</span>
+        </div>
+        <h1>कादिरी का महारहस्य —<br><span class="accent">वह वृक्ष जिससे नृसिंह प्रकट हुए</span></h1>
+        <p class="subtitle">वह विग्रह जो अभिषेक के बाद प्रतिदिन पसीना बहाता है, और वह नगर जो भगवान विष्णु के चरण-चिह्न
+            से बना।</p>
+        <div class="meta">
+            <span>📅 08 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 13 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह वृक्ष जिसकी जड़ों से भगवान प्रकट हुए</h2>
+        <p class="dropcap">आंध्र प्रदेश के अनंतपुर जिले में एक नगर है। उस नगर का नाम उस वृक्ष के नाम पर रखा गया है जिसकी
+            जड़ों से एक दिन भगवान स्वयं प्रकट हुए।</p>
+        <p>वह वृक्ष था: खड़री। जिसे कनारी वृक्ष या इंडियन मलबरी भी कहते हैं। और उस वृक्ष की जड़ों से प्रकट हुए: श्री
+            लक्ष्मी नृसिंह स्वामी। आठ भुजाओं वाले। हिरण्यकशिपु की छाती विदीर्ण करते हुए। प्रह्लाद को समीप में लिए।</p>
+        <p>यह विग्रह स्वयंभू है। किसी ने नहीं बनाया। भगवान उस वृक्ष की जड़ों में से स्वयं प्रकट हुए। और इस मंदिर का एक
+            ऐसा रहस्य है जो प्रतिदिन होता है। लाखों भक्तों के सामने। और जिसे विज्ञान आज तक नहीं सुलझा पाया।</p>
+
+        <p>प्रतिदिन अभिषेक के बाद भगवान के विग्रह से पसीना निकलता है। बार-बार पोंछने पर भी। फिर से निकलता है।</p>
+        <strong>— कादिरी मंदिर परंपरा</strong>
+
+        <p>यह है: श्री कादिरी लक्ष्मी नृसिंह स्वामी मंदिर। रायलसीमा का वह महातीर्थ जो तिरुपति के समकक्ष माना जाता है।
+            आइए, इस महारहस्य को उसकी जड़ों से समझते हैं।</p>
+
+        <h2>कादिरी नाम का रहस्य: तीन अर्थ, एक सत्य</h2>
+        <p>इस नगर के नाम की उत्पत्ति के तीन स्रोत हैं।</p>
+        <p><strong>पहला स्रोत:</strong> "का" का अर्थ है विष्णु पादम् अर्थात भगवान विष्णु के चरण-चिह्न। और "आद्रि" का
+            अर्थ है पहाड़ी। अर्थात कादिरी का अर्थ है: वह पहाड़ी जहाँ भगवान विष्णु के चरण-चिह्न हैं।</p>
+        <p><strong>दूसरा स्रोत:</strong> खड़री वृक्ष से "खड़री" और फिर "कादिरी।" वह वृक्ष जिसकी जड़ों से भगवान प्रकट
+            हुए, उस वृक्ष के नाम पर यह नगर बसा।</p>
+        <p><strong>तीसरा स्रोत:</strong> वेद व्यास ने यहाँ अपने शिष्यों को असुरों की जानकारी के बिना शिक्षा दी। इसीलिए
+            यह स्थान "केदारण्यम्" कहलाया।</p>
+        <p>तीनों नाम एक ही सत्य की ओर इशारा करते हैं। यह भूमि ऋषियों की तपस्या से, भगवान के चरणों से और उस वृक्ष से
+            अभिषिक्त है जिसमें भगवान ने अपना निवास बनाया।</p>
+
+        <h2>हिरण्यकशिपु वध के बाद: जब प्रह्लाद ने यहाँ नृसिंह को शांत किया</h2>
+        <p>हिरण्यकशिपु के वध के बाद भगवान नृसिंह का क्रोध शांत नहीं हुआ और वे वनों और पहाड़ियों में विचरण करते रहे।
+            कादिरी के निकट स्थित स्थोत्राद्रि पहाड़ी पर प्रह्लाद ने देवताओं के साथ मिलकर भगवान नृसिंह से क्रोध शांत करने
+            की प्रार्थना की। भगवान उनकी प्रार्थना से प्रसन्न हुए और इसी स्थान पर शांत हुए।</p>
+        <p>इसीलिए इस मंदिर को "प्रह्लाद सामेत नृसिंह स्वामी मंदिर" भी कहते हैं। यह प्रसंग अत्यंत महत्त्वपूर्ण है।
+            अहोबिलम में युद्ध हुआ। कादिरी में शांति आई। अहोबिलम में नृसिंह उग्र थे। कादिरी में वे शांत हुए। और उसी शांत
+            होने के स्थान पर वे उस खड़री वृक्ष की जड़ों में विराजमान हो गए।</p>
+
+        <p>जहाँ भगवान का क्रोध समाप्त हुआ, वहाँ उनका प्रेम प्रकट हुआ।</p>
+        <strong>— कादिरी स्थल पुराण</strong>
+
+
+        <h2>वह महारहस्य जो प्रतिदिन होता है: अभिषेक के बाद पसीना</h2>
+        <p>प्रतिदिन अभिषेक के बाद भगवान नृसिंह के विग्रह से पसीना निकलता है। पुजारी इसे बार-बार पोंछते हैं किंतु पसीना
+            फिर से प्रकट हो जाता है। यह रहस्य अद्वितीय है।</p>
+        <p>अभिषेक का अर्थ है स्नान। जब विग्रह को स्नान कराया जाता है, तब वह ठंडा होता है। सामान्य तर्क के अनुसार उसके
+            बाद पसीना निकलने का कोई कारण नहीं। किंतु यहाँ होता है। प्रतिदिन। बिना अपवाद के।</p>
+        <p>विग्रह से निकलने वाला अभिषेक जल पवित्र माना जाता है और भक्त इसे प्रसाद के रूप में ग्रहण करते हैं। वैज्ञानिकों
+            ने इसे समझने का प्रयास किया। किंतु वे कोई स्पष्टीकरण नहीं दे पाए।</p>
+        <p><strong>भगवान का विग्रह पसीना बहाता है। यह उस जीवंत उपस्थिति का प्रमाण है जो हजारों वर्षों से इस मंदिर में
+                है।</strong></p>
+
+        <h2>भृगु ऋषि और उत्सव मूर्ति: वह प्रसंग जो इस मंदिर को अद्वितीय बनाता है</h2>
+        <p>भगवान नृसिंह स्वामी ने स्वयं भृगु ऋषि को उत्सव मूर्तियाँ प्रदान कीं ताकि वे दैनिक अर्चना कर सकें। यह प्रसंग
+            अत्यंत असाधारण है।</p>
+        <p>भृगु ऋषि जो सप्तर्षियों में एक हैं, जिनके वंश में परशुराम जन्मे, जिन्होंने भगवान विष्णु की छाती पर पाँव रखने
+            का साहस किया था। उन्हीं भृगु ऋषि को भगवान ने स्वयं अपनी उत्सव मूर्तियाँ भेंट कीं।</p>
+        <p>चूँकि उन मूर्तियों की स्थापना वसंत ऋतु में हुई थी, इसलिए भगवान को यहाँ "वसंत वल्लभुडु" अथवा "वसंत माधवुलु" भी
+            कहते हैं। और वे मूर्तियाँ बाद में भृगु तीर्थम् नामक जलाशय में मिलीं जब भगवान ने एक भक्त को स्वप्न में उनका
+            स्थान बताया।</p>
+        <p>भगवान ने स्वयं मूर्तियाँ दीं। मूर्तियाँ जलाशय में छिप गईं। और फिर स्वप्न में भगवान ने उन्हें वापस करवाया। यह
+            वही परंपरा है जो यदाद्रि में और मट्टपल्ली में भी थी। भगवान अपने भक्तों के पास स्वप्न में आते हैं।</p>
+
+        <h2>वेद व्यास का गुरुकुल: जब ज्ञान को छिपाकर सुरक्षित किया गया</h2>
+        <p>कादिरी के इस क्षेत्र में वेद व्यास ने अपने शिष्यों को असुरों की जानकारी के बिना शिक्षा दी। वे यहाँ इसलिए आए
+            क्योंकि यह स्थान असुरों की पहुँच से दूर था।</p>
+        <p>वेद व्यास जिन्होंने महाभारत लिखा। जिन्होंने अठारह पुराणों की रचना की। जिन्होंने वेदों को चार भागों में
+            विभाजित किया। उन्होंने इस भूमि को अपना गुरुकुल बनाया।</p>
+        <p>और वह गुरुकुल इसलिए यहाँ था क्योंकि यह स्थान पवित्र था, सुरक्षित था और भगवान नृसिंह की उपस्थिति से अभिषिक्त
+            था। जहाँ वेद व्यास ने ज्ञान की शिक्षा दी, वह भूमि स्वयं ज्ञान-क्षेत्र बन गई।</p>
+
+        <h2>अर्जुन की तपस्या और आठ तीर्थ: वह नदी जो सबको जोड़ती है</h2>
+        <p>मद्दिलेरु नदी जिसे अर्जुन नदी भी कहते हैं, इसी के तट पर अर्जुन ने तपस्या की थी। यह नदी आठ पवित्र तीर्थों से
+            होकर बहती है: श्वेत पुष्करिणी, भृगु तीर्थम्, शेष तीर्थम्, कुंती तीर्थम्, लक्ष्मी तीर्थम्, गंगा तीर्थम्,
+            गरुड़ तीर्थम् और भवनासिनी तीर्थम्।</p>
+        <p>आठ तीर्थ। एक नदी। अर्जुन ने इसी नदी के तट पर तपस्या की। और उनकी तपस्या का फल उन्हें मिला। जो नदी इन आठ
+            तीर्थों को जोड़ती है, उसके किनारे स्नान करने का माहात्म्य आठ तीर्थों के दर्शन के समान माना जाता है।</p>
+        <p><strong>एक नदी में आठ तीर्थों का पुण्य। यही कादिरी की विशेषता है।</strong></p>
+
+        <h2>विग्रह का रहस्य: वह अदृश्य होना और पुनः प्रकट होना</h2>
+        <p>वीर बुक्क रायलु ने खड़री वृक्ष की जड़ों से विग्रह को खोजा और 1274-1275 ईस्वी में मंदिर बनवाया। बाद में विग्रह
+            मंदिर से अदृश्य हो गया। फिर अच्युत देवरायलु को भगवान ने स्वप्न में दर्शन दिए और स्थोत्राद्रि पहाड़ी की
+            गुफाओं से विग्रह को लाने का आदेश दिया। 1545 ईस्वी में विग्रह पुनः मंदिर में स्थापित हुआ।</p>
+        <p>यह प्रसंग यदाद्रि से और मट्टपल्ली से कितना मिलता-जुलता है। भगवान प्रकट होते हैं। फिर अदृश्य हो जाते हैं। और
+            फिर स्वप्न में आकर अपना स्थान बताते हैं। यह उनकी वह लीला है जो बार-बार दोहराई जाती है।</p>
+        <p><strong>भगवान कभी पूर्णतः अदृश्य नहीं होते। वे केवल हमें खोजने के लिए प्रेरित करते हैं।</strong></p>
+
+        <h2>भारत का दूसरा सबसे बड़ा रथ: वह रथोत्सव जो लाखों को खींचता है</h2>
+        <p>कादिरी में प्रतिवर्ष रथोत्सव मनाया जाता है। यह रथ भारत का दूसरा सबसे बड़ा रथ माना जाता है। इस पवित्र दिन
+            भगवान लक्ष्मी नृसिंह की मूर्ति उस रथ पर विराजमान होती है और लाखों भक्त उसे खींचते हैं।</p>
+        <p>भारत का दूसरा सबसे बड़ा रथ। पहला स्थान पुरी के जगन्नाथ रथोत्सव का है। और दूसरा स्थान कादिरी का। यह तुलना इस
+            मंदिर के महत्त्व को स्पष्ट करती है।</p>
+        <p>इस रथोत्सव में आसपास के सभी जिलों के साथ-साथ कर्नाटक और अन्य राज्यों से भी दो लाख से अधिक भक्त आते हैं। दो
+            लाख भक्त। एक रथ। और वह भगवान जो खड़री वृक्ष की जड़ों से प्रकट हुए थे।</p>
+
+        <h2>विजयनगर साम्राज्य का वह योगदान: इतिहास पत्थरों में</h2>
+        <p>1509 में श्री कृष्णदेव राय ने रंग मंटपम् और आलवार मंदिर का निर्माण करवाया। 1545 में अच्युत देवराय ने पूर्व
+            राज गोपुरम, विनायक मंदिर, कृष्ण मंदिर और राघवेंद्र वृंदावन बनवाया। 1569 में तिरुमल राय ने मंडप और पुष्करिणी
+            बनवाई।</p>
+        <p>विजयनगर साम्राज्य के तीन महान शासकों का योगदान एक ही मंदिर में। कृष्णदेव राय जो विजयनगर के सबसे महान सम्राट
+            थे। उनके वंशज अच्युत देवराय और तिरुमल राय। तीन पीढ़ियों ने इस मंदिर को सींचा।</p>
+        <p>1451 और 1529 में वेयी कल्ल मंटपम् (1000 स्तम्भ मंडप) और कोटई मंडप का निर्माण हुआ। 1642-1644 में छत्रपति
+            शिवाजी ने महिषासुर मर्दिनी मंदिर बनवाया। और छत्रपति शिवाजी का नाम भी इस मंदिर के इतिहास में है।</p>
+        <p><strong>यह मंदिर केवल एक धर्म की, एक राज्य की, एक युग की सम्पत्ति नहीं। यह सम्पूर्ण भारत की सांस्कृतिक विरासत
+                है।</strong></p>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: भगवान वृक्ष की जड़ों में भी विराजमान हो सकते हैं।</strong> वह खड़री वृक्ष। उसकी जड़ों
+            में भगवान। यह बताता है कि भगवान केवल मंदिरों में नहीं, प्रकृति के हर तत्त्व में हैं। जो उन्हें खोजे, वह हर
+            स्थान पर पाए।</p>
+        <p><strong>दूसरी शिक्षा: पसीना बहाना उपस्थिति का प्रमाण है।</strong> वह विग्रह जो अभिषेक के बाद पसीना बहाता है।
+            यह बताता है कि भगवान उस विग्रह में जीवंत हैं। वे वहाँ हैं। सक्रिय हैं।</p>
+        <p><strong>तीसरी शिक्षा: ज्ञान को सुरक्षित रखना भी भक्ति है।</strong> वेद व्यास ने यहाँ असुरों से छिपाकर शिक्षा
+            दी। ज्ञान की रक्षा भगवान की सेवा है।</p>
+        <p><strong>चौथी शिक्षा: भगवान बार-बार वापस आते हैं।</strong> विग्रह अदृश्य हुआ। भगवान ने स्वप्न में स्थान बताया।
+            वे वापस आए। जो भगवान को छोड़ता है, वे उसे नहीं छोड़ते।</p>
+
+        <h2>उपसंहार: वह वृक्ष जो आज भी मंदिर में है</h2>
+        <p>वह खड़री वृक्ष। जिसकी जड़ों से सतयुग में भगवान नृसिंह प्रकट हुए थे। वह वृक्ष आज भी मंदिर परिसर में है। और
+            उसकी जड़ों में वह स्थान आज भी पवित्र माना जाता है।</p>
+        <p>हजारों वर्ष पहले एक वृक्ष था। उसकी जड़ों में भगवान विराजमान थे। आज उस वृक्ष के चारों ओर एक भव्य मंदिर है।
+            गोपुरम हैं। मंडप हैं। पुष्करिणी है।</p>
+        <p>किंतु उस मंदिर के केन्द्र में वही विग्रह है जो उन जड़ों से प्रकट हुआ था। और वह विग्रह आज भी प्रतिदिन अभिषेक
+            के बाद पसीना बहाता है। जैसे भगवान कह रहे हों:</p>
+
+        <p>मैं यहाँ हूँ। मैं जीवित हूँ। मैं तुम्हारा इंतजार कर रहा हूँ।</p>
+        <strong>— कादिरी लक्ष्मी नृसिंह स्वामी</strong>
+
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह ध्यान श्लोक ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्।।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उस उग्र, वीर, महाविष्णु स्वरूप नृसिंह देव
+                को नमन करता हूँ, जो ज्वाला के समान चारों ओर से प्रकाशमान हैं, जो भयंकर होते हुए भी कल्याणकारी हैं, और जो
+                मृत्यु के भी मृत्यु स्वरूप हैं।</div>
+        </div>
+
+        <p>यह लेख ब्रह्माण्ड पुराण, templesinindiainfo.com, trawell.in, templepurohit.com, gotirupati.com,
+            pilgrimaide.com तथा कादिरी मंदिर देवस्थानम् के प्रमाणित स्रोतों पर आधारित है।</p>
+
+        <div class="om-divider">ॐ नमो भगवते नृसिंहाय</div>
+    </article>
+
+    <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
