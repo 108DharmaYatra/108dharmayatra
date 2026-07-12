@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>भक्त रामदासु की सच्ची कथा: जब भगवान राम ने जेल में आकर कर्ज चुकाया | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="भक्त रामदासु (कंचर्ला गोपन्ना) की अद्भुत सत्य कथा — जिन्होंने भद्राचलम मंदिर बनवाने के लिए 12 वर्ष कारागार में बिताए, और अंत में स्वयं भगवान राम व लक्ष्मण आकर उनका ऋण चुका गए।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/bhakta-ramadasu-bhadrachalam-katha" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>भक्त रामदासु
+                की कथा</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">भक्त रामदासु</span>
+            <span class="tag">भद्राचलम</span>
+            <span class="tag">भगवान राम</span>
+        </div>
+        <h1>भक्त रामदासु की सच्ची कथा —<br><span class="accent">जब भगवान राम ने स्वयं जेल में आकर कर्ज चुकाया</span>
+        </h1>
+        <p class="subtitle">कंचर्ला गोपन्ना, जिन्होंने भद्राचलम मंदिर बनवाने के लिए 12 वर्ष कारागार में बिताए, और अंत
+            में राम-लक्ष्मण स्वयं आकर उनका ऋण चुका गए।</p>
+        <div class="meta">
+            <span>📅 12 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह व्यक्ति जिसने भगवान के लिए सरकारी खजाना लगा दिया</h2>
+        <p class="dropcap">सन् 1620। तेलंगाना के खम्मम जिले के नेलकोंडापल्ली गाँव में एक बालक जन्मा। नाम रखा गया:
+            कंचर्ला गोपन्ना।</p>
+        <p>किशोरावस्था में माता-पिता का साया उठ गया। जीवन कठिन था। किंतु हृदय में एक ऐसी ज्वाला थी जो कभी बुझी नहीं।
+            भगवान राम के प्रति अनन्य प्रेम।</p>
+        <p>वर्षों बाद जब गोपन्ना भद्राचलम पहुँचे और उन्होंने वह मंदिर देखा जहाँ माना जाता था कि राम ने वनवास काल में
+            पर्णशाला बनाई थी — उनका हृदय टूट गया। मंदिर जर्जर था। टूटा हुआ। उपेक्षित।</p>
+        <p>कोई पुजारी पूजा नहीं कर रहा था। प्रभु राम का वह प्रिय स्थान धूल में मिला हुआ था। गोपन्ना ने उसी क्षण संकल्प
+            लिया: इस मंदिर का जीर्णोद्धार होगा। चाहे कुछ भी हो। और उस "चाहे कुछ भी हो" में जो हुआ, वह इतिहास बन गया।</p>
+
+        <h2>तहसीलदार से भक्त तक: वह निर्णय जिसने जीवन बदल दिया</h2>
+        <p>गोपन्ना को उनके मामा अक्कन्ना और मदन्ना ने गोलकोण्डा सल्तनत के तहत भद्राचलम क्षेत्र का तहसीलदार नियुक्त
+            करवाया। तहसीलदार अर्थात राजस्व अधिकारी। जनता से कर वसूल करना और राज्य के खजाने में जमा करना।</p>
+        <p>गोपन्ना ने अपना कार्य ईमानदारी से किया। किंतु उनका हृदय सदा भद्राचलम के उस जर्जर मंदिर के लिए व्याकुल था।
+            उन्होंने लोगों से दान एकत्र किया। लोगों ने सोने के आभूषण, अँगूठियाँ, सिक्के दिए। किंतु फिर भी राशि पर्याप्त
+            नहीं थी।</p>
+        <p>तब क्षेत्र के लोगों ने गोपन्ना से अनुरोध किया कि वे राजस्व की राशि से मंदिर बनवाएँ और फसल के बाद वे सब राशि
+            लौटा देंगे। गोपन्ना ने राजा तानाशाह को संदेश भेजा कि वे राजस्व का उपयोग राम मंदिर के निर्माण में करना चाहते
+            हैं। किंतु वह संदेश रानी सितारा के षड्यंत्रकारी भतीजे ने रोक लिया। राजा तक संदेश कभी पहुँचा ही नहीं।</p>
+        <p>गोपन्ना ने सोचा कि अनुमति मिल गई और मंदिर निर्माण आरंभ किया। सन् 1662 में मंदिर बनकर तैयार हुआ। निर्माण में
+            लगभग छह लाख वराह (स्वर्ण मुद्राएँ) खर्च हुईं।</p>
+        <p>वह मंदिर जो आज भी भद्राचलम में गोदावरी के तट पर खड़ा है। वह मंदिर जहाँ हर राम नवमी को लाखों भक्त आते हैं।</p>
+
+        <h2>कैद: वह क्षण जब सब कुछ बिखर गया</h2>
+        <p>राजा अब्दुल्लाह कुतुबशाह को ज्ञात हुआ कि उनके तहसीलदार ने बिना अनुमति के राजस्व की राशि मंदिर निर्माण में लगा
+            दी है। राजा क्रोधित हुए। गोपन्ना को गोलकोण्डा के कारागार में डाल दिया गया।</p>
+        <p>उनकी रिहाई की शर्त थी: जब तक खजाने में सम्पूर्ण राशि वापस न आए, तब तक कैद में रहना। यह राशि चुकाना किसी एक
+            व्यक्ति के लिए असंभव था।</p>
+        <p>गोपन्ना के लिए यह स्पष्ट था। वे वर्षों तक कैद में रहेंगे। किंतु उनके हृदय में एक भी शिकायत नहीं थी।</p>
+
+        <p>उन्होंने भगवान के लिए जो किया, वह सही था। और भगवान उन्हें निराश नहीं करेंगे।</p>
+        <strong>— भक्त रामदासु की आस्था</strong>
+
+
+        <h2>12 वर्ष कारागार में: वह भजन जो आज भी गाया जाता है</h2>
+        <p>गोपन्ना सन् 1662 से 1674 तक, पूरे 12 वर्ष गोलकोण्डा के कारागार में रहे। उस कारागार में उन्होंने क्या किया?
+            वही जो वे सदा करते थे। भगवान राम का भजन।</p>
+        <p>उन्होंने अनेक भावपूर्ण कीर्तन रचे जो "दशरथि सतकम्" और "रामदासु कीर्तनालु" के नाम से प्रसिद्ध हुए। ये गीत
+            प्रभु के प्रति पूर्ण समर्पण की भावना से भरे हैं।</p>
+        <p>उन कीर्तनों में वे भगवान से पूछते थे: "प्रभु, आपने मुझे यहाँ क्यों छोड़ा? क्या आप देख नहीं रहे? क्या आपको
+            मेरी याद नहीं?" यह भक्ति की वह पराकाष्ठा है जो प्रह्लाद की भक्ति की याद दिलाती है।</p>
+        <p>प्रह्लाद ने भी कहा था: "नारायण! तू कहाँ है?" और नारायण स्तम्भ से प्रकट हुए थे। रामदासु ने पूछा: "राम! तू कहाँ
+            है?" और राम आए।</p>
+        <p>किंवदंती है कि गोपन्ना ने जेल की दीवारों पर राम, सीता और लक्ष्मण की प्रतिमाएँ उकेरीं। वे मूर्तियाँ आज भी
+            गोलकोण्डा किले में देखी जाती हैं।</p>
+        <p><strong>जो कारागार में भी भगवान की प्रतिमा बनाए, उसे कारागार कैसा लगेगा?</strong></p>
+
+        <h2>वह रात जो इतिहास बन गई: राम और लक्ष्मण राजा के सामने आए</h2>
+        <p>12 वर्षों की कैद के बाद एक रात राजा तानाशाह को स्वप्न में भगवान राम के दर्शन हुए। जागने पर उन्होंने अपने पास
+            राम की छवि वाली सोने की मुद्राएँ (राम-तंका) पाईं। यह घटना राजा के लिए अप्रत्याशित थी।</p>
+        <p>एक अन्य परंपरागत कथा के अनुसार, रात को राजा के दरबार में दो युवक आए और उन्होंने वह सम्पूर्ण राशि ब्याज सहित
+            चुका दी जो रामदासु ने खजाने से ली थी। जब राजा ने उन सोने के सिक्कों की जाँच की तो उन पर भगवान राम की मुद्रा
+            थी। वे दोनों युवक तत्काल अदृश्य हो गए।</p>
+        <p>राजा स्तब्ध रह गए। जब राजा ने रामदासु को यह सब बताया, तो रामदासु ने तत्काल समझा कि यह उनके प्रिय राम की लीला
+            है। उन्होंने राजा को भद्राचलम मंदिर ले जाकर अपने प्रभु से मिलाया।</p>
+        <p>वे राम-तंका स्वर्ण मुद्राएँ आज भी भद्राचलम मंदिर में प्रदर्शित हैं। यह प्रमाण है। कोई काल्पनिक कथा नहीं। वे
+            सिक्के जो राम और लक्ष्मण ने तानाशाह को दिए, वे आज भी मंदिर में रखे हैं। जो चाहे जाकर देख सकता है।</p>
+
+        <h2>रिहाई और वह परंपरा जो आज भी जीवित है</h2>
+        <p>1674 में गोपन्ना को कारागार से मुक्त किया गया। तानाशाह इतना प्रभावित हुआ कि उसने राम नवमी पर भद्राचलम मंदिर
+            को मोती और वस्त्र भेजने की परंपरा स्थापित की। यह परंपरा निज़ामों के शासनकाल में भी जारी रही।</p>
+        <p>सोचिए। एक मुसलमान राजा। और वह प्रतिवर्ष राम नवमी पर भद्राचलम मंदिर को भेंट भेजता है। यह भेंट इसलिए नहीं कि वह
+            हिंदू था। यह भेंट इसलिए कि उसने स्वयं उस दिव्य शक्ति को अनुभव किया था।</p>
+        <p><strong>जो सत्य है, वह किसी धर्म की सीमा में बंधा नहीं रहता।</strong></p>
+
+        <h2>रामदासु और प्रह्लाद: वह तुलना जो संतों ने की</h2>
+        <p>महान कर्नाटक संगीतकार त्यागराज ने रामदासु की स्तुति में पाँच कीर्तन रचे। एक कीर्तन में उन्होंने रामदासु की
+            तुलना नारद मुनि और भक्त प्रह्लाद से की।</p>
+        <p>त्यागराज ने रामदासु को प्रह्लाद के समकक्ष रखा। यह तुलना आकस्मिक नहीं। प्रह्लाद ने कहा था: "नारायण सर्वत्र
+            है।" हिरण्यकशिपु ने कहा: "क्या वह इस स्तम्भ में भी है?" प्रह्लाद ने कहा: "हाँ।" और नारायण प्रकट हुए।</p>
+        <p>रामदासु ने कहा: "राम मेरे साथ है।" तानाशाह ने सोचा: "यह पागल है।" किंतु राम प्रकट हुए।</p>
+        <p><strong>दोनों की परीक्षा एक ही थी। और दोनों के भगवान एक ही प्रकार से प्रकट हुए।</strong></p>
+
+        <h2>वह गीत जो कारागार में जन्मा और आज भी गाया जाता है</h2>
+        <p>रामदासु के कारागार में लिखे गीतों की एक विशेषता है। वे गीत शिकायत नहीं करते। वे दुःख नहीं प्रकट करते। वे
+            भगवान की स्तुति करते हैं।</p>
+        <p>उनके गीत "दिनमे सुदिनमु, सीताराम स्मरणमे पावनमु" (जो दिन सीताराम का स्मरण हो वह दिन शुभ है) जैसी पंक्तियों से
+            भरे हैं।</p>
+        <p>12 वर्ष कारागार में। और गीत कह रहा है: "जो दिन राम का स्मरण हो, वह शुभ दिन है।" यह वह भक्ति है जो विपत्ति में
+            भी मुस्कुराती है।</p>
+        <p>और इन्हीं गीतों की मिठास ने राजा तानाशाह को भी प्रभावित किया था। राजा ने स्वयं माना था कि रामदासु कारागार में
+            भी एक संत की तरह व्यवहार करते थे।</p>
+
+        <h2>भद्राचलम मंदिर: वह प्रमाण जो आज भी खड़ा है</h2>
+        <p>जिस मंदिर के लिए रामदासु ने 12 साल कारागार में बिताए, वह आज भी गोदावरी के तट पर खड़ा है। वह मंदिर जिसे
+            गोपन्ना ने अपनी पूरी जमा-पूँजी और राजस्व के धन से बनवाया।</p>
+        <p>उस मंदिर में आज प्रतिदिन हजारों भक्त आते हैं। हर राम नवमी पर तेलंगाना सरकार की ओर से आज भी तानाशाह की उस
+            परंपरा को जीवित रखते हुए मंदिर को विशेष भेंट दी जाती है।</p>
+        <p><strong>एक भक्त की श्रद्धा ने एक मंदिर बनाया। और वह मंदिर आज एक राज्य की सांस्कृतिक विरासत बन गया।</strong>
+        </p>
+
+        <h2>इस कथा से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: भगवान के लिए किया गया त्याग व्यर्थ नहीं जाता।</strong> गोपन्ना ने राजस्व लगाया, कैद हुए।
+            किंतु अंत में भगवान राम ने स्वयं वह ऋण चुकाया। जो भगवान के लिए त्याग करे, वह कभी घाटे में नहीं रहता।</p>
+        <p><strong>दूसरी शिक्षा: विपत्ति में भजन सबसे बड़ा साथी है।</strong> रामदासु ने 12 वर्ष कारागार में भजन गाए।
+            उन्होंने न रोया, न टूटे। भजन ने उन्हें जीवित रखा। और अंततः भगवान को भी बुला लिया।</p>
+        <p><strong>तीसरी शिक्षा: सच्ची भक्ति धर्म की सीमाएँ पार कर जाती है।</strong> तानाशाह मुसलमान था। फिर भी उसने राम
+            के दर्शन किए। राम नवमी पर उसने मंदिर को भेंट भेजी। भगवान किसी एक धर्म के नहीं। वे सभी के हैं।</p>
+        <p><strong>चौथी शिक्षा: प्रमाण सदा रहता है।</strong> वे राम-तंका सोने के सिक्के आज भी भद्राचलम में हैं। यह कथा
+            केवल परंपरा नहीं, इतिहास है। भगवान का हस्तक्षेप प्रमाण छोड़ जाता है।</p>
+
+        <h2>उपसंहार: वह कैद जो वास्तव में मुक्ति थी</h2>
+        <p>कोई सोच सकता है कि 12 वर्ष की कैद एक दुःखद घटना थी। किंतु रामदासु के लिए?</p>
+        <p>वे कारागार में थे, किंतु उनका मन भद्राचलम में था। वे बंधे थे, किंतु उनकी आत्मा स्वतंत्र थी। उन 12 वर्षों में
+            उन्होंने जो गीत रचे, वे आज कर्नाटक संगीत की अमूल्य धरोहर हैं।</p>
+        <p>और जिन सोने के सिक्कों से उनकी रिहाई हुई, वे आज भी मंदिर में रखे हैं। भगवान राम ने अपने भक्त का ऋण चुकाया।
+        </p>
+
+        <p>ठीक वैसे ही जैसे भगवान नृसिंह ने प्रह्लाद को हिरण्यकशिपु से बचाया था। भक्त की पुकार कभी अनसुनी नहीं रहती।
+        </p>
+        <strong>— 108 Dharma Yatra</strong>
+
+
+        <div class="shlok">
+            <div class="shlok-label">✦ भक्त रामदासु का कीर्तन ✦</div>
+            <div class="shlok-text">दिनमे सुदिनमु, सीताराम स्मरणमे पावनमु।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>जो दिन सीताराम का स्मरण हो, वह दिन पवित्र और
+                शुभ है। यह पंक्ति भक्त रामदासु ने गोलकोण्डा के कारागार में रचित अपने कीर्तन में लिखी, जो प्रभु के प्रति
+                उनके अटूट समर्पण का प्रमाण है।</div>
+        </div>
+
+        <p>यह लेख Wikipedia (Bhadrachala Ramadasu), sitaramaswamy.com, namadwaar.org, hindu-blog.com तथा भद्राचलम मंदिर
+            देवस्थानम् के प्रमाणित ऐतिहासिक स्रोतों पर आधारित है।</p>
+
+        <div class="om-divider">जय श्री राम</div>
+    </article>
+
+     <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय श्री राम 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
