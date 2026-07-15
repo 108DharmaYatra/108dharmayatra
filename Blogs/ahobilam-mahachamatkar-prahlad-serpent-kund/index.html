@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>अहोबिलम का महाचमत्कार: सर्प-कुंड में प्रह्लाद की रक्षा | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="अहोबिलम की दो अद्भुत सत्य घटनाएँ — जब नृसिंह ने सर्पों के बीच प्रह्लाद की रक्षा की, और 600 वर्ष पहले जब भगवान स्वयं संन्यासी बनकर एक युवा भक्त को दीक्षा देने आए।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/ahobilam-mahachamatkar-prahlad-serpent-kund" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>अहोबिलम का
+                महाचमत्कार</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">अहोबिलम</span>
+            <span class="tag">प्रह्लाद</span>
+        </div>
+        <h1>अहोबिलम का महाचमत्कार —<br><span class="accent">सर्प-कुंड में प्रह्लाद की रक्षा और 600 वर्ष पुरानी
+                दीक्षा</span></h1>
+        <p class="subtitle">जब नृसिंह ने सर्पों के बीच प्रह्लाद की रक्षा की, और जब भगवान स्वयं संन्यासी बनकर एक युवा
+            भक्त को दीक्षा देने आए।</p>
+        <div class="meta">
+            <span>📅 09 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 13 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह भूमि जहाँ भगवान ने दो बार असाधारण रूप से रक्षा की</h2>
+        <p class="dropcap">अहोबिलम के नल्लमला वनों में एक ऐसी ऊर्जा है जो किसी और स्थान पर नहीं मिलती। यहाँ की हवा में
+            वह दिव्यता है जो सतयुग से अब तक अखंडित है। वह भूमि जहाँ भगवान ने स्तम्भ को फाड़कर अवतार लिया, जहाँ प्रह्लाद
+            के चरण पड़े, जहाँ नव नृसिंह स्वयंभू रूप में विराजमान हैं।</p>
+        <p>और इसी भूमि पर दो ऐसी घटनाएँ घटीं जो आज भी भक्तों के हृदय में जीवित हैं।</p>
+        <p><strong>पहली घटना:</strong> सतयुग में। जब एक पिता ने अपने पुत्र को सर्पों से भरे कुंड में फेंका। और नृसिंह ने
+            उस पुत्र की रक्षा की।</p>
+        <p><strong>दूसरी घटना:</strong> कलियुग में। लगभग 600 वर्ष पहले। जब एक 20 वर्षीय युवा को स्वप्न में नृसिंह ने
+            बुलाया। और स्वयं एक संन्यासी का रूप धरकर उसे दीक्षा दी।</p>
+        <div class="pull-quote">
+            <p>भगवान नृसिंह अपने भक्तों को कभी अकेला नहीं छोड़ते।</p>
+            <strong>— अहोबिलम की परंपरा</strong>
+        </div>
+
+        <h2>पहली सत्य घटना: वह सर्प-कुंड जो आज भी अहोबिलम में है</h2>
+        <p>हिरण्यकशिपु ने प्रह्लाद को असंख्य प्रकार से कष्ट दिया। उन्हें आग में फेंका। पर्वत से गिराया। हाथियों के पैरों
+            तले कुचलवाया। और अंत में एक ऐसे कुंड में फेंका जो सर्पों से भरा था।</p>
+        <p>यह कोई साधारण सर्प नहीं थे। वे विषधर थे। एक ही दंश में मृत्यु देने वाले। हिरण्यकशिपु के सेवकों ने उस बालक को
+            उस कुंड में फेंका और दरवाजा बंद कर दिया।</p>
+        <p>भीतर अँधेरा था। सर्पों की फुफकार थी। मृत्यु निश्चित लग रही थी। और प्रह्लाद ने क्या किया? उन्होंने भगवान
+            नृसिंह का नाम लिया।</p>
+        <p>जो सर्प उस बालक को डसने आए, वे सब उसके चरणों में आकर लेट गए। वे उसे हानि नहीं पहुँचा सके। भगवान की भक्ति
+            उन्हें एक अदृश्य कवच की भाँति सुरक्षित किए हुए थी।</p>
+        <p>और इसका प्रमाण क्या है? वह स्थान आज भी अहोबिलम में विद्यमान है। उस कुंड के पास आज भी वे सर्प रहते हैं। किंतु
+            अहोबिलम के वे सर्प किसी भक्त को नहीं काटते। यह परंपरागत विश्वास है जो पीढ़ियों से चला आ रहा है।</p>
+        <p>अहोबिलम के नल्लमला वनों में रीछ और सर्प जैसे वन्य प्राणी रहते हैं। फिर भी लाखों भक्त प्रतिवर्ष उन वनों में
+            जाते हैं और नव नृसिंह के दर्शन करते हैं।</p>
+        <p><strong>वह अदृश्य कवच जो प्रह्लाद को मिला था, वह आज भी नृसिंह के भक्तों के ऊपर है।</strong></p>
+
+        <h2>प्रह्लाद का वह साहस जो सर्पों को भी विस्मित कर गया</h2>
+        <p>उस कुंड में जो हुआ, वह भागवत पुराण में विस्तार से वर्णित है। जब सर्प प्रह्लाद के पास आए, तो उस बालक के मुख पर
+            भय नहीं था।</p>
+        <p>भय की जगह एक गहरी शांति थी। एक मुस्कान थी। प्रह्लाद ने उन सर्पों को देखा और मन में कहा: "तुम भी उन्हीं के
+            बनाए हुए हो। तुम्हारे भीतर भी वही हैं। तुम मुझे कैसे हानि पहुँचाओगे?"</p>
+        <p>और सर्पों ने उस बालक को छोड़ दिया। जब हिरण्यकशिपु के सेवकों ने दरवाजा खोला तो उन्होंने देखा कि प्रह्लाद
+            सर्पों के बीच सुरक्षित बैठे हैं और भगवान का नाम जप रहे हैं।</p>
+        <p>यह दृश्य देखकर सेवक भी चकित रह गए। हिरण्यकशिपु को जब यह बताया गया, तो उसका क्रोध और बढ़ गया। किंतु उसके भीतर
+            कहीं एक प्रश्न भी जागा: "वह कौन है जो मेरे पुत्र की इस प्रकार रक्षा करता है?"</p>
+        <p>और वह प्रश्न ही उसके अंत का आरंभ था। क्योंकि वही प्रश्न उस प्रसिद्ध संवाद तक पहुँचा जब प्रह्लाद ने कहा: "वे
+            इस स्तम्भ में भी हैं।" और स्तम्भ टूटा। नृसिंह प्रकट हुए।</p>
+        <p><strong>प्रह्लाद की रक्षा केवल सर्पों से नहीं हुई थी। वह रक्षा एक ऐसे क्रम की पहली कड़ी थी जो भगवान के अवतरण
+                तक पहुँची।</strong></p>
+
+        <h2>वह तीर्थ जो आज भी अहोबिलम में है: रक्तकुंड की कहानी</h2>
+        <p>हिरण्यकशिपु वध के पश्चात भगवान नृसिंह ने अपने रक्तरंजित हाथ जिस सरोवर में धोए, वह आज रक्तकुंड तीर्थ कहलाता
+            है। उस सरोवर के चारों ओर आज भी लाल रंग के चिह्न दिखाई देते हैं।</p>
+        <p>और इस रक्तकुंड के निकट वह प्रह्लाद गुफा भी है। उस गुफा में जब प्रह्लाद को सर्पों में फेंका गया था, वहाँ से
+            निकलकर वे उसी गुफा के पास रुके जहाँ भगवान ने उन्हें अपनी बाहों में थामा था। उस गुफा की शिलाओं पर प्रह्लाद के
+            हाथ से लिखे "ॐ नमो नारायण" के अक्षर आज भी हैं।</p>
+        <p>एक बालक जो सर्पों के बीच से जीवित निकला। और उस बालक ने उस गुफा में जाकर पत्थर पर लिखा: "ॐ नमो नारायण।" यह
+            धन्यवाद था।</p>
+        <p><strong>वह पत्थर और वे अक्षर आज भी हैं। और वे यह बताते हैं कि भगवान की रक्षा को पाप काल तक याद रखना
+                चाहिए।</strong></p>
+
+        <h2>दूसरी सत्य घटना: जब नृसिंह स्वयं संन्यासी बनकर आए</h2>
+        <p>अब दूसरी घटना की ओर। मेलकोट के श्रीनिवास आचार्य एक युवा वैष्णव भक्त थे जो श्री रामानुजाचार्य की परंपरा में
+            दीक्षित थे। एक रात भगवान लक्ष्मी नृसिंह उनके स्वप्न में प्रकट हुए और कहा: "अहोबिलम जाओ।"</p>
+        <p>श्रीनिवास आचार्य की आयु केवल 20 वर्ष थी। वे अपने गुरु के पास गए। गुरु ने कहा: "भगवान की आज्ञा का पालन करो।
+            विलंब मत करो।"</p>
+        <p>श्रीनिवास आचार्य अहोबिलम पहुँचे। वहाँ मुकुंदराय नामक एक स्थानीय प्रमुख ने उनका स्वागत किया जिसे भगवान ने
+            स्वप्न में निर्देश दिया था कि अहोबिलम में एक युवक आएगा, उसका स्वागत करो।</p>
+        <p>यह संयोग नहीं था। भगवान ने एक साथ दो लोगों को स्वप्न में निर्देश दिए। एक को भेजा और दूसरे को प्राप्त करने की
+            तैयारी करवाई।</p>
+        <p>और तब वह हुआ जो श्री वैष्णव परंपरा का सबसे असाधारण प्रसंग है। भगवान नृसिंह स्वयं एक संन्यासी का रूप धरकर
+            श्रीनिवास आचार्य के सामने प्रकट हुए। उन्होंने उन्हें संन्यास की दीक्षा दी और नाम दिया: "सतकोप जीयर।"</p>
+        <p>भगवान ने दीक्षा दी। फिर भगवान ने उन्हें आदेश दिया: "अहोबिलम को विकसित करो। वैष्णव संदेश का प्रसार करो। मालोल
+            नृसिंह की उत्सव मूर्ति को साथ लेकर यात्रा करो।"</p>
+        <p>और जब सतकोप जीयर ने यह जानना चाहा कि किस उत्सव मूर्ति को साथ ले जाएँ, तब मालोल नृसिंह की उत्सव मूर्ति स्वयं
+            चलकर उनके पास आई।</p>
+        <p><strong>भगवान ने न केवल दीक्षा दी, उन्होंने अपनी उत्सव मूर्ति भी स्वयं सौंपी।</strong></p>
+
+        <h2>अहोबिल मठ: वह संस्था जो उस एक घटना से जन्मी</h2>
+        <p>उस घटना के पश्चात अहोबिल मठ की स्थापना हुई। यह मठ आज भी अहोबिलम सहित अनेक नृसिंह मंदिरों की सेवा करता है।</p>
+        <p>600 वर्षों में 46 जीयर हो चुके हैं। एक के बाद एक। अखंडित परंपरा। और उस परंपरा का आरंभ उस एक रात हुआ था जब एक
+            20 वर्षीय युवा को भगवान ने स्वप्न में बुलाया था।</p>
+        <p>अहोबिल मठ के जीयर आज भी मालोल नृसिंह की उत्सव मूर्ति को साथ लेकर देश-विदेश में यात्रा करते हैं। भगवान उनके
+            साथ चलते हैं। जैसे उन्होंने उस पहले जीयर के साथ चलना स्वीकार किया था।</p>
+        <p><strong>एक भक्त को दी गई दीक्षा आज भी 46 पीढ़ियों बाद जीवित है।</strong></p>
+
+        <h2>दोनों घटनाओं में एक सूत्र</h2>
+        <p>ये दोनों घटनाएँ अलग-अलग युगों की हैं। एक सतयुग में, एक कलियुग में। किंतु दोनों में एक ही सूत्र है।</p>
+        <p><strong>भगवान नृसिंह ने अपने भक्त की पुकार सुनी और स्वयं आए।</strong></p>
+        <p>प्रह्लाद ने पुकारा — सर्प चरणों में आ गए। श्रीनिवास आचार्य ने भगवान को याद किया — भगवान संन्यासी बनकर आए।</p>
+        <p>दोनों में भक्त ने कुछ विशेष नहीं किया। प्रह्लाद ने तो केवल नाम लिया। और श्रीनिवास आचार्य ने तो केवल स्वप्न का
+            पालन किया।</p>
+        <p><strong>भगवान को विस्तृत साधना की आवश्यकता नहीं। वे उस हृदय को देखते हैं जो सच्चा हो।</strong></p>
+
+        <h2>आज भी वे आते हैं: वे तीन प्रमाण जो अहोबिलम में मौजूद हैं</h2>
+        <p>जो कहते हैं कि भगवान केवल पुराणों में हैं, उन्हें अहोबिलम जाना चाहिए। वहाँ तीन प्रत्यक्ष प्रमाण हैं।</p>
+        <p><strong>पहला प्रमाण:</strong> उग्र स्तम्भ की गुफा के पास वे शिलाएँ जिन पर प्रह्लाद ने "ॐ नमो नारायण" लिखा था।
+            वे अक्षर हजारों वर्ष बाद भी अमिट हैं।</p>
+        <p><strong>दूसरा प्रमाण:</strong> चैतन्य महाप्रभु के चरण-चिह्न जो उग्र स्तम्भ के शिखर पर आज भी अंकित हैं।
+            उन्होंने सन् 1516 में अहोबिलम की यात्रा की थी।</p>
+        <p><strong>तीसरा प्रमाण:</strong> रक्तकुंड के चारों ओर आज भी वे लाल चिह्न जो हजारों वर्ष पहले भगवान के रक्तरंजित
+            हाथों के स्पर्श से बने थे।</p>
+        <p>तीन युगों के तीन प्रमाण। एक ही भूमि पर।</p>
+        <p><strong>अहोबिलम कोई मृत इतिहास नहीं। यह एक जीवित तीर्थ है।</strong></p>
+
+        <h2>इस क्षेत्र से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: नाम ही सबसे बड़ा कवच है।</strong> प्रह्लाद के पास कोई शस्त्र नहीं था। कोई मंत्र-यंत्र
+            नहीं था। केवल नाम था। और वह नाम ही उनका कवच बन गया।</p>
+        <p><strong>दूसरी शिक्षा: स्वप्न में भगवान की आज्ञा को मानना चाहिए।</strong> श्रीनिवास आचार्य ने स्वप्न को
+            गंभीरता से लिया। गुरु से पूछा। आज्ञा का पालन किया। और भगवान ने स्वयं आकर उन्हें दीक्षा दी। जो भगवान की आज्ञा
+            को हल्के में ले, वह उनकी कृपा से वंचित रहता है।</p>
+        <p><strong>तीसरी शिक्षा: भगवान वहाँ आते हैं जहाँ सच्ची भक्ति हो।</strong> नल्लमला के घने वन। कठिन पहाड़ी मार्ग।
+            वन्य प्राणियों का भय। किंतु जो सच्चे मन से जाता है, वह सुरक्षित रहता है। भगवान उन वनों में भी अपने भक्त के
+            साथ हैं।</p>
+        <p><strong>चौथी शिक्षा: भगवान की कृपा पीढ़ियों तक चलती है।</strong> वह दीक्षा जो 600 वर्ष पहले एक 20 वर्षीय युवा
+            को मिली, आज 46 पीढ़ियों बाद भी अखंडित है। जो भगवान से जुड़ जाता है, उसकी परंपरा कभी नष्ट नहीं होती।</p>
+
+        <h2>उपसंहार: वह वन जहाँ भगवान आज भी हैं</h2>
+        <p>अहोबिलम वह स्थान है जहाँ दैवीय और मानवीय के बीच का पर्दा सबसे पतला है।</p>
+        <p>वह वन जहाँ प्रह्लाद सर्पों के बीच बैठकर नाम जपते थे। वह गुफा जहाँ भगवान ने एक युवा संन्यासी को दीक्षा दी। वह
+            उग्र स्तम्भ जहाँ भगवान प्रकट हुए थे।</p>
+        <p>यह सब आज भी वहाँ है। वैसा ही। अखंडित। और वे नृसिंह जिन्होंने प्रह्लाद की रक्षा की थी, जिन्होंने श्रीनिवास
+            आचार्य को दीक्षा दी थी, आज भी उन नव मंदिरों में विराजमान हैं।</p>
+        <div class="pull-quote">
+            <p>जो उन्हें सच्चे मन से पुकारे, वे आज भी उत्तर देते हैं।</p>
+            <strong>— अहोबिलम स्थल पुराण</strong>
+        </div>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह ध्यान श्लोक ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्।।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उस उग्र, वीर, महाविष्णु स्वरूप नृसिंह देव
+                को नमन करता हूँ, जो ज्वाला के समान चारों ओर से प्रकाशमान हैं, जो भयंकर होते हुए भी कल्याणकारी हैं, और जो
+                मृत्यु के भी मृत्यु स्वरूप हैं।</div>
+        </div>
+
+        <p>यह लेख ब्रह्माण्ड पुराण, श्रीमद् भागवत पुराण (सप्तम स्कंध), templesinindiainfo.com, arunraj.org,
+            tirthayatra.org, divineaarti.com तथा अहोबिल मठ के प्रमाणित ऐतिहासिक स्रोतों पर आधारित है।</p>
+
+        <div class="om-divider">ॐ नृं नृसिंहाय नमः</div>
+    </article>
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
