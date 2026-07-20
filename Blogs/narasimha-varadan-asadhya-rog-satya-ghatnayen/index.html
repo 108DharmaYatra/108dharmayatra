@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>नृसिंह का वह वरदान जो डॉक्टर नहीं दे सके | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="तीन सत्य घटनाएँ — जब कैंसर, हेपेटाइटिस-सी और गंभीर जलन जैसे असाध्य रोगों से पीड़ित भक्तों को भगवान नृसिंह ने चिकित्सा विज्ञान की सीमाओं से परे जाकर जीवन दिया।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/narasimha-varadan-asadhya-rog-satya-ghatnayen" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>नृसिंह का वह
+                वरदान</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">वैद्य नृसिंह</span>
+            <span class="tag">चमत्कार</span>
+        </div>
+        <h1>नृसिंह का वह वरदान —<br><span class="accent">जो डॉक्टर नहीं दे सके</span></h1>
+        <p class="subtitle">तीन सत्य घटनाएँ, जब असाध्य रोगियों को — कैंसर, हेपेटाइटिस-सी और गंभीर जलन से — भगवान नृसिंह
+            ने जीवन दिया।</p>
+        <div class="meta">
+            <span>📅 20 जुलाई 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 12 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह चिकित्सक जो किसी अस्पताल में नहीं है</h2>
+        <p class="dropcap">डॉक्टरों ने हाथ खड़े कर दिए थे। एक पिता के सामने उसकी 20 वर्षीया पुत्री थी, जो स्वयं मेडिकल
+            की छात्रा थी और जिसे डॉक्टरों ने बता दिया था कि उसका रोग लाइलाज है।</p>
+        <p>एक भक्त को डॉक्टरों ने बता दिया था कि उसकी लीवर की बीमारी इतनी गहरी है कि ठीक होने की केवल 45 प्रतिशत संभावना
+            है। एक 14 वर्षीय बालक के चेहरे पर पटाखे से इतनी गंभीर जलन हुई थी कि डॉक्टरों ने प्लास्टिक सर्जरी तक की बात
+            कह दी।</p>
+        <p>तीन अलग-अलग देश। तीन अलग-अलग रोग। तीन अलग-अलग काल। किंतु तीनों में एक ही समानता थी।</p>
+        
+            <p>वे सब भगवान नृसिंह के पास पहुँचे। और तीनों को जीवन मिला।</p>
+            <strong>— nrisimhadev.com की गवाहियाँ</strong>
+      
+        <p>यह कोई किंवदंती नहीं। यह nrisimhadev.com पर प्रकाशित वे प्रत्यक्ष गवाहियाँ हैं जो स्वयं उन रोगियों और उनके
+            परिजनों ने दी हैं। आइए, इन तीन सत्य घटनाओं को एक-एक करके समझते हैं।</p>
+
+        <h2>पहली घटना: वह डॉक्टर जिसकी बेटी को नृसिंह ने जीवन दिया</h2>
+        <p><strong>बांग्लादेश। मार्च 2006।</strong></p>
+        <p>डॉ. बासुदेव दास बांग्लादेश सरकार के एक वरिष्ठ चिकित्सक हैं। उनकी 20 वर्षीया पुत्री मिस्ती दास जो स्वयं मेडिकल
+            की छात्रा थीं, मार्च 2006 में गंभीर रूप से बीमार पड़ गईं। उन्हें डिम्बग्रंथि में एक जीवन-घातक जर्म सेल
+            ट्यूमर का निदान हुआ।</p>
+        <p>जर्म सेल ट्यूमर। एक ऐसा कैंसर जो 20 वर्ष की आयु में आता है तो परिवार को तोड़ देता है। उपचार के लिए मिस्ती को
+            मुंबई लाया गया। उपचार आरंभ हुआ। किंतु शीघ्र ही डॉक्टरों ने हाथ खड़े कर दिए।</p>
+        <p>एक पिता के लिए इससे बड़ा दुःख क्या होगा। वह स्वयं डॉक्टर था। किंतु अपनी बेटी के लिए वह कुछ नहीं कर सकता था।
+            और तब डॉ. दास एक दिन मुंबई के ISKCON मंदिर में गए।</p>
+        <p>वहाँ एक भक्त ने उन्हें मायापुर में आगामी नृसिंह चतुर्दशी उत्सव का एक पत्रक दिया। वे उस उत्सव में सम्मिलित
+            हुए। वहाँ उन्हें भगवान नृसिंह के चमत्कारों पर एक छोटी पुस्तक मिली। उस पुस्तक को पढ़कर डॉ. दास के मन में एक
+            विश्वास जागा।</p>
+        <p>वे बांग्लादेश लौटे और मायापुर में नृसिंह देव के पुजारी से संपर्क किया। उन्होंने अनुरोध किया कि उनकी पुत्री के
+            जीवन की रक्षा के लिए भगवान नृसिंह को विशेष अर्पण किया जाए।</p>
+        <p>और तब जो हुआ, वह डॉ. दास जैसे चिकित्सक को भी चकित कर गया। तत्काल मिस्ती का स्वास्थ्य सुधरने लगा। और धीरे-धीरे
+            वे अपनी सामान्य अवस्था में वापस आने लगीं।</p>
+        <p>डॉ. बासुदेव दास इतने प्रेरित हुए कि उन्होंने भगवान नृसिंह के चमत्कारों की वह पुस्तक छपवाकर पूरे बांग्लादेश
+            में वितरित की। उन्होंने कहा: "मुझे लगता है कि हर व्यक्ति को व्यक्तिगत और आध्यात्मिक उन्नति के लिए भगवान
+            नृसिंह से प्रार्थना करनी चाहिए।"</p>
+        <p><strong>एक चिकित्सक जिसने अपने रोगी को ठीक करने की क्षमता खो दी थी, उसे वह चिकित्सक मिला जिसके लिए कोई रोग
+                असाध्य नहीं।</strong></p>
+
+        <h2>दूसरी घटना: हेपेटाइटिस-सी का वह उपचार जो रात भर में हुआ</h2>
+        <p><strong>अमेरिका। वर्ष 2004।</strong></p>
+        <p>आंधरूपा देवी दासी 1975 से भगवान की दीक्षित भक्त हैं। 2004 की गर्मियों में वे हेपेटाइटिस-सी के तृतीय चरण के
+            फाइब्रोसिस से पीड़ित थीं। 48 सप्ताह के उपचार से ठीक होने की केवल 45 प्रतिशत संभावना थी। और उपचार के गंभीर
+            दुष्प्रभाव भी थे।</p>
+        <p>हेपेटाइटिस-सी का तृतीय चरण। लीवर का वह रोग जो धीरे-धीरे अंग को नष्ट करता है। उन्होंने जयपताका महाराज से
+            आशीर्वाद माँगा। महाराज ने अपना दण्ड जो मायापुर में भगवान नृसिंह के स्पर्श से पवित्र हुआ था, उनके मस्तक पर
+            लगाया।</p>
+        <p>उस रात आंधरूपा देवी को एक स्वप्न आया। स्वप्न में उनका शरीर रोग से पीड़ित था और वह धीरे-धीरे मिट रहा था।</p>
+        <p>और अगले दिन प्रातः: फ्लोरिडा विश्वविद्यालय से एक दूरभाष आया। डॉक्टरों ने कहा: "बधाई हो। आप हेपेटाइटिस-सी से
+            मुक्त हो गई हैं। केवल 8 सप्ताह में वायरल काउंट शून्य हो गया।" डॉक्टर आश्चर्यचकित थे क्योंकि यह जेनोटाइप 1 था
+            जो हेपेटाइटिस-सी का सबसे घातक प्रकार है।</p>
+        <p>48 सप्ताह का उपचार चल रहा था। केवल 8 सप्ताह में परिणाम आ गया। आंधरूपा देवी ने कहा: "जब मैंने यह उपचार शुरू
+            किया था, तो मैं प्रतिदिन भगवान नृसिंह से प्रार्थना करती थी: जो आपकी इच्छा हो। आप मुझे इस संसार से ले जाएँ या
+            ठीक करें। जो आप उचित समझें। किंतु मुझे सदा आपकी भक्ति में लगे रहने दें।"</p>
+        <p>यह प्रार्थना थी। न जीवन की माँग। न मृत्यु का भय। केवल भक्ति की याचना।</p>
+        <p><strong>और भगवान ने जीवन दिया।</strong></p>
+
+        <h2>तीसरी घटना: वह बालक जिसके जले चेहरे पर अगले दिन एक निशान नहीं था</h2>
+        <p><strong>मायापुर। भारत।</strong></p>
+        <p>चक्रवर्ती राज रामनवमी के उत्सव के समय पटाखे के विस्फोट से घायल हो गए। उनकी आयु 14 वर्ष थी। उन्हें तत्काल
+            अस्पताल ले जाया गया। डॉक्टरों ने बताया कि चेहरे पर द्वितीय श्रेणी की जलन है। उन्होंने तीन चरणों में उपचार का
+            सुझाव दिया: पहले चेहरे की ड्रेसिंग, फिर दो सप्ताह बाद रासायनिक क्राफ्टिंग और 6 महीने से 1 वर्ष बाद प्लास्टिक
+            सर्जरी।</p>
+        <p>प्लास्टिक सर्जरी तक की बात आ गई थी। अगली सुबह उनके माता-पिता ने मायापुर में भगवान नृसिंह को विशेष अर्पण
+            करवाया। जयपताका स्वामी ने बालक की माँ के मस्तक पर नृसिंह तेल लगाया और कहा कि वे प्रार्थना करेंगे।</p>
+        <p>और फिर जो हुआ, उसने अस्पताल के डॉक्टरों को भी निःशब्द कर दिया। चक्रवर्ती को कोलकाता के एक अस्पताल ले जाया
+            गया। एक वरिष्ठ डॉक्टर ने परीक्षण किया और द्वितीय श्रेणी की जलन की पुष्टि करके उन्हें ड्रेसिंग के लिए भेजा।
+            किंतु 3 मिनट बाद ड्रेसिंग कक्ष से एक कर्मचारी दौड़ता हुआ बाहर आया और माता-पिता को भीतर बुलाया।</p>
+        <p>माता-पिता ने जो देखा, उस पर उन्हें स्वयं विश्वास नहीं हुआ। चक्रवर्ती खड़े थे और मुस्करा रहे थे। उनके चेहरे पर
+            जलन का एक भी निशान नहीं था।</p>
+        <p>जब डॉक्टरों से स्पष्टीकरण माँगा गया तो उनके पास कोई उत्तर नहीं था। एक ने कहा: "आप अपने मंदिर जाइए और अपने
+            भगवान से पूछिए। यह तो आपके भगवान का चमत्कार है।"</p>
+        <p><strong>एक डॉक्टर ने स्वयं कहा: "यह भगवान का चमत्कार है।"</strong></p>
+
+        <h2>तीनों घटनाओं में एक सूत्र: वह प्रार्थना जो काम करती है</h2>
+        <p>ये तीन घटनाएँ तीन अलग-अलग देशों की हैं। तीन अलग-अलग रोगों की हैं। किंतु तीनों में एक ही सूत्र है।</p>
+        <p><strong>किसी ने माँगा नहीं "मुझे जीवन दो।"</strong></p>
+        <p>डॉ. दास ने केवल विश्वास किया और भगवान को अर्पण करवाया। आंधरूपा देवी ने कहा: "जो आप उचित समझें।" चक्रवर्ती के
+            माता-पिता ने भगवान को अर्पण करवाया और प्रार्थना की।</p>
+        <p>तीनों ने भगवान को अपने हाथों में सब सौंप दिया। और भगवान ने जीवन दिया।</p>
+        <p>यह उस वचन की जीवंत व्याख्या है जो भागवत पुराण में है: प्रह्लाद के मुख से निकला नृसिंह कवच आज भी कहता है:
+            "वृश्चिकोरगसम्भूत विषापहरणं परम्" अर्थात नृसिंह कवच सर्पों और बिच्छुओं के विष को भी दूर करने में सक्षम है।
+            यह असाध्य रोगों से रक्षा करता है।</p>
+        <p><strong>जो भगवान सर्प-विष को हर सकते हैं, वे कैंसर और हेपेटाइटिस को क्यों नहीं हर सकते?</strong></p>
+
+        <h2>वह चेतावनी जो इन घटनाओं के साथ आती है</h2>
+        <p>यहाँ एक महत्त्वपूर्ण बात स्पष्ट करना आवश्यक है। ये घटनाएँ यह नहीं कहतीं कि चिकित्सा उपचार छोड़ दो।</p>
+        <p>डॉ. दास ने मुंबई में उपचार करवाया और साथ में प्रार्थना की। आंधरूपा देवी 48 सप्ताह का उपचार ले रही थीं और साथ
+            में प्रार्थना करती थीं।</p>
+        
+            <p>भगवान नृसिंह की कृपा और चिकित्सा उपचार विरोधी नहीं हैं। दोनों साथ चल सकते हैं।</p>
+            <strong>— 108 Dharma Yatra</strong>
+       
+        <p>किंतु जब चिकित्सा ने हाथ खड़े कर दिए, तब भगवान ने हाथ आगे बढ़ाया। यही वैद्य नृसिंह की विशेषता है।</p>
+
+        <h2>इन घटनाओं से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: भगवान का विश्वास स्वयं एक औषधि है।</strong> डॉ. दास जो स्वयं डॉक्टर थे, जब उन्होंने
+            भगवान पर विश्वास किया, तब कुछ ऐसा हुआ जो चिकित्सा विज्ञान नहीं समझा सका। विश्वास की शक्ति का कोई माप नहीं।
+        </p>
+        <p><strong>दूसरी शिक्षा: समर्पण सबसे बड़ी प्रार्थना है।</strong> आंधरूपा देवी ने कहा: "जो आप उचित समझें।" यह
+            समर्पण ही सबसे शक्तिशाली प्रार्थना थी। जब हम परिणाम भगवान पर छोड़ देते हैं, तब वे सर्वोत्तम परिणाम देते हैं।
+        </p>
+        <p><strong>तीसरी शिक्षा: भगवान की कृपा तत्काल भी आती है।</strong> चक्रवर्ती का चेहरा रात भर में ठीक हुआ। आंधरूपा
+            देवी 8 सप्ताह में ठीक हुईं। भगवान की कृपा का अपना समय होता है। वह कभी विलंब नहीं करते, केवल उचित समय पर देते
+            हैं।</p>
+        <p><strong>चौथी शिक्षा: जब डॉक्टर हाथ खड़े करें, तो वैद्य नृसिंह के पास जाओ।</strong> ये तीनों घटनाएँ तब हुईं जब
+            चिकित्सा विज्ञान ने अपनी सीमा स्वीकार कर ली थी। और भगवान ने उस सीमा से आगे जाकर दिखाया।</p>
+
+        <h2>उपसंहार: वह वैद्य जो सदा उपस्थित है</h2>
+        <p>डॉ. बासुदेव दास ने कहा था: "मुझे लगता है हर व्यक्ति को नृसिंह से प्रार्थना करनी चाहिए।" यह एक डॉक्टर का वचन
+            है। एक ऐसे डॉक्टर का जिसने अपनी पुत्री को उस चिकित्सक के हाथों में सौंपा जो किसी अस्पताल में नहीं बैठता।</p>
+        <p>भगवान नृसिंह वैद्य हैं। यदाद्रि में भी। मायापुर में भी। अमेरिका में भी। बांग्लादेश में भी। वे किसी एक स्थान
+            पर नहीं बैठते। वे वहाँ होते हैं जहाँ उनका भक्त होता है।</p>
+        
+            <p>और जो उनसे सच्चे मन से प्रार्थना करता है, वह कभी निराश नहीं लौटता।</p>
+            <strong>— 108 Dharma Yatra</strong>
+      
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह ध्यान श्लोक ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्।।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उस उग्र, वीर, महाविष्णु स्वरूप नृसिंह देव
+                को नमन करता हूँ, जो ज्वाला के समान चारों ओर से प्रकाशमान हैं, जो भयंकर होते हुए भी कल्याणकारी हैं, और जो
+                मृत्यु के भी मृत्यु स्वरूप हैं।</div>
+        </div>
+
+        <p>यह लेख nrisimhadev.com पर पंकजांघ्रि दास द्वारा संकलित प्रत्यक्ष गवाहियों पर आधारित है। इनमें डॉ. बासुदेव दास
+            (बांग्लादेश), आंधरूपा देवी दासी (अमेरिका) और पद्मराधिका देवी दासी (मायापुर) की गवाहियाँ सम्मिलित हैं।</p>
+
+        <div class="om-divider">ॐ नृं नृसिंहाय नमः</div>
+    </article>
+
+      <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
