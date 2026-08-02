@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>नृसिंह का पिता की तरह आना: एक भक्त का स्वप्न अनुभव | 108 Dharma Yatra</title>
+    <meta name="description"
+        content="जब एक भक्त को स्वप्न में भगवान नृसिंह चलते-फिरते, पिता की भाँति बातें करते मिले — और जब एक असाध्य पीड़ा एक ही रात में गायब हो गई। दो सत्य अनुभव, एक ही सत्य की ओर इशारा करते हुए।" />
+    <link rel="canonical" href="https://108dharmayatra.com/Blogs/narasimha-pita-swapna-anubhav" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Tiro+Devanagari+Hindi:ital@0;1&family=Jost:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --saffron: #FE6901;
+            --gold: #FFEE00;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d0b08;
+            --text: #ede5d8;
+            --muted: #8a7f72;
+            --border: rgba(254, 105, 1, 0.15);
+            --card: rgba(254, 105, 1, 0.05);
+            --shlok-bg: rgba(254, 105, 1, 0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdf6ed;
+            --text: #1a1208;
+            --muted: #7a6550;
+            --border: rgba(200, 120, 30, 0.2);
+            --card: rgba(254, 105, 1, 0.04);
+            --shlok-bg: rgba(254, 105, 1, 0.05);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 999;
+            transition: width 0.1s linear;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--saffron);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        .theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            max-width: 680px;
+            margin: 5rem auto 0;
+            padding: 0 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--saffron);
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(254, 105, 1, 0.3);
+            color: var(--saffron);
+        }
+
+        .tag.primary {
+            background: var(--saffron);
+            color: #fff;
+            border-color: var(--saffron);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 .accent {
+            color: var(--saffron);
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(254, 105, 1, 0.35);
+            align-self: center;
+        }
+
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 6rem;
+        }
+
+        .article p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            color: var(--text);
+            margin-bottom: 1.8rem;
+        }
+
+        .article h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 3.5rem 0 1.2rem;
+            scroll-margin-top: 80px;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 4.2rem;
+            line-height: 0.82;
+            margin: 0.08em 0.12em 0 0;
+            color: var(--saffron);
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--saffron);
+        }
+
+        .pull-quote p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.22rem;
+            font-style: italic;
+            line-height: 1.65;
+            margin: 0 !important;
+        }
+
+        .pull-quote cite {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .shlok {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .shlok-label {
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 1.2rem;
+        }
+
+        .shlok-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.1rem;
+            line-height: 2.1;
+            margin-bottom: 1.4rem;
+        }
+
+        .shlok-meaning {
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.8;
+            text-align: left;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .shlok-meaning strong {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            font-style: normal;
+        }
+
+        .om-divider {
+            text-align: center;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            color: rgba(254, 105, 1, 0.3);
+            margin: 3.5rem 0 0;
+        }
+
+        .post-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .back-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            text-decoration: none;
+        }
+
+        .jai {
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.6rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 0.78rem;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+    <nav>
+        <a href="/index.html" class="logo">|| 108 Dharma Yatra ||</a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/About/">About</a></li>
+                <li><a href="/Buy/">eBooks</a></li>
+                <li><a href="/Blogs/">Blogs</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn">☀️</button>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>›</span> <a href="/Blogs/">Blogs</a> <span>›</span> <span>नृसिंह का
+                पिता की तरह आना</span>
+        </div>
+        <div class="tags">
+            <span class="tag primary">Dharma</span>
+            <span class="tag">नृसिंह</span>
+            <span class="tag">स्वप्न अनुभव</span>
+            <span class="tag">भक्ति</span>
+        </div>
+        <h1>नृसिंह का पिता की तरह आना —<br><span class="accent">जब भक्त को स्वप्न में नृसिंह चलते-फिरते मिले</span></h1>
+        <p class="subtitle">दो सत्य अनुभव — एक असाध्य पीड़ा जो दर्शन के बाद उसी रात गायब हुई, और एक स्वप्न जिसमें भगवान
+            नृसिंह एक पिता की भाँति साथ चले।</p>
+        <div class="meta">
+            <span>📅 01 अगस्त 2026</span>
+            <span class="meta-dot"></span>
+            <span>✍️ Dharma Yatra</span>
+            <span class="meta-dot"></span>
+            <span>⏱ 11 मिनट पठन</span>
+        </div>
+    </header>
+
+    <article class="article">
+        <h2>वह स्वप्न जो स्वप्न नहीं था</h2>
+        <p class="dropcap">एक भक्त ने लिखा: "वे बस चल रहे थे। मेरे पास। बिल्कुल किसी पिता की तरह। उन्होंने कुछ कहा। और
+            मैं सुन रहा था।"</p>
+        <p>"जागने पर भी वह उपस्थिति बनी रही। जैसे वे अभी गए ही नहीं।"</p>
+        <p>यह अनुभव एक ऐसी भक्त का था जो भगवान नृसिंह के मंदिर में दर्शन करने के कुछ दिन बाद रात को सोई थी। और भगवान आए।
+        </p>
+        <p>कुछ दिनों बाद एक अन्य भक्त पुजारी के कक्ष में आई और उसने एक स्वप्न के बारे में बताया जिसमें भगवान नृसिंहदेव
+            उसके साथ बिल्कुल एक पिता की तरह चलते और बातें करते थे।</p>
+        <p>यह कोई असाधारण साधना का फल नहीं था। कोई दशकों की तपस्या नहीं। केवल एक दर्शन। और उस दर्शन के बाद आया वह स्वप्न
+            जो स्वप्न नहीं था।</p>
+        <p><strong>भगवान नृसिंह केवल उग्र नहीं हैं। वे पिता भी हैं।</strong></p>
+
+        <h2>वह भगवान जो हम नहीं जानते</h2>
+        <p>हम नृसिंह को जानते हैं उनके उस स्वरूप से जो हिरण्यकशिपु का वक्षस्थल विदीर्ण कर रहा है। ज्वाला की भाँति
+            तेजस्वी। नखों से लैस। क्रोध में।</p>
+        <p>किंतु उसी भगवान का एक और रूप है। एक स्वप्न में भगवान नृसिंहदेव एक पिता की तरह चलते और बातें करते थे। वे
+            बिल्कुल सामान्य थे। जैसे कोई प्रिय परिजन।</p>
+        <p>यह रूप वही है जो प्रह्लाद ने देखा था। प्रह्लाद के लिए नृसिंह कोई भयंकर देव नहीं थे। वे उनके प्रिय, उनके
+            रक्षक, उनके पिता समान थे।</p>
+        <p>और हजारों वर्ष बाद भी वे अपने भक्तों के स्वप्न में उसी रूप में आते हैं।</p>
+
+        <h2>पहली घटना: वह रोग जो दर्शन के बाद उसी रात गायब हुआ</h2>
+        <p>एक भक्त दो सप्ताह से एक गंभीर शारीरिक समस्या से पीड़ित थी जो उसे असम में देवता-विग्रह बनाने से रोक रही थी।
+            उसे वहाँ जाने का काम मिला था और हवाई टिकट भी था। किंतु वह समस्या उसे जाने नहीं दे रही थी।</p>
+        <p>दो सप्ताह। चिकित्सकों के पास गई। कोई लाभ नहीं।</p>
+        <p>उस दिन वह नृसिंह मंदिर में दर्शन करने आई। तब एक अन्य भक्त ने उसे सुझाव दिया: "भगवान नृसिंहदेव आज तत्काल
+            आशीर्वाद दे रहे हैं। क्यों न उनसे प्रार्थना करो?"</p>
+        <p>उस भक्त ने भगवान के सामने प्रार्थना की। कोई विधि-विधान नहीं। कोई पुजारी नहीं। केवल एक सरल प्रार्थना।</p>
+        <p>अगले दिन प्रातः वह भक्त उस पुजारी के पास आई और बोली: "आपका बहुत धन्यवाद। जब मैं कल मंदिर से घर पहुँची, मेरी
+            समस्या पूर्णतः समाप्त हो गई थी।"</p>
+        <p>दो सप्ताह जो ठीक नहीं हुआ, वह एक दर्शन के बाद उसी रात ठीक हो गया।</p>
+        <p><strong>भगवान नृसिंह के लिए दो सप्ताह और दो क्षण में कोई अंतर नहीं।</strong></p>
+
+        <h2>दूसरी घटना: वह स्वप्न जिसमें भगवान पिता बनकर आए</h2>
+        <p>कुछ दिनों बाद एक अन्य भक्त। वह भक्त पुजारी के कक्ष में आई और उसने एक स्वप्न के बारे में बताया जिसमें भगवान
+            नृसिंहदेव उसके साथ बिल्कुल एक पिता की तरह चलते और बातें करते थे।</p>
+        <p>यह स्वप्न असाधारण था। भगवान नृसिंह — वे जिनका नाम सुनकर असुर भी काँपते हैं — वे एक पिता की तरह चल रहे थे।</p>
+        <p>कोई उग्रता नहीं। कोई ज्वाला नहीं। कोई शस्त्र नहीं। बस एक पिता। अपनी पुत्री के साथ।</p>
+        <p>यह दृश्य हृदय को क्या देता है? वह आश्वासन जो कोई शब्द नहीं दे सकता।</p>
+
+        <p>मैं हूँ। तुम्हारे साथ। हमेशा।</p>
+        <strong>— भक्त के स्वप्न में भगवान नृसिंह</strong>
+
+
+        <h2>प्रह्लाद का वह सम्बन्ध जो यहाँ जीवित है</h2>
+        <p>यह स्वप्न अकारण नहीं था। प्रह्लाद के लिए नृसिंह हमेशा पिता थे। उन्होंने भगवान को कभी भयंकर नहीं माना।</p>
+        <p>जब हिरण्यकशिपु ने पूछा: "वह विष्णु कहाँ है?" तब प्रह्लाद ने कहा: "वे मेरे हृदय में हैं। वे मेरे साथ हैं।"</p>
+        <p>यह सम्बन्ध था। पिता और पुत्री का सम्बन्ध। और वही सम्बन्ध हजारों वर्ष बाद भी उस भक्त के स्वप्न में जीवित था।
+        </p>
+        <p>भगवान नृसिंहदेव उस भक्त के साथ एक पिता की तरह चले। बातें कीं। जैसे कोई प्रिय परिजन।</p>
+        <p><strong>जो प्रह्लाद के लिए पिता थे, वे आज भी अपने भक्तों के लिए पिता हैं।</strong></p>
+
+        <h2>"तत्काल आशीर्वाद" की वह परंपरा</h2>
+        <p>उस पहली घटना में एक वाक्य था जो ध्यान आकर्षित करता है। उस पुजारी ने कहा था: "भगवान नृसिंहदेव आज तत्काल
+            आशीर्वाद दे रहे हैं।"</p>
+        <p>यह क्या था? यह उस पुजारी का अनुभव था। वर्षों की सेवा का अनुभव।</p>
+        <p>कुछ दिन ऐसे होते हैं जब भगवान की कृपा विशेष रूप से प्रवाहित होती है। जब मंदिर में एक विशेष दिव्यता होती है।
+            उस दिन वह पुजारी जानता था।</p>
+        <p>और उसी ज्ञान से उसने उस पीड़ित भक्त को मंदिर में प्रार्थना करने के लिए कहा।</p>
+        <p><strong>भगवान की कृपा सदा बहती है। किंतु जो उसे पहचाने, वह उसका लाभ उठा सकता है।</strong></p>
+
+        <h2>वह भय जो नृसिंह का नाम सुनकर आता है और वह प्रेम जो दर्शन के बाद</h2>
+        <p>यहाँ एक विरोधाभास है जो इन दोनों घटनाओं को और गहरा बनाता है।</p>
+        <p>पहली बार जब कोई नृसिंह के बारे में सुनता है — वह उग्र स्वरूप, वे बड़े नख, वह हिरण्यकशिपु का वध — तो एक भय
+            होता है।</p>
+        <p>किंतु जब कोई उनके मंदिर में जाता है, उनके सामने खड़ा होता है, उनसे प्रार्थना करता है — तब वह भय कहाँ जाता है?
+        </p>
+        <p>भक्त के स्वप्न में भगवान नृसिंहदेव चलते-फिरते, बातें करते, बिल्कुल एक पिता की तरह थे। भय नहीं था। केवल प्रेम
+            था।</p>
+        <p><strong>जो भगवान भक्त की रक्षा के लिए उग्र हैं, वही भगवान भक्त के साथ होने पर कोमल हैं।</strong></p>
+        <p>यही नृसिंह की सबसे बड़ी विशेषता है।</p>
+
+        <h2>वह पुजारी जिसने इन घटनाओं को दर्ज किया</h2>
+        <p>इन दोनों घटनाओं को एक पुजारी ने अपनी डायरी में दर्ज किया जो narasimhalila.wordpress.com पर प्रकाशित है।</p>
+        <p>यह एक ऐसे पुजारी का वृत्तान्त है जो नृसिंह मंदिर में वर्षों से सेवा करते रहे और उन्होंने जो चमत्कार देखे,
+            उन्हें लिख दिया।</p>
+        <p>यह कोई बड़ा दावा नहीं है। कोई समाचार पत्र की खबर नहीं। कोई वैज्ञानिक प्रमाण नहीं। बस दो साधारण भक्तों के
+            साधारण अनुभव।</p>
+        <p>किंतु वे अनुभव उस सत्य को प्रकट करते हैं जो हजारों वर्षों से कहा जा रहा है:</p>
+        <p><strong>भगवान नृसिंह अपने भक्तों को कभी अकेला नहीं छोड़ते।</strong></p>
+
+        <h2>इन घटनाओं से चार शाश्वत शिक्षाएँ</h2>
+        <p><strong>पहली शिक्षा: भगवान तत्काल भी आशीर्वाद दे सकते हैं।</strong> दो सप्ताह की समस्या एक दर्शन के बाद उसी
+            रात गायब हुई। भगवान की कृपा का कोई समय-सारिणी नहीं है। वे जब चाहें, जितना चाहें, उतना दे सकते हैं।</p>
+        <p><strong>दूसरी शिक्षा: भगवान स्वप्न में भी उतने ही वास्तविक हैं।</strong> वह स्वप्न जिसमें नृसिंह एक पिता की
+            तरह चले, वह कोई मानसिक कल्पना नहीं थी। भगवान की उपस्थिति स्वप्न में भी उतनी ही वास्तविक होती है।</p>
+        <p><strong>तीसरी शिक्षा: नृसिंह के दो रूप हैं — उग्र और कोमल।</strong> वे हिरण्यकशिपु के लिए उग्र थे क्योंकि वह
+            अधर्मी था। वे प्रह्लाद के लिए पिता थे क्योंकि वह भक्त था। जो भगवान का भक्त हो, उसके लिए वे सदा कोमल हैं।</p>
+        <p><strong>चौथी शिक्षा: सरल प्रार्थना पर्याप्त है।</strong> उस पीड़ित भक्त ने कोई विशेष मंत्र नहीं जपा। कोई विधि
+            नहीं की। बस प्रार्थना की। और भगवान ने सुना।</p>
+
+        <h2>उपसंहार: वह पिता जो कभी अनुपस्थित नहीं होता</h2>
+        <p>उस भक्त के स्वप्न में भगवान नृसिंह चल रहे थे। उसके साथ। बातें कर रहे थे। जैसे एक पिता अपनी पुत्री के साथ करता
+            है।</p>
+        <p>यह दृश्य — यह कोमल, शांत, प्रेममय दृश्य — नृसिंह के उस स्वरूप को दिखाता है जो शास्त्रों में तो है, किंतु जिसे
+            हम अक्सर भूल जाते हैं।</p>
+        <p>वे केवल उग्र रक्षक नहीं हैं। वे पिता भी हैं। और जो पिता की भाँति अपने पुत्र-पुत्रियों की रक्षा करता है, वह
+            उनके स्वप्न में भी आता है।</p>
+
+        <p>उनके साथ चलता है। बातें करता है। और यह जताता है: "मैं हूँ। तुम्हारे साथ। हमेशा।"</p>
+        <strong>— भक्त पुजारी का अनुभव-वृत्तान्त</strong>
+
+        <div class="shlok">
+            <div class="shlok-label">✦ नृसिंह ध्यान श्लोक ✦</div>
+            <div class="shlok-text">उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम्।<br>नृसिंहं भीषणं भद्रं मृत्युमृत्युं
+                नमाम्यहम्।।</div>
+            <div class="shlok-meaning"><strong>भावार्थ —</strong><br><br>मैं उस उग्र, वीर, महाविष्णु स्वरूप नृसिंह देव
+                को नमन करता हूँ, जो ज्वाला के समान चारों ओर से प्रकाशमान हैं, जो भयंकर होते हुए भी कल्याणकारी हैं, और जो
+                मृत्यु के भी मृत्यु स्वरूप हैं।</div>
+        </div>
+
+        <p>यह लेख narasimhalila.wordpress.com पर एक नृसिंह मंदिर के पुजारी द्वारा प्रकाशित प्रत्यक्ष अनुभव-वृत्तान्त पर
+            आधारित है। यह वृत्तान्त उन भक्तों के प्रत्यक्ष अनुभवों पर आधारित है जिन्होंने स्वयं उस पुजारी को यह बताया।
+        </p>
+
+        <div class="om-divider">ॐ नृं नृसिंहाय नमः</div>
+    </article>
+
+     <!-- Email Caputure Section -->
+
+    <!--
+================================================================
+  FREE EBOOKS EMAIL CAPTURE BOX — 108 Dharma Yatra
+  Blog Page ke END mein paste karein (footer se pehle)
+  
+  INSTRUCTIONS:
+  1. Is poore block ko copy karein
+  2. Blog page mein <div class="post-footer"> se PEHLE paste karein
+  3. Bus! Kuch change nahi karna.
+================================================================
+-->
+
+    <!-- ═══ BLOG EMAIL CAPTURE BOX ═══ -->
+    <section style="
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+">
+        <div style="
+    border-radius: 16px;
+    border: 1px solid rgba(254, 105, 1, 0.2);
+    background: rgba(254, 105, 1, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  ">
+
+            <!-- Top glow accent -->
+            <div style="
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 200px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(254,105,1,0.6), transparent);
+      pointer-events: none;
+    "></div>
+
+            <!-- Label -->
+            <div style="
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 0.6rem;
+    ">✦ Free eBooks</div>
+
+            <!-- Heading -->
+            <h3 style="
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
+    ">Download FREE Narasimha Kavach
+                & 108 Divine Names of Lord Narasimha</h3>
+
+
+
+            <!-- MailerLite Form -->
+            <div id="mlb2-41989827-blog" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41989827">
+                <div class="ml-form-embedWrapper embedForm">
+
+                    <!-- FORM -->
+                    <div class="ml-form-embedBody ml-form-embedBodyDefault row-form" style="padding:0;">
+                        <form class="ml-block-form"
+                            action="https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/subscribe"
+                            data-code="" method="post" target="_blank">
+
+                            <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                <input aria-label="name" type="text" name="fields[name]" placeholder="Aapka Naam"
+                                    autocomplete="given-name" style="
+                  flex: 1;
+                  min-width: 120px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                                <input aria-label="email" aria-required="true" type="email" name="fields[email]"
+                                    placeholder="Email Address" autocomplete="email" style="
+                  flex: 1.4;
+                  min-width: 160px;
+                  padding: 0.7rem 1rem;
+                  background: rgba(254,105,1,0.06);
+                  border: 1px solid var(--glass-border, rgba(254,105,1,0.18));
+                  border-radius: 8px;
+                  color: var(--text);
+                  font-family: 'Jost', sans-serif;
+                  font-size: 0.83rem;
+                  font-weight: 300;
+                  outline: none;
+                  transition: border-color 0.2s, background 0.2s;
+                " onfocus="this.style.borderColor='rgba(254,105,1,0.5)'; this.style.background='rgba(254,105,1,0.1)'"
+                                    onblur="this.style.borderColor=''; this.style.background='rgba(254,105,1,0.06)'" />
+                            </div>
+
+                            <input type="hidden" name="ml-submit" value="1">
+                            <input type="hidden" name="anticsrf" value="true">
+
+                            <button type="submit" style="
+              width: 100%;
+              padding: 0.78rem 1.5rem;
+              background: var(--saffron, #FE6901);
+              border: none;
+              border-radius: 8px;
+              color: #fff;
+              font-family: 'Jost', sans-serif;
+              font-size: 0.75rem;
+              font-weight: 500;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              cursor: pointer;
+              box-shadow: 0 4px 20px rgba(254,105,1,0.35);
+              transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.opacity='0.9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(254,105,1,0.5)'"
+                                onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(254,105,1,0.35)'">
+                                Get Free Ebooks →
+                            </button>
+
+                        </form>
+
+                        <p style="
+            font-family: 'Jost', sans-serif;
+            font-size: 0.98rem;
+            color: var(--muted);
+            text-align: center;
+            opacity: 0.65;
+            margin-top: 0.6rem;
+            letter-spacing: 0.05em;
+          ">🔒 Your information is secure</p>
+                    </div>
+
+                    <!-- SUCCESS -->
+                    <div class="ml-form-successBody row-success"
+                        style="display:none; padding:1rem 0; text-align:center;">
+                        <div style="font-size:2rem; margin-bottom:0.5rem;">🙏</div>
+                        <h4 style="
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+          ">Jai Narsimha!</h4>
+                        <p
+                            style="font-family:'Jost',sans-serif; font-size:0.78rem; color:var(--muted); line-height:1.6;">
+                            📧 Inbox check karein — eBooks ready hain!<br>
+                            <span style="color:var(--saffron); font-size:0.72rem;">Spam / Junk folder bhi dekh
+                                lein.</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /MailerLite -->
+
+        </div>
+    </section>
+    <!-- ═══ END BLOG EMAIL CAPTURE BOX ═══ -->
+
+    <!-- MailerLite Scripts (already loaded on main page, but safe to include here too) -->
+    <script>
+        function ml_webform_success_41989827() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-41989827 .row-success').show();
+            $('.ml-subscribe-form-41989827 .row-form').hide();
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b"
+        type="text/javascript"></script>
+    <script>
+        fetch("https://assets.mailerlite.com/jsonp/2393384/forms/188964160107709965/takel")
+    </script>
+
+    <!-- Email Capture Section End -->
+
+    <div class="post-footer">
+        <a href="/Blogs/" class="back-link">← सभी Blogs देखें</a>
+        <span class="jai">जय नरसिंह देव 🙏</span>
+    </div>
+    <footer>
+        <a href="#" class="footer-logo">|| 108 Dharma Yatra ||</a>
+        <span>©️ 2026 · All rights reserved</span>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => { const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100; document.getElementById('progress-bar').style.width = Math.min(pct, 100) + '%'; });
+        const btn = document.getElementById('themeBtn'); const html = document.documentElement; const saved = localStorage.getItem('dy-theme') || 'dark'; html.setAttribute('data-theme', saved); btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.addEventListener('click', () => { const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); btn.textContent = next === 'dark' ? '☀️' : '🌙'; localStorage.setItem('dy-theme', next); });
+    </script>
+</body>
+
+</html>
